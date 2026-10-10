@@ -1,4 +1,5 @@
 """App entry point. Run from backend/:  uvicorn app.main:app --reload"""
+import logging
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -7,7 +8,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from app import models  # noqa: F401  (importing registers the tables with Base)
 from app.config import CORS_ORIGINS
 from app.database import Base, engine
-from app.routers import logs
+from app.routers import incidents, logs, samples
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
 
 @asynccontextmanager
@@ -24,9 +27,12 @@ app.add_middleware(
     allow_origins=CORS_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["Content-Disposition"],  # lets the frontend read the report's file name
 )
 
 app.include_router(logs.router)
+app.include_router(incidents.router)
+app.include_router(samples.router)
 
 
 @app.get("/api/health")
