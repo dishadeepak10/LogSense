@@ -1,0 +1,14 @@
+2026-10-01 09:00:00,001 INFO  [api-gateway] Service started on port 8080
+2026-10-01 09:00:05,002 INFO  [payment-service] Payment 1001 authorized
+2026-10-01 09:01:00,000 WARN  [payment-service] Slow query took 4200 ms: SELECT * FROM payments
+2026-10-01 09:01:10,000 ERROR [payment-service] Could not get JDBC connection: pool exhausted after 30000 ms
+java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
+Caused by: org.postgresql.util.PSQLException: remaining connection slots are reserved
+	... 12 more
+2026-10-01 09:01:15,000 ERROR [order-service] Failed to save order 5001: database connection timed out
+2026-10-01 09:01:20,000 ERROR [payment-service] Timeout waiting for connection from pool after 30000 ms
+2026-10-01 09:01:30,000 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments
+=== log rotated ===
+2026-10-01 09:30:00,000 INFO  [payment-service] Payment 1002 authorized
+2026-10-01 09:45:00,000 ERROR [auth-service] Invalid token for user 4512
