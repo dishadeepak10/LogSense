@@ -1,0 +1,37 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project status
+
+LogSense is a log anomaly detection and probable root-cause analysis platform (3rd-year ISE college mini project). Users upload an application log; the backend parses it, groups errors, detects anomalies, builds incidents, and an LLM returns "Probable Root Cause / Why / Suggested Action". Stack: FastAPI + SQLAlchemy + PostgreSQL (SQLite acceptable early on) + an external LLM API; the React/Tailwind/Recharts frontend is built separately.
+
+**The repo is currently a skeleton: every `.py` file under `backend/app/` is empty** (only commit on `main`: "Initial project structure"). There is no dependency manifest, no tests, and no linter config yet. Do not assume existing implementations; when adding the first build/run/test tooling, update this file with the real commands. Manual API testing is done through Swagger UI at http://localhost:8000/docs.
+
+## Ownership and team rules
+
+- Gourav (backend): `main.py`, `routers/`, `services/`, `models.py`, `schemas.py`, `database.py`.
+- Disha (LLM and analysis): `backend/app/analysis/`. **Backend code must never edit this folder**; it only calls `detect_anomalies`, `analyze_incident`, `find_similar_incidents`, `decide_confidence`.
+- Anusha (frontend + integration) owns `docs/API_CONTRACT.md`, the source of truth for every JSON shape. Changing a response shape requires telling Anusha first.
+- Harsh: testing, `sample_logs/`, docs.
+- One branch per task, pull request, teammate review. Never commit `.env` or API keys.
+
+## Intended pipeline
+
+1. **Upload** (`routers/logs.py`): validate file size (`MAX_UPLOAD_MB`) and type.
+2. **Parse** (`services/parser.py`): regex parser; folds continuation lines (e.g. stack traces) into the previous entry and counts unparsed lines. Must not crash on a real Loghub log slice.
+3. **Group** (`services/grouping.py`): group errors by message template; feeds the summary endpoint.
+4. **Analyze** (calls into `analysis/`): anomaly detection, LLM root cause (with non-LLM fallback), similarity, confidence.
+5. **Build incidents** (`services/incident_builder.py`): merge anomalies, categorize by keywords, assign severity by rules, pick a candidate trigger. Each incident also carries:
+   - `service_timeline`: `[{service, first_error, error_count}]` computed from the incident's log entries.
+   - `similar_incidents`: backend loads template sets of incidents from earlier uploads, passes them to `find_similar_incidents(...)`, then stores and returns `[{incident_id, file_name, similarity}]`.
+   - `analysis.confidence` (`"high"`/`"low"`) from `decide_confidence(...)`, stored in `incident_analysis`.
+6. **Serve** (`routers/incidents.py`, `services/report.py`): incident endpoints and report generation.
+
+Samples: `GET /api/samples` lists files in `sample_logs/`; `POST /api/samples/{name}/load` runs the same pipeline as upload and returns the same response.
+
+Out of scope until the team says the core is done: comparing two files, follow-up questions, thumbs up/down, JSON logs, Slack alerts.
+
+## Configuration
+
+Copy `.env.example` to `.env` (gitignored) and fill in `DATABASE_URL`, `LLM_PROVIDER`, `LLM_API_KEY`, `LLM_MODEL`, `MAX_UPLOAD_MB` (default 10).
