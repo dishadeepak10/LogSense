@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 LogSense is a log anomaly detection and probable root-cause analysis platform (3rd-year ISE college mini project). Users upload an application log; the backend parses it, groups errors, detects anomalies, builds incidents, and an LLM returns "Probable Root Cause / Why / Suggested Action". Stack: FastAPI + SQLAlchemy + PostgreSQL (SQLite acceptable early on) + an external LLM API; the React/Tailwind/Recharts frontend is built separately.
 
-**Early stage:** only app setup exists (`config.py`, `database.py`, `main.py` with `GET /api/health`). Routers, services, models, and schemas are still empty files, and there are no tests or linter config yet. Do not assume existing implementations.
+**Early stage:** app setup (`config.py`, `database.py`, `main.py` with `GET /api/health`) and `models.py` exist. Routers, services, and schemas are still empty files, and there are no tests or linter config yet. Do not assume existing implementations.
 
 ## Commands
 
@@ -25,6 +25,15 @@ Manual API testing is done through Swagger UI at http://localhost:8000/docs. Wit
 - `app/config.py` is the single place that reads `.env` (repo root) and exposes `DATABASE_URL`, `MAX_UPLOAD_MB`, `CORS_ORIGINS`. Empty env values fall back to defaults. This is separate from Disha's `app/analysis/config.py`.
 - `app/database.py` provides `engine`, `SessionLocal`, `Base` (SQLAlchemy 2.0 `DeclarativeBase`), and `get_db()` for use as a FastAPI dependency.
 - `app/main.py` imports `app.models` so every model is registered on `Base` before `create_all` runs in the lifespan hook. New routers must be added there with `app.include_router(...)`.
+
+## Data model (`app/models.py`)
+
+`LogFile` 1→many `LogEntry` and `Incident`; `Incident` 1→many `LogEntry` (via nullable `log_entries.incident_id`) and 1→1 `IncidentAnalysis` (table `incident_analysis`). Deleting a `LogFile` cascades to everything under it. Deliberate choices:
+- `candidate_trigger` is stored as text + line number on `Incident`, not as a foreign key to `log_entries`, to avoid a circular reference between the two tables.
+- `similar_incidents` is a JSON column holding Disha's result as returned.
+- `service_timeline` is not stored; compute it from the incident's entries.
+- `LogFile.content_hash` (SHA-256) is used to exclude identical files from similarity.
+- There are no migrations: `create_all` only adds missing tables, so after changing a column delete `backend/logsense.db` and restart.
 
 ## Ownership and team rules
 
