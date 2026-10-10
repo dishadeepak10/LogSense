@@ -1,7 +1,7 @@
-"""Checks a log file's content and saves it as a LogFile row.
+"""Checks a log file's content and creates its LogFile row.
 
-Used by the upload endpoint now, and later by the sample-load endpoint,
-so both go through exactly the same rules.
+Used by both the upload endpoint and the sample-load endpoint (through the
+pipeline), so both follow exactly the same rules.
 """
 import hashlib
 from pathlib import Path
@@ -37,9 +37,8 @@ def validate_log_file(file_name: str, data: bytes) -> None:
         raise InvalidLogFile("The file looks binary, not a text log.", status_code=415)
 
 
-def save_log_file(db: Session, file_name: str, data: bytes, source: str = "upload") -> LogFile:
-    """Validate the file, then store its details (not its content) in log_files."""
-    validate_log_file(file_name, data)
+def create_log_file(db: Session, file_name: str, data: bytes, source: str = "upload") -> LogFile:
+    """Add a LogFile row for already-validated data. The caller commits."""
     log_file = LogFile(
         file_name=Path(file_name).name,  # drop any folder part a client might send
         content_hash=hashlib.sha256(data).hexdigest(),
@@ -47,6 +46,5 @@ def save_log_file(db: Session, file_name: str, data: bytes, source: str = "uploa
         source=source,
     )
     db.add(log_file)
-    db.commit()
-    db.refresh(log_file)  # reload so id and uploaded_at are filled in
+    db.flush()  # sends the INSERT so log_file.id is available, without committing yet
     return log_file

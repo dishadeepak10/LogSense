@@ -1,5 +1,6 @@
 """Backend settings, read once from environment variables / the .env file."""
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -18,3 +19,10 @@ CORS_ORIGINS = [
     for origin in (os.getenv("CORS_ORIGINS") or "http://localhost:5173,http://localhost:3000").split(",")
     if origin.strip()
 ]
+
+# Only the N most severe incidents per file go to the LLM; the rest use the
+# non-LLM fallback. Keeps uploads fast (each LLM call can take seconds).
+MAX_LLM_INCIDENTS = int(os.getenv("MAX_LLM_INCIDENTS") or 5)
+
+# Folder listed by GET /api/samples. Default: sample_logs/ at the repo root.
+SAMPLE_LOGS_DIR = Path(os.getenv("SAMPLE_LOGS_DIR") or Path(__file__).resolve().parents[2] / "sample_logs")
