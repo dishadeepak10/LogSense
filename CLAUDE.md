@@ -6,7 +6,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 LogSense is a log anomaly detection and probable root-cause analysis platform (3rd-year ISE college mini project). Users upload an application log; the backend parses it, groups errors, detects anomalies, builds incidents, and an LLM returns "Probable Root Cause / Why / Suggested Action". Stack: FastAPI + SQLAlchemy + PostgreSQL (SQLite acceptable early on) + an external LLM API; the React/Tailwind/Recharts frontend is built separately.
 
-**The repo is currently a skeleton: every `.py` file under `backend/app/` is empty** (only commit on `main`: "Initial project structure"). There is no dependency manifest, no tests, and no linter config yet. Do not assume existing implementations; when adding the first build/run/test tooling, update this file with the real commands. Manual API testing is done through Swagger UI at http://localhost:8000/docs.
+**Early stage:** only app setup exists (`config.py`, `database.py`, `main.py` with `GET /api/health`). Routers, services, models, and schemas are still empty files, and there are no tests or linter config yet. Do not assume existing implementations.
+
+## Commands
+
+Run from `backend/` (Windows, Git Bash paths shown):
+
+```
+python -m venv venv
+./venv/Scripts/pip install -r requirements.txt
+./venv/Scripts/python -m uvicorn app.main:app --reload --port 8000
+```
+
+Manual API testing is done through Swagger UI at http://localhost:8000/docs. With no `DATABASE_URL` set, the app uses SQLite at `backend/logsense.db` (gitignored); tables are created at startup from `models.py`.
+
+## App wiring
+
+- `app/config.py` is the single place that reads `.env` (repo root) and exposes `DATABASE_URL`, `MAX_UPLOAD_MB`, `CORS_ORIGINS`. Empty env values fall back to defaults. This is separate from Disha's `app/analysis/config.py`.
+- `app/database.py` provides `engine`, `SessionLocal`, `Base` (SQLAlchemy 2.0 `DeclarativeBase`), and `get_db()` for use as a FastAPI dependency.
+- `app/main.py` imports `app.models` so every model is registered on `Base` before `create_all` runs in the lifespan hook. New routers must be added there with `app.include_router(...)`.
 
 ## Ownership and team rules
 
@@ -41,4 +59,4 @@ Out of scope until the team says the core is done: comparing two files, follow-u
 
 ## Configuration
 
-Copy `.env.example` to `.env` (gitignored) and fill in `DATABASE_URL`, `LLM_PROVIDER`, `LLM_API_KEY`, `LLM_MODEL`, `MAX_UPLOAD_MB` (default 10).
+Copy `.env.example` to `.env` (gitignored) and fill in `DATABASE_URL`, `LLM_PROVIDER`, `LLM_API_KEY`, `LLM_MODEL`, `MAX_UPLOAD_MB` (default 10), `CORS_ORIGINS` (comma-separated; defaults to the Vite and CRA dev servers on localhost).
