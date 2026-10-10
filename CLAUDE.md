@@ -32,6 +32,13 @@ Samples: `GET /api/samples` lists files in `sample_logs/`; `POST /api/samples/{n
 
 Out of scope until the team says the core is done: comparing two files, follow-up questions, thumbs up/down, JSON logs, Slack alerts.
 
+## Agreed design decisions
+
+- **LLM cap:** only the top N incidents by severity go to `analyze_incident`; the rest use Disha's non-LLM fallback. N is a config value (not yet chosen) so uploads stay fast.
+- **Build order:** don't stub or guess Disha's function signatures. Build upload, parser, grouping, and DB first; wire in `analysis/` calls only after her code is merged.
+- **Duplicate uploads:** store a content hash per uploaded file; before calling `find_similar_incidents`, exclude past incidents from files with the same hash so a re-upload doesn't match itself at 100%.
+- **API contract:** `docs/API_CONTRACT.md` doesn't exist yet; Anusha will publish it. Don't invent response shapes ahead of it without checking with the user.
+
 ## Configuration
 
 Copy `.env.example` to `.env` (gitignored) and fill in `DATABASE_URL`, `LLM_PROVIDER`, `LLM_API_KEY`, `LLM_MODEL`, `MAX_UPLOAD_MB` (default 10).
