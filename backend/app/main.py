@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app import models  # noqa: F401  (importing registers the tables with Base)
 from app.config import CORS_ORIGINS
 from app.database import Base, engine
+from app.routers import logs
 
 
 @asynccontextmanager
@@ -24,6 +25,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(logs.router)
 
 
 @app.get("/api/health")

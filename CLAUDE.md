@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 LogSense is a log anomaly detection and probable root-cause analysis platform (3rd-year ISE college mini project). Users upload an application log; the backend parses it, groups errors, detects anomalies, builds incidents, and an LLM returns "Probable Root Cause / Why / Suggested Action". Stack: FastAPI + SQLAlchemy + PostgreSQL (SQLite acceptable early on) + an external LLM API; the React/Tailwind/Recharts frontend is built separately.
 
-**Early stage:** app setup (`config.py`, `database.py`, `main.py` with `GET /api/health`) and `models.py` exist. Routers, services, and schemas are still empty files, and there are no tests or linter config yet. Do not assume existing implementations.
+**Early stage:** app setup (`config.py`, `database.py`, `main.py` with `GET /api/health`), `models.py`, and `POST /api/logs/upload` (validates and saves the file record only; no parsing yet) exist. Other routers and services are still empty files, and there are no tests or linter config yet. Do not assume existing implementations.
 
 ## Commands
 
@@ -24,6 +24,8 @@ Manual API testing is done through Swagger UI at http://localhost:8000/docs. Wit
 
 - `app/config.py` is the single place that reads `.env` (repo root) and exposes `DATABASE_URL`, `MAX_UPLOAD_MB`, `CORS_ORIGINS`. Empty env values fall back to defaults. This is separate from Disha's `app/analysis/config.py`.
 - `app/database.py` provides `engine`, `SessionLocal`, `Base` (SQLAlchemy 2.0 `DeclarativeBase`), and `get_db()` for use as a FastAPI dependency.
+- `app/services/ingest.py` holds upload validation (`.log`/`.txt` only, non-empty, no NUL bytes in the first 8 KB) and `save_log_file`, which stores the SHA-256 hash. Routers turn its `InvalidLogFile` into an HTTP error using its `status_code`. Reuse it for sample loading so both paths follow the same rules. The size limit is enforced in `routers/logs.py` while reading the upload in chunks.
+- `app/schemas.py` shapes are provisional until `docs/API_CONTRACT.md` exists. SQLite returns naive datetimes; schemas mark them as UTC via `as_utc` so the frontend doesn't misread them as local time. Apply it to every datetime field in responses.
 - `app/main.py` imports `app.models` so every model is registered on `Base` before `create_all` runs in the lifespan hook. New routers must be added there with `app.include_router(...)`.
 
 ## Data model (`app/models.py`)
