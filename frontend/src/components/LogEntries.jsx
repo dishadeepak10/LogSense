@@ -36,7 +36,7 @@ export default function LogEntries({ entries, total, triggerLine }) {
                 </span>
               </button>
               {isOpen && (
-                <pre className="rise mx-2 mb-2 overflow-x-auto whitespace-pre rounded bg-base p-3 text-zinc-200 ring-1 ring-zinc-800">
+                <pre className="rise mx-2 mb-2 overflow-x-auto whitespace-pre rounded bg-page p-3 text-zinc-200 ring-1 ring-zinc-800">
                   {entry.raw}
                 </pre>
               )}

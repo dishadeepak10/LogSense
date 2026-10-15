@@ -39,13 +39,13 @@
   --color-green-50: oklch(26.6% 0.065 152.934); --color-green-100: oklch(39.3% 0.095 152.535); --color-green-200: oklch(44.8% 0.119 151.328); --color-green-300: oklch(52.7% 0.154 150.069); --color-green-400: oklch(62.7% 0.194 149.214); --color-green-500: oklch(72.3% 0.219 149.579); --color-green-600: oklch(79.2% 0.209 151.711); --color-green-700: oklch(87.1% 0.15 154.449); --color-green-800: oklch(92.5% 0.084 155.995); --color-green-900: oklch(96.2% 0.044 156.743); --color-green-950: oklch(98.2% 0.018 155.826);
 }
 
-/* Makes Tailwind classes from the variables: bg-accent-1, text-accent-soft, ring-accent-1/50, bg-panel, bg-base ... */
+/* Makes Tailwind classes from the variables: bg-accent-1, text-accent-soft, ring-accent-1/50, bg-panel, bg-page ... */
 @theme inline {
   --color-accent-1: var(--accent-1);
   --color-accent-2: var(--accent-2);
   --color-accent-soft: var(--accent-soft);
   --color-accent-dot: var(--accent-dot);
-  --color-base: var(--surface-base);
+  --color-page: var(--surface-base);
   --color-panel: var(--surface-panel);
 }
 
@@ -55,7 +55,7 @@ html {
 }
 
 body {
-  @apply bg-base text-zinc-100 antialiased;
+  @apply bg-page text-zinc-100 antialiased;
   transition: background-color 0.4s;
   /* Two soft colored glows behind the page */
   background-image:
@@ -179,6 +179,20 @@ body {
 }
 .logo-scan {
   animation: logo-scan 0.7s ease-in-out forwards;
+}
+
+/* ---------- Hero (components/Hero.jsx) ---------- */
+
+/* A faint band that keeps sliding down the example terminal, like a scanner reading the log */
+/* We move the band with transform (not "top"): transforms are handled by the graphics card,
+   so the animation doesn't make the browser recalculate the page layout 60 times a second. */
+@keyframes hero-scan {
+  from { transform: translateY(-15%); }
+  to { transform: translateY(100%); }
+}
+.hero-scan {
+  animation: hero-scan 3.5s linear infinite;
+  will-change: transform;
 }
 
 /* People who turn on "reduce motion" in their OS get no animations at all. */
