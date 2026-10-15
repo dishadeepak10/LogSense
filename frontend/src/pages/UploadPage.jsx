@@ -58,7 +58,7 @@ export default function UploadPage() {
     <div className="grid gap-6 lg:grid-cols-3">
       <section className="lg:col-span-2">
         <h1 className="text-2xl font-bold">Analyze a log file</h1>
-        <p className="mt-1 text-slate-600">
+        <p className="mt-1 text-slate-400">
           Upload an application log. LogSense finds incidents, shows how the failure spread, and explains the
           probable root cause.
         </p>
@@ -75,15 +75,15 @@ export default function UploadPage() {
             pickFile(e.dataTransfer.files[0])
           }}
           className={`mt-5 flex flex-col items-center justify-center rounded-xl border-2 border-dashed p-10 text-center transition ${
-            dragging ? 'border-blue-500 bg-blue-50' : 'border-slate-300 bg-white'
+            dragging ? 'border-blue-500 bg-blue-950/50' : 'border-slate-700 bg-slate-900'
           }`}
         >
-          <p className="font-medium text-slate-700">Drag a .log or .txt file here</p>
-          <p className="my-2 text-sm text-slate-500">or</p>
+          <p className="font-medium text-slate-300">Drag a .log or .txt file here</p>
+          <p className="my-2 text-sm text-slate-400">or</p>
           <button
             type="button"
             onClick={() => inputRef.current.click()}
-            className="rounded-md bg-white px-4 py-2 text-sm font-medium ring-1 ring-slate-300 hover:bg-slate-50"
+            className="rounded-md bg-slate-900 px-4 py-2 text-sm font-medium ring-1 ring-slate-700 hover:bg-slate-800"
           >
             Choose file
           </button>
@@ -94,19 +94,19 @@ export default function UploadPage() {
             className="hidden"
             onChange={(e) => pickFile(e.target.files[0])}
           />
-          <p className="mt-3 text-xs text-slate-500">Max {MAX_UPLOAD_MB} MB</p>
+          <p className="mt-3 text-xs text-slate-400">Max {MAX_UPLOAD_MB} MB</p>
         </div>
 
         {file && (
-          <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-lg bg-white p-4 ring-1 ring-slate-200">
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-lg bg-slate-900 p-4 ring-1 ring-slate-800">
             <div className="min-w-0">
               <p className="truncate font-medium">{file.name}</p>
-              <p className="text-sm text-slate-500">{formatBytes(file.size)}</p>
+              <p className="text-sm text-slate-400">{formatBytes(file.size)}</p>
             </div>
             <button
               onClick={() => run('upload', () => uploadLog(file, setProgress))}
               disabled={uploadDisabled}
-              className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+              className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-slate-700"
             >
               {busy === 'upload' ? 'Analyzing...' : 'Upload and analyze'}
             </button>
@@ -115,10 +115,10 @@ export default function UploadPage() {
 
         {busy === 'upload' && (
           <div className="mt-4">
-            <div className="h-2 overflow-hidden rounded-full bg-slate-200">
+            <div className="h-2 overflow-hidden rounded-full bg-slate-700">
               <div className="h-full bg-blue-600 transition-all" style={{ width: `${progress}%` }} />
             </div>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="mt-2 text-sm text-slate-400">
               {progress < 100 ? `Uploading... ${progress}%` : 'Uploaded. Finding incidents and asking for root causes...'}
             </p>
           </div>
@@ -131,23 +131,23 @@ export default function UploadPage() {
         )}
       </section>
 
-      <aside className="rounded-xl bg-white p-5 ring-1 ring-slate-200">
+      <aside className="rounded-xl bg-slate-900 p-5 ring-1 ring-slate-800">
         <h2 className="font-semibold">No log at hand?</h2>
-        <p className="mt-1 text-sm text-slate-600">Try one of the sample logs with a known failure.</p>
+        <p className="mt-1 text-sm text-slate-400">Try one of the sample logs with a known failure.</p>
         <div className="mt-4">
           {samples.loading && <Loading text="Loading samples..." />}
           {samples.error && <ErrorState message={samples.error} onRetry={samples.reload} />}
           {samples.data && samples.data.length === 0 && <EmptyState title="No sample logs on the server" />}
           {samples.data && samples.data.length > 0 && (
             <>
-              <label htmlFor="sample" className="text-sm font-medium text-slate-700">
+              <label htmlFor="sample" className="text-sm font-medium text-slate-300">
                 Sample
               </label>
               <select
                 id="sample"
                 value={selectedSample}
                 onChange={(e) => setSampleName(e.target.value)}
-                className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm"
+                className="mt-1 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm"
               >
                 {samples.data.map((s) => (
                   <option key={s.name} value={s.name}>
@@ -158,7 +158,7 @@ export default function UploadPage() {
               <button
                 onClick={() => run('sample', () => loadSample(selectedSample))}
                 disabled={busy !== null}
-                className="mt-3 w-full rounded-md bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-700 disabled:bg-slate-300"
+                className="mt-3 w-full rounded-md bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-white disabled:bg-slate-700"
               >
                 {busy === 'sample' ? 'Analyzing sample...' : 'Load sample log'}
               </button>

@@ -4,7 +4,7 @@ import { USE_MOCK } from '../api/client'
 
 function navClass({ isActive }) {
   return `rounded-md px-3 py-1.5 text-sm font-medium ${
-    isActive ? 'bg-slate-900 text-white' : 'text-slate-600 hover:bg-slate-200'
+    isActive ? 'bg-slate-700 text-white' : 'text-slate-400 hover:bg-slate-800'
   }`
 }
 
@@ -12,9 +12,9 @@ function navClass({ isActive }) {
 export default function Layout() {
   return (
     <div className="min-h-screen">
-      <header className="border-b border-slate-200 bg-white">
+      <header className="border-b border-slate-800 bg-slate-900">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
-          <NavLink to="/" className="flex items-center gap-2 text-lg font-bold text-slate-900">
+          <NavLink to="/" className="flex items-center gap-2 text-lg font-bold text-slate-100">
             <span className="rounded-md bg-blue-600 px-1.5 py-0.5 text-sm text-white">LS</span>
             LogSense
           </NavLink>
@@ -29,7 +29,7 @@ export default function Layout() {
         </div>
       </header>
       {USE_MOCK && (
-        <div className="bg-amber-100 px-4 py-1.5 text-center text-xs font-medium text-amber-900">
+        <div className="bg-amber-950 px-4 py-1.5 text-center text-xs font-medium text-amber-200">
           Mock mode: showing data from src/mock/, not the real backend.
         </div>
       )}

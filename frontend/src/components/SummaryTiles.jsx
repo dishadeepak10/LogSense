@@ -2,10 +2,10 @@
 
 function Tile({ label, value, note }) {
   return (
-    <div className="rounded-lg bg-white p-4 ring-1 ring-slate-200">
-      <p className="text-sm text-slate-500">{label}</p>
+    <div className="rounded-lg bg-slate-900 p-4 ring-1 ring-slate-800">
+      <p className="text-sm text-slate-400">{label}</p>
       <p className="mt-1 text-2xl font-bold tabular-nums">{value}</p>
-      {note && <p className="mt-0.5 text-xs text-slate-500">{note}</p>}
+      {note && <p className="mt-0.5 text-xs text-slate-400">{note}</p>}
     </div>
   )
 }

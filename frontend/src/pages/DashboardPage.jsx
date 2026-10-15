@@ -24,7 +24,7 @@ export default function DashboardPage() {
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="min-w-0">
           <h1 className="break-all text-2xl font-bold">{file.file_name}</h1>
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-400">
             {file.source === 'sample' ? 'Sample log' : 'Uploaded'} {formatUtc(file.uploaded_at)} · log covers{' '}
             {formatLogTime(summary.start_time)} to {formatLogTime(summary.end_time)}
           </p>
@@ -34,7 +34,7 @@ export default function DashboardPage() {
 
       <SummaryTiles summary={summary} />
 
-      <section className="rounded-lg bg-white p-4 ring-1 ring-slate-200">
+      <section className="rounded-lg bg-slate-900 p-4 ring-1 ring-slate-800">
         <h2 className="mb-2 font-semibold">Errors and warnings over time</h2>
         <ErrorTimelineChart timeline={summary.error_timeline} bucketSeconds={summary.bucket_seconds} />
       </section>
@@ -43,7 +43,7 @@ export default function DashboardPage() {
         <div className="mb-2 flex items-center justify-between">
           <h2 className="font-semibold">Incidents ({incidents.length})</h2>
           {incidents.length > TOP_INCIDENTS && (
-            <Link to={`/files/${file.id}/incidents`} className="text-sm font-medium text-blue-700 hover:underline">
+            <Link to={`/files/${file.id}/incidents`} className="text-sm font-medium text-blue-400 hover:underline">
               View all incidents →
             </Link>
           )}
@@ -61,14 +61,14 @@ export default function DashboardPage() {
         )}
       </section>
 
-      <section className="rounded-lg bg-white p-4 ring-1 ring-slate-200">
+      <section className="rounded-lg bg-slate-900 p-4 ring-1 ring-slate-800">
         <h2 className="mb-2 font-semibold">Most frequent errors</h2>
         {summary.top_error_groups.length === 0 ? (
-          <p className="text-sm text-slate-500">No ERROR or FATAL lines in this log.</p>
+          <p className="text-sm text-slate-400">No ERROR or FATAL lines in this log.</p>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
-              <thead className="text-slate-500">
+              <thead className="text-slate-400">
                 <tr>
                   <th className="py-1 pr-3">Count</th>
                   <th className="pr-3">Level</th>
@@ -78,11 +78,11 @@ export default function DashboardPage() {
               </thead>
               <tbody>
                 {summary.top_error_groups.map((group) => (
-                  <tr key={`${group.template}-${group.level}`} className="border-t border-slate-100 align-top">
+                  <tr key={`${group.template}-${group.level}`} className="border-t border-slate-800 align-top">
                     <td className="py-1.5 pr-3 font-semibold tabular-nums">{group.count}</td>
                     <td className="pr-3">{group.level}</td>
                     <td className="break-all pr-3 font-mono text-xs" title={group.example}>{group.template}</td>
-                    <td className="whitespace-nowrap text-slate-600">{formatLogTime(group.first_seen)}</td>
+                    <td className="whitespace-nowrap text-slate-400">{formatLogTime(group.first_seen)}</td>
                   </tr>
                 ))}
               </tbody>

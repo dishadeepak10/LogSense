@@ -14,7 +14,7 @@ export function SeverityBadge({ severity }) {
 
 export function CategoryTag({ category }) {
   return (
-    <span className="inline-flex rounded-md bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-700">
+    <span className="inline-flex rounded-md bg-slate-800 px-2 py-0.5 text-xs font-medium text-slate-300">
       {CATEGORY_LABELS[category] || category}
     </span>
   )
@@ -25,13 +25,13 @@ export function CategoryTag({ category }) {
 export function ConfidenceBadge({ confidence }) {
   if (confidence === 'high') {
     return (
-      <span className="inline-flex items-center gap-1 rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-semibold text-green-800 ring-1 ring-green-300">
+      <span className="inline-flex items-center gap-1 rounded-full bg-green-950 px-2.5 py-0.5 text-xs font-semibold text-green-300 ring-1 ring-green-800">
         <span aria-hidden="true">✓</span> High confidence
       </span>
     )
   }
   return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-900 ring-1 ring-amber-300">
+    <span className="inline-flex items-center gap-1 rounded-full bg-amber-950 px-2.5 py-0.5 text-xs font-semibold text-amber-200 ring-1 ring-amber-800">
       <span aria-hidden="true">!</span> Low confidence, verify manually
     </span>
   )
@@ -39,7 +39,7 @@ export function ConfidenceBadge({ confidence }) {
 
 export function SourceTag({ source }) {
   return (
-    <span className="text-xs text-slate-500">
+    <span className="text-xs text-slate-400">
       {source === 'llm' ? 'Explained by the AI model' : 'Rule-based explanation (no AI used)'}
     </span>
   )

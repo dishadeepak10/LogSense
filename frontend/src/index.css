@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
-/* Chart colors (validated for color-blind separation; see docs) */
+/* Dark theme. Chart colors are set in ErrorTimelineChart.jsx and ServiceTimeline.jsx
+   (checked for color-blind separation and contrast on the dark cards). */
 :root {
-  --color-errors: #d03b3b;
-  --color-warnings: #eda100;
-  --color-marker: #2a78d6;
+  color-scheme: dark; /* dark scrollbars, file picker and dropdowns */
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 antialiased;
+  @apply bg-slate-950 text-slate-100 antialiased;
 }

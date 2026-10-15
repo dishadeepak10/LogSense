@@ -17,12 +17,12 @@ export default function HistoryPage() {
       <h1 className="mb-4 text-2xl font-bold">History</h1>
       {data.length === 0 ? (
         <EmptyState title="No files analyzed yet">
-          <Link to="/" className="text-blue-700 underline">Upload a log</Link> or load a sample to get started.
+          <Link to="/" className="text-blue-400 underline">Upload a log</Link> or load a sample to get started.
         </EmptyState>
       ) : (
-        <div className="overflow-x-auto rounded-lg bg-white ring-1 ring-slate-200">
+        <div className="overflow-x-auto rounded-lg bg-slate-900 ring-1 ring-slate-800">
           <table className="w-full text-left text-sm">
-            <thead className="bg-slate-50 text-slate-500">
+            <thead className="bg-slate-800/60 text-slate-400">
               <tr>
                 <th className="px-4 py-2">File</th>
                 <th className="px-4">Analyzed</th>
@@ -32,12 +32,12 @@ export default function HistoryPage() {
             </thead>
             <tbody>
               {data.map((file) => (
-                <tr key={file.id} className="border-t border-slate-100">
+                <tr key={file.id} className="border-t border-slate-800">
                   <td className="px-4 py-2">
-                    <Link to={`/files/${file.id}`} className="break-all font-medium text-blue-700 hover:underline">
+                    <Link to={`/files/${file.id}`} className="break-all font-medium text-blue-400 hover:underline">
                       {file.file_name}
                     </Link>
-                    {file.source === 'sample' && <span className="ml-2 text-xs text-slate-500">sample</span>}
+                    {file.source === 'sample' && <span className="ml-2 text-xs text-slate-400">sample</span>}
                   </td>
                   <td className="whitespace-nowrap px-4">{formatUtc(file.uploaded_at)}</td>
                   <td className="whitespace-nowrap px-4">{formatBytes(file.size_bytes)}</td>

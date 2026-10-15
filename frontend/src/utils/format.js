@@ -44,10 +44,10 @@ export function formatBytes(bytes) {
 export const SEVERITY_ORDER = ['critical', 'high', 'medium', 'low']
 
 export const SEVERITY_STYLES = {
-  critical: 'bg-red-100 text-red-800 ring-red-300',
-  high: 'bg-orange-100 text-orange-800 ring-orange-300',
-  medium: 'bg-amber-100 text-amber-800 ring-amber-300',
-  low: 'bg-slate-100 text-slate-700 ring-slate-300',
+  critical: 'bg-red-950 text-red-300 ring-red-800',
+  high: 'bg-orange-950 text-orange-300 ring-orange-800',
+  medium: 'bg-amber-950 text-amber-300 ring-amber-800',
+  low: 'bg-slate-800 text-slate-300 ring-slate-700',
 }
 
 export const CATEGORY_LABELS = {
@@ -62,9 +62,9 @@ export const CATEGORY_LABELS = {
 }
 
 export const LEVEL_STYLES = {
-  FATAL: 'text-red-800 bg-red-100',
-  ERROR: 'text-red-700 bg-red-50',
-  WARN: 'text-amber-800 bg-amber-50',
-  INFO: 'text-slate-700 bg-slate-100',
-  DEBUG: 'text-slate-500 bg-slate-50',
+  FATAL: 'text-red-300 bg-red-950',
+  ERROR: 'text-red-400 bg-red-950/40',
+  WARN: 'text-amber-300 bg-amber-950/40',
+  INFO: 'text-slate-300 bg-slate-800',
+  DEBUG: 'text-slate-400 bg-slate-800/60',
 }
