@@ -72,6 +72,62 @@ body {
   animation: glow 1.6s ease-in-out infinite;
 }
 
+/* ---------- Logo (components/Logo.jsx) ---------- */
+
+.logo-mark {
+  transition: transform 0.35s cubic-bezier(0.3, 1.6, 0.5, 1), filter 0.35s;
+}
+.logo:hover .logo-mark {
+  transform: rotate(-8deg) scale(1.1);
+  filter: drop-shadow(0 0 10px rgb(99 102 241 / 0.7));
+}
+.logo:active .logo-mark {
+  transform: rotate(-8deg) scale(0.95);
+}
+
+/* The heartbeat line draws itself: dash = whole line, offset moves from 100 (hidden) to 0 (shown). */
+@keyframes logo-draw {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+.logo-pulse {
+  stroke-dasharray: 100;
+}
+.logo:hover .logo-pulse {
+  animation: logo-draw 0.9s ease-out;
+}
+.logo-looping .logo-pulse {
+  animation: logo-draw 1.2s ease-in-out infinite;
+}
+
+/* The anomaly dot breathes slowly, and pops when the logo is hovered. */
+@keyframes logo-breathe {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+@keyframes logo-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.7); }
+  100% { transform: scale(1); }
+}
+.logo-dot {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: logo-breathe 2.4s ease-in-out infinite;
+}
+.logo:hover .logo-dot {
+  animation: logo-pop 0.5s ease-out 0.55s;
+}
+
+/* Click: a light beam sweeps across the mark */
+@keyframes logo-scan {
+  from { transform: translateX(0); }
+  to { transform: translateX(56px); }
+}
+.logo-scan {
+  animation: logo-scan 0.7s ease-in-out forwards;
+}
+
 /* People who turn on "reduce motion" in their OS get no animations at all. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
