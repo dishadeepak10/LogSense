@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Chart colors (validated for color-blind separation; see docs) */
+:root {
+  --color-errors: #d03b3b;
+  --color-warnings: #eda100;
+  --color-marker: #2a78d6;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}

@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 LogSense is a log anomaly detection and probable root-cause analysis platform (3rd-year ISE college mini project). Users upload an application log; the backend parses it, groups errors, detects anomalies, builds incidents, and an LLM returns "Probable Root Cause / Why / Suggested Action". Stack: FastAPI + SQLAlchemy 2.0 + PostgreSQL (SQLite by default) + an external LLM API called only from Disha's `app/analysis/`. The React/Tailwind/Recharts frontend is built separately.
 
-The backend pipeline is complete. `app/analysis/` (Disha's) is still empty, so the backend currently runs on placeholders in `services/analysis_adapter.py` (see below).
+The backend pipeline is complete, `app/analysis/` (Disha's) implements the four analysis functions, and `frontend/` holds the React app (see `frontend/README.md`). The adapter's placeholders in `services/analysis_adapter.py` are now only a safety net.
 
 ## Commands
 
@@ -44,15 +44,15 @@ The only backend file that touches `app/analysis/`. It looks up `detect_anomalie
 - anomalies: placeholder error-burst clustering (2+ errors within 60 s, or one FATAL, plus preceding WARNs from the same services)
 - analysis: rule-based text per category, `source="fallback"`
 - similarity: `[]` (backend must not implement matching)
-- confidence: `"low"`
+- confidence: `"low"` (also always `"low"` for fallback answers; LLM answers call `decide_confidence(root_cause, category)`)
 
-When Disha's signatures land and differ, change only this file. The adapter's interface is a proposal she hasn't confirmed yet.
+If Disha's signatures change, change only this file. The agreed interface is in `docs/API_CONTRACT.md`.
 
 ## Endpoints
 
 `GET /api/health` · `POST /api/logs/upload` · `GET /api/logs` · `GET /api/logs/{id}` · `GET /api/logs/{id}/summary` · `GET /api/logs/{id}/incidents` · `GET /api/logs/{id}/report` (Markdown download) · `GET /api/incidents/{id}` (adds first 200 entries) · `GET /api/samples` · `POST /api/samples/{name}/load` (name must be in the listing: blocks path traversal).
 
-Shapes live in `schemas.py` and are **provisional** until `docs/API_CONTRACT.md` exists. Times: our own (`uploaded_at`, `created_at`) are UTC and marked with `as_utc` (SQLite drops tz info); times read from logs are returned naive, as written in the log.
+Shapes live in `schemas.py` and must match `docs/API_CONTRACT.md`. Times: our own (`uploaded_at`, `created_at`) are UTC and marked with `as_utc` (SQLite drops tz info); times read from logs are returned naive, as written in the log.
 
 ## Data model (`app/models.py`)
 
