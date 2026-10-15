@@ -3,9 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import ThemeProvider from './theme/ThemeProvider'
-import { applyPalette, savedPalette } from './theme/palettes'
+import { applyMode, savedMode } from './theme/mode'
 
-applyPalette(savedPalette()) // before the first paint, so there is no flash of the wrong colors
+applyMode(savedMode()) // before the first paint, so there is no flash of the wrong colors
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

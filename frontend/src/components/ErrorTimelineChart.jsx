@@ -8,8 +8,13 @@ import { formatLogTime } from '../utils/format'
 
 // Checked with a color-blindness validator: errors and warnings stay distinguishable.
 // Both colors keep 3:1 contrast on the dark card; the legend, tooltips and table view help too.
-// Errors and warnings keep the same colors in every theme; only the card color comes from the theme.
-const COLORS = { errors: '#d03b3b', warnings: '#c98500', grid: '#27272a', axis: '#a1a1aa' }
+// Errors and warnings keep the same colors in both modes (checked on the dark and the white card).
+// Grid, axis and gap colors follow the mode.
+const COLORS = { errors: '#d03b3b', warnings: '#c98500' }
+const MODE_COLORS = {
+  dark: { grid: '#27272a', axis: '#a1a1aa', cursor: '#27272a', legend: '#d4d4d8', panel: '#18181b' },
+  light: { grid: '#e4e4e7', axis: '#52525b', cursor: '#f4f4f5', legend: '#3f3f46', panel: '#ffffff' },
+}
 
 function shortLabel(time, bucketSeconds) {
   const text = formatLogTime(time) // "2026-10-01 09:20:00"
@@ -37,7 +42,7 @@ function ChartTooltip({ active, payload }) {
 // Stacked bars: errors and warnings per time bucket (summary.error_timeline).
 export default function ErrorTimelineChart({ timeline, bucketSeconds }) {
   const [showTable, setShowTable] = useState(false)
-  const { palette } = useTheme()
+  const ui = MODE_COLORS[useTheme().mode]
   if (!timeline.length) {
     return <p className="text-sm text-zinc-400">This log has no readable timestamps, so there is no timeline.</p>
   }
@@ -69,16 +74,16 @@ export default function ErrorTimelineChart({ timeline, bucketSeconds }) {
       ) : (
         <ResponsiveContainer width="100%" height={260}>
           <BarChart data={rows} barCategoryGap={1} margin={{ top: 8, right: 8, bottom: 0, left: -12 }}>
-            <CartesianGrid vertical={false} stroke={COLORS.grid} />
-            <XAxis dataKey="label" tick={{ fontSize: 14, fill: COLORS.axis }} minTickGap={24} tickLine={false} />
-            <YAxis allowDecimals={false} tick={{ fontSize: 14, fill: COLORS.axis }} tickLine={false} axisLine={false} />
-            <Tooltip content={<ChartTooltip />} cursor={{ fill: '#27272a' }} />
+            <CartesianGrid vertical={false} stroke={ui.grid} />
+            <XAxis dataKey="label" tick={{ fontSize: 14, fill: ui.axis }} minTickGap={24} tickLine={false} />
+            <YAxis allowDecimals={false} tick={{ fontSize: 14, fill: ui.axis }} tickLine={false} axisLine={false} />
+            <Tooltip content={<ChartTooltip />} cursor={{ fill: ui.cursor }} />
             {/* Legend words stay in normal text color; the colored square carries the identity */}
             <Legend iconType="square" wrapperStyle={{ fontSize: 15 }}
-              formatter={(value) => <span style={{ color: '#d4d4d8' }}>{value}</span>} />
+              formatter={(value) => <span style={{ color: ui.legend }}>{value}</span>} />
             {/* Stroke in the card color = small gap between stacked parts */}
-            <Bar dataKey="errors" name="Errors" stackId="levels" fill={COLORS.errors} stroke={palette.panel} strokeWidth={1} />
-            <Bar dataKey="warnings" name="Warnings" stackId="levels" fill={COLORS.warnings} stroke={palette.panel}
+            <Bar dataKey="errors" name="Errors" stackId="levels" fill={COLORS.errors} stroke={ui.panel} strokeWidth={1} />
+            <Bar dataKey="warnings" name="Warnings" stackId="levels" fill={COLORS.warnings} stroke={ui.panel}
               strokeWidth={1} radius={[3, 3, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>

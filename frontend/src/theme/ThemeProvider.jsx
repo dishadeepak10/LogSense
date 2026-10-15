@@ -1,21 +1,18 @@
 import { useState } from 'react'
 
 import { ThemeContext } from './context'
-import { PALETTES, STORAGE_KEY, applyPalette, savedPalette } from './palettes'
+import { applyMode, saveMode, savedMode } from './mode'
 
 // Wrap the app in this; any component can then call useTheme().
 export default function ThemeProvider({ children }) {
-  const [key, setKey] = useState(savedPalette)
+  const [mode, setMode] = useState(savedMode)
 
-  function choose(newKey) {
-    applyPalette(newKey)
-    setKey(newKey)
-    try {
-      localStorage.setItem(STORAGE_KEY, newKey)
-    } catch {
-      // not saved; the theme still works for this visit
-    }
+  function toggle() {
+    const next = mode === 'dark' ? 'light' : 'dark'
+    applyMode(next)
+    saveMode(next)
+    setMode(next)
   }
 
-  return <ThemeContext.Provider value={{ key, palette: PALETTES[key], choose }}>{children}</ThemeContext.Provider>
+  return <ThemeContext.Provider value={{ mode, toggle }}>{children}</ThemeContext.Provider>
 }

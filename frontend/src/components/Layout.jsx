@@ -2,7 +2,7 @@ import { NavLink, Outlet, useLocation } from 'react-router-dom'
 
 import { USE_MOCK } from '../api/client'
 import Logo from './Logo'
-import ThemeSwitcher from './ThemeSwitcher'
+import ModeToggle from './ModeToggle'
 
 function navClass({ isActive }) {
   return `rounded-lg px-3 py-1.5 text-sm font-medium transition ${
@@ -29,7 +29,7 @@ export default function Layout() {
               History
             </NavLink>
             <span className="ml-2">
-              <ThemeSwitcher />
+              <ModeToggle />
             </span>
           </nav>
         </div>
