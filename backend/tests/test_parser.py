@@ -77,6 +77,41 @@ def test_empty_and_weird_input():
     assert result.entries[-1].timestamp is None  # impossible date: kept, but without a timestamp
 
 
+
+def test_non_error_exception_traceback_is_folded():
+    """UpstreamTimeout, KeyboardInterrupt, ReadTimeout etc. must be continuation lines.
+    Bug: the old regex only matched names ending in Error or Exception.
+    """
+    text = (
+        "2026-10-15 14:42:40,000 ERROR [checkout-api] Unhandled exception in checkout handler\n"
+        "Traceback (most recent call last):\n"
+        "  File \"/app/checkout/handler.py\", line 88, in place_order\n"
+        "    cart = cart_client.get(cart_id)\n"
+        "  File \"/app/clients/cart.py\", line 41, in get\n"
+        "    raise UpstreamTimeout(\"cart-service did not answer in 30s\")\n"
+        "clients.errors.UpstreamTimeout: cart-service did not answer in 30s\n"
+        "2026-10-15 14:42:41,000 ERROR [orders-db] Too many connections\n"
+    )
+    result = parse_log(text)
+    assert len(result.entries) == 2, "traceback lines must be folded into the first entry"
+    assert result.unparsed_lines == 0
+    assert result.entries[0].continuation_lines >= 5  # Traceback + 3 frames + UpstreamTimeout line
+
+
+def test_keyboard_interrupt_is_folded():
+    text = (
+        "2026-10-01 09:00:00 ERROR [worker] Worker interrupted\n"
+        "Traceback (most recent call last):\n"
+        "  File \"worker.py\", line 5, in run\n"
+        "    time.sleep(1)\n"
+        "KeyboardInterrupt\n"
+        "2026-10-01 09:00:01 INFO [worker] Shutting down\n"
+    )
+    result = parse_log(text)
+    assert len(result.entries) == 2
+    assert result.unparsed_lines == 0
+    assert result.entries[0].continuation_lines >= 3
+
 @pytest.mark.parametrize("path", sorted(LOGHUB.glob("*.log")), ids=lambda p: p.stem)
 def test_loghub_slices_parse(path):
     result = parse_log(path.read_text(encoding="utf-8"))
