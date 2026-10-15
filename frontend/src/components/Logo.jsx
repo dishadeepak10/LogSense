@@ -65,9 +65,9 @@ export function LogoMark({ size = 36, looping = false, scanKey = 0 }) {
 export default function Logo() {
   const [scanKey, setScanKey] = useState(0)
   return (
-    <span className="logo group flex items-center gap-2.5" onClick={() => setScanKey((n) => n + 1)}>
-      <LogoMark scanKey={scanKey} />
-      <span className="text-xl font-bold tracking-tight">
+    <span className="logo group flex items-center gap-3" onClick={() => setScanKey((n) => n + 1)}>
+      <LogoMark size={48} scanKey={scanKey} />
+      <span className="text-2xl font-bold tracking-tight sm:text-3xl">
         <span className="text-white">Log</span>
         <span className="bg-linear-to-r from-accent-soft to-accent-2 bg-clip-text text-transparent">Sense</span>
       </span>
