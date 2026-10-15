@@ -95,9 +95,11 @@ def test_similarity_skips_identical_files(upload, monkeypatch):
     monkeypatch.setattr(analysis_adapter, "_find", fake_find)
     response = upload(APP_LOG, "again.log")  # identical content to earlier uploads
 
-    assert seen and seen[-1] == {"other.log"}  # earlier identical files were excluded
+    # Earlier identical uploads (app.log) are excluded. Other tests may have added other files.
+    assert seen and "other.log" in seen[-1] and not seen[-1] & {"app.log", "again.log"}
     similar = response.json()["incidents"][0]["similar_incidents"]
-    assert similar and all(s["file_name"] == "other.log" for s in similar)
+    assert similar and "other.log" in {s["file_name"] for s in similar}
+    assert not {s["file_name"] for s in similar} & {"app.log", "again.log"}
 
 
 def test_file_with_no_recognizable_lines_is_still_accepted(upload):

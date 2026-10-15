@@ -14,6 +14,7 @@ FIXTURES = Path(__file__).resolve().parent / "fixtures"
 _tmp = tempfile.mkdtemp(prefix="logsense-test-")
 os.environ["DATABASE_URL"] = f"sqlite:///{_tmp}/test.db"
 os.environ["SAMPLE_LOGS_DIR"] = str(FIXTURES / "samples")
+os.environ["LLM_API_KEY"] = ""  # tests must never call a real LLM, even if .env has a key
 sys.path.insert(0, str(BACKEND_DIR))
 
 import pytest  # noqa: E402
