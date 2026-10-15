@@ -194,11 +194,3 @@ body {
   animation: hero-scan 3.5s linear infinite;
   will-change: transform;
 }
-
-/* People who turn on "reduce motion" in their OS get no animations at all. */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-}

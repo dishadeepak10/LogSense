@@ -3,11 +3,9 @@ import { useEffect, useState } from 'react'
 // Counts from 0 up to `target` over `duration` ms, for the headline numbers.
 // requestAnimationFrame runs once per screen refresh, so the count moves smoothly.
 export function useCountUp(target, duration = 800) {
-  const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
   const [value, setValue] = useState(0)
 
   useEffect(() => {
-    if (reduceMotion) return // no animation: we just show the target below
     let frame
     const start = performance.now()
     function step(now) {
@@ -18,9 +16,9 @@ export function useCountUp(target, duration = 800) {
     }
     frame = requestAnimationFrame(step)
     return () => cancelAnimationFrame(frame)
-  }, [target, duration, reduceMotion])
+  }, [target, duration])
 
-  return reduceMotion ? target : value
+  return value
 }
 
 // True one frame after the component appears. Used to start CSS transitions
