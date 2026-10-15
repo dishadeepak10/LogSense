@@ -14,13 +14,13 @@ export default function HistoryPage() {
 
   return (
     <div>
-      <h1 className="mb-4 text-2xl font-bold">History</h1>
+      <h1 className="mb-4 text-3xl font-bold tracking-tight">History</h1>
       {data.length === 0 ? (
         <EmptyState title="No files analyzed yet">
           <Link to="/" className="text-blue-400 underline">Upload a log</Link> or load a sample to get started.
         </EmptyState>
       ) : (
-        <div className="overflow-x-auto rounded-lg bg-slate-900 ring-1 ring-slate-800">
+        <div className="overflow-x-auto card">
           <table className="w-full text-left text-sm">
             <thead className="bg-slate-800/60 text-slate-400">
               <tr>

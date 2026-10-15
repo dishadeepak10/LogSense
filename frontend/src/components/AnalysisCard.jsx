@@ -5,15 +5,15 @@ import { ConfidenceBadge, SourceTag } from './Badges'
 export default function AnalysisCard({ analysis }) {
   if (!analysis) {
     return (
-      <section className="rounded-lg bg-slate-900 p-5 ring-1 ring-slate-800">
+      <section className="card p-5">
         <p className="text-slate-400">No analysis available for this incident.</p>
       </section>
     )
   }
   return (
-    <section className="rounded-lg bg-slate-900 p-5 ring-1 ring-slate-800">
+    <section className="card p-5">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="font-semibold">AI analysis</h2>
+        <h2 className="text-lg font-semibold">AI analysis</h2>
         <ConfidenceBadge confidence={analysis.confidence} />
       </div>
       <dl className="mt-4 space-y-4">

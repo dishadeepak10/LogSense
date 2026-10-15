@@ -29,17 +29,17 @@ export default function IncidentListPage() {
         <Link to={`/files/${file.id}`} className="text-sm text-blue-400 hover:underline">
           ← Back to dashboard
         </Link>
-        <h1 className="mt-1 break-all text-2xl font-bold">Incidents in {file.file_name}</h1>
+        <h1 className="mt-1 break-all text-3xl font-bold tracking-tight">Incidents in {file.file_name}</h1>
       </div>
 
       <div className="flex flex-wrap gap-3">
         <select value={severity} onChange={(e) => setSeverity(e.target.value)}
-          className="rounded-md border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm" aria-label="Severity">
+          className="rounded-lg border border-white/10 bg-slate-900 px-3 py-1.5 text-sm transition hover:border-white/25" aria-label="Severity">
           <option value="all">All severities</option>
           {SEVERITY_ORDER.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
         <select value={category} onChange={(e) => setCategory(e.target.value)}
-          className="rounded-md border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm" aria-label="Category">
+          className="rounded-lg border border-white/10 bg-slate-900 px-3 py-1.5 text-sm transition hover:border-white/25" aria-label="Category">
           <option value="all">All categories</option>
           {categories.map((c) => <option key={c} value={c}>{CATEGORY_LABELS[c] || c}</option>)}
         </select>
@@ -51,7 +51,7 @@ export default function IncidentListPage() {
       {incidents.length === 0 && <EmptyState title="No incidents detected">The log looks healthy.</EmptyState>}
       {incidents.length > 0 && shown.length === 0 && <EmptyState title="No incidents match these filters" />}
       <div className="space-y-3">
-        {shown.map((incident) => <IncidentCard key={incident.id} incident={incident} />)}
+        {shown.map((incident, i) => <IncidentCard key={incident.id} incident={incident} delay={Math.min(i, 10) * 50} />)}
       </div>
     </div>
   )

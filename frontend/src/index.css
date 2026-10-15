@@ -6,6 +6,76 @@
   color-scheme: dark; /* dark scrollbars, file picker and dropdowns */
 }
 
+/* Tailwind sizes are in rem, so this one line makes ALL text and spacing ~12% bigger. */
+html {
+  font-size: 112.5%;
+}
+
 body {
   @apply bg-slate-950 text-slate-100 antialiased;
+  /* Two soft colored glows behind the page */
+  background-image:
+    radial-gradient(60rem 30rem at 10% -10%, rgb(59 130 246 / 0.12), transparent 60%),
+    radial-gradient(50rem 30rem at 100% 0%, rgb(139 92 246 / 0.10), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* ---------- Reusable looks ---------- */
+
+/* A panel. Its border brightens a little on hover. */
+@utility card {
+  @apply rounded-xl bg-slate-900/70 ring-1 ring-white/10 transition duration-200 hover:ring-white/20;
+}
+
+/* A panel you can click: it lifts and glows on hover. */
+@utility card-link {
+  @apply rounded-xl bg-slate-900/70 ring-1 ring-white/10 transition duration-200
+    hover:-translate-y-0.5 hover:ring-blue-500/50 hover:shadow-[0_10px_40px_-12px_rgb(59_130_246/0.5)];
+}
+
+/* The main action button. */
+@utility btn-primary {
+  @apply rounded-lg bg-linear-to-r from-blue-600 to-violet-600 px-4 py-2 font-semibold text-white shadow-lg
+    shadow-blue-900/40 transition hover:brightness-110 active:scale-95
+    disabled:cursor-not-allowed disabled:from-slate-700 disabled:to-slate-700 disabled:shadow-none;
+}
+
+/* A quieter button. */
+@utility btn-secondary {
+  @apply rounded-lg bg-slate-800/80 px-3 py-2 font-medium text-slate-100 ring-1 ring-white/10 transition
+    hover:bg-slate-700 hover:ring-white/20 active:scale-95 disabled:text-slate-500;
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid rgb(96 165 250);
+  outline-offset: 2px;
+}
+
+/* ---------- Animations ---------- */
+
+/* Things slide up and fade in when a page opens. Add style={{ animationDelay }} to stagger them. */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+.rise {
+  animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* Slow glow for the drop zone while a file is dragged over it */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(59 130 246 / 0.0); }
+  50% { box-shadow: 0 0 40px 4px rgb(59 130 246 / 0.35); }
+}
+.glow {
+  animation: glow 1.6s ease-in-out infinite;
+}
+
+/* People who turn on "reduce motion" in their OS get no animations at all. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

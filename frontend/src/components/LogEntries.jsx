@@ -18,8 +18,12 @@ export default function LogEntries({ entries, total, triggerLine }) {
               <button
                 onClick={() => setOpen(isOpen ? null : entry.id)}
                 aria-expanded={isOpen}
-                className="flex w-full items-start gap-2 px-2 py-1.5 text-left hover:bg-slate-800"
+                className="group flex w-full items-start gap-2 rounded px-2 py-1.5 text-left transition hover:bg-white/5"
               >
+                {/* arrow turns to point down when the line is open */}
+                <span aria-hidden="true" className={`shrink-0 text-slate-500 transition-transform group-hover:text-blue-400 ${isOpen ? 'rotate-90' : ''}`}>
+                  ▸
+                </span>
                 <span className="w-10 shrink-0 text-right text-slate-500">{entry.line_number}</span>
                 <span className="hidden w-16 shrink-0 text-slate-400 sm:block">{formatClock(entry.timestamp)}</span>
                 <span className={`w-12 shrink-0 rounded px-1 text-center ${LEVEL_STYLES[entry.level] || ''}`}>
@@ -32,7 +36,7 @@ export default function LogEntries({ entries, total, triggerLine }) {
                 </span>
               </button>
               {isOpen && (
-                <pre className="mx-2 mb-2 overflow-x-auto whitespace-pre rounded bg-slate-950 p-3 text-slate-200 ring-1 ring-slate-800">
+                <pre className="rise mx-2 mb-2 overflow-x-auto whitespace-pre rounded bg-slate-950 p-3 text-slate-200 ring-1 ring-slate-800">
                   {entry.raw}
                 </pre>
               )}

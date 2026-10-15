@@ -28,7 +28,7 @@ export default function IncidentDetailPage() {
           <CategoryTag category={incident.category} />
           <span className="text-sm text-slate-400">Incident #{incident.id}</span>
         </div>
-        <h1 className="mt-2 break-words text-xl font-bold sm:text-2xl">{incident.title}</h1>
+        <h1 className="mt-2 break-words text-2xl font-bold tracking-tight sm:text-3xl">{incident.title}</h1>
         <p className="mt-1 text-sm text-slate-400">
           {incident.error_count} errors from {formatLogTime(incident.start_time)} to{' '}
           {formatLogTime(incident.end_time)} · services: {incident.services.join(', ') || 'unknown'}
@@ -39,8 +39,8 @@ export default function IncidentDetailPage() {
         <div className="space-y-6 lg:col-span-2">
           <AnalysisCard analysis={incident.analysis} />
 
-          <section className="rounded-lg bg-slate-900 p-5 ring-1 ring-slate-800">
-            <h2 className="font-semibold">Failure timeline</h2>
+          <section className="card p-5">
+            <h2 className="text-lg font-semibold">Failure timeline</h2>
             <p className="mb-4 text-sm text-slate-400">When each service logged its first error.</p>
             <ServiceTimeline rows={incident.service_timeline} startTime={incident.start_time} endTime={incident.end_time} />
           </section>
@@ -48,8 +48,8 @@ export default function IncidentDetailPage() {
 
         <div className="space-y-6">
           <SimilarIncidents items={incident.similar_incidents} />
-          <section className="rounded-lg bg-slate-900 p-5 ring-1 ring-slate-800">
-            <h2 className="font-semibold">Candidate trigger</h2>
+          <section className="card p-5">
+            <h2 className="text-lg font-semibold">Candidate trigger</h2>
             <p className="mt-1 text-xs text-slate-400">Earliest related line (line {incident.candidate_trigger_line ?? '-'})</p>
             <p className="mt-2 break-words rounded bg-slate-800/60 p-2 font-mono text-xs text-slate-200">
               {incident.candidate_trigger || '-'}
@@ -58,8 +58,8 @@ export default function IncidentDetailPage() {
         </div>
       </div>
 
-      <section className="rounded-lg bg-slate-900 p-5 ring-1 ring-slate-800">
-        <h2 className="mb-3 font-semibold">Log lines in this incident</h2>
+      <section className="card p-5">
+        <h2 className="mb-3 text-lg font-semibold">Log lines in this incident</h2>
         <LogEntries entries={incident.entries} total={incident.total_entries} triggerLine={incident.candidate_trigger_line} />
       </section>
     </div>

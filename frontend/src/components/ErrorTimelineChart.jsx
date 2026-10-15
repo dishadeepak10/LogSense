@@ -44,7 +44,7 @@ export default function ErrorTimelineChart({ timeline, bucketSeconds }) {
     <div>
       <div className="mb-2 flex items-center justify-between text-xs text-slate-400">
         <span>One bar = {bucketSeconds >= 60 ? `${bucketSeconds / 60} min` : `${bucketSeconds} s`}</span>
-        <button onClick={() => setShowTable(!showTable)} className="text-blue-400 hover:underline">
+        <button onClick={() => setShowTable(!showTable)} className="rounded-full px-3 py-1 text-blue-300 ring-1 ring-blue-500/40 transition hover:bg-blue-500/15">
           {showTable ? 'Show chart' : 'Show as table'}
         </button>
       </div>
@@ -67,11 +67,11 @@ export default function ErrorTimelineChart({ timeline, bucketSeconds }) {
         <ResponsiveContainer width="100%" height={260}>
           <BarChart data={rows} barCategoryGap={1} margin={{ top: 8, right: 8, bottom: 0, left: -12 }}>
             <CartesianGrid vertical={false} stroke={COLORS.grid} />
-            <XAxis dataKey="label" tick={{ fontSize: 12, fill: COLORS.axis }} minTickGap={24} tickLine={false} />
-            <YAxis allowDecimals={false} tick={{ fontSize: 12, fill: COLORS.axis }} tickLine={false} axisLine={false} />
+            <XAxis dataKey="label" tick={{ fontSize: 14, fill: COLORS.axis }} minTickGap={24} tickLine={false} />
+            <YAxis allowDecimals={false} tick={{ fontSize: 14, fill: COLORS.axis }} tickLine={false} axisLine={false} />
             <Tooltip content={<ChartTooltip />} cursor={{ fill: '#1e293b' }} />
             {/* Legend words stay in normal text color; the colored square carries the identity */}
-            <Legend iconType="square" wrapperStyle={{ fontSize: 13 }}
+            <Legend iconType="square" wrapperStyle={{ fontSize: 15 }}
               formatter={(value) => <span style={{ color: '#cbd5e1' }}>{value}</span>} />
             {/* Stroke in the card color = small gap between stacked parts */}
             <Bar dataKey="errors" name="Errors" stackId="levels" fill={COLORS.errors} stroke={COLORS.surface} strokeWidth={1} />

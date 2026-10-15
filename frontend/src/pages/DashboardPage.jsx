@@ -23,7 +23,7 @@ export default function DashboardPage() {
     <div className="space-y-6">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="min-w-0">
-          <h1 className="break-all text-2xl font-bold">{file.file_name}</h1>
+          <h1 className="break-all text-3xl font-bold tracking-tight">{file.file_name}</h1>
           <p className="text-sm text-slate-400">
             {file.source === 'sample' ? 'Sample log' : 'Uploaded'} {formatUtc(file.uploaded_at)} · log covers{' '}
             {formatLogTime(summary.start_time)} to {formatLogTime(summary.end_time)}
@@ -34,14 +34,14 @@ export default function DashboardPage() {
 
       <SummaryTiles summary={summary} />
 
-      <section className="rounded-lg bg-slate-900 p-4 ring-1 ring-slate-800">
-        <h2 className="mb-2 font-semibold">Errors and warnings over time</h2>
+      <section className="card p-4">
+        <h2 className="mb-2 text-lg font-semibold">Errors and warnings over time</h2>
         <ErrorTimelineChart timeline={summary.error_timeline} bucketSeconds={summary.bucket_seconds} />
       </section>
 
       <section>
         <div className="mb-2 flex items-center justify-between">
-          <h2 className="font-semibold">Incidents ({incidents.length})</h2>
+          <h2 className="text-lg font-semibold">Incidents ({incidents.length})</h2>
           {incidents.length > TOP_INCIDENTS && (
             <Link to={`/files/${file.id}/incidents`} className="text-sm font-medium text-blue-400 hover:underline">
               View all incidents →
@@ -54,15 +54,15 @@ export default function DashboardPage() {
           </EmptyState>
         ) : (
           <div className="space-y-3">
-            {incidents.slice(0, TOP_INCIDENTS).map((incident) => (
-              <IncidentCard key={incident.id} incident={incident} />
+            {incidents.slice(0, TOP_INCIDENTS).map((incident, i) => (
+              <IncidentCard key={incident.id} incident={incident} delay={i * 80} />
             ))}
           </div>
         )}
       </section>
 
-      <section className="rounded-lg bg-slate-900 p-4 ring-1 ring-slate-800">
-        <h2 className="mb-2 font-semibold">Most frequent errors</h2>
+      <section className="card p-4">
+        <h2 className="mb-2 text-lg font-semibold">Most frequent errors</h2>
         {summary.top_error_groups.length === 0 ? (
           <p className="text-sm text-slate-400">No ERROR or FATAL lines in this log.</p>
         ) : (

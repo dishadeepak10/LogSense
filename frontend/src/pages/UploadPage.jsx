@@ -20,6 +20,12 @@ function checkFile(file) {
   return null
 }
 
+// "inventory_db_outage.log" -> "Inventory db outage"
+function prettyName(fileName) {
+  const words = fileName.replace(/\.(log|txt)$/i, '').replace(/[_-]+/g, ' ')
+  return words.charAt(0).toUpperCase() + words.slice(1)
+}
+
 export default function UploadPage() {
   const navigate = useNavigate()
   const inputRef = useRef(null)
@@ -57,7 +63,10 @@ export default function UploadPage() {
   return (
     <div className="grid gap-6 lg:grid-cols-3">
       <section className="lg:col-span-2">
-        <h1 className="text-2xl font-bold">Analyze a log file</h1>
+        <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+          Analyze a{' '}
+          <span className="bg-linear-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">log file</span>
+        </h1>
         <p className="mt-1 text-slate-400">
           Upload an application log. LogSense finds incidents, shows how the failure spread, and explains the
           probable root cause.
@@ -74,16 +83,31 @@ export default function UploadPage() {
             setDragging(false)
             pickFile(e.dataTransfer.files[0])
           }}
-          className={`mt-5 flex flex-col items-center justify-center rounded-xl border-2 border-dashed p-10 text-center transition ${
-            dragging ? 'border-blue-500 bg-blue-950/50' : 'border-slate-700 bg-slate-900'
+          onClick={() => inputRef.current.click()}
+          className={`group mt-6 flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed p-12 text-center transition duration-300 ${
+            dragging
+              ? 'glow scale-[1.02] border-blue-400 bg-blue-950/50'
+              : 'border-slate-700 bg-slate-900/60 hover:border-blue-500/60 hover:bg-slate-900'
           }`}
         >
-          <p className="font-medium text-slate-300">Drag a .log or .txt file here</p>
+          {/* upload icon: bounces while a file is dragged over */}
+          <svg
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"
+            className={`mb-3 h-14 w-14 text-blue-400 transition group-hover:-translate-y-1 ${dragging ? 'animate-bounce' : ''}`}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 16V4m0 0l-4 4m4-4l4 4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+          </svg>
+          <p className="text-lg font-medium text-slate-200">
+            {dragging ? 'Drop it!' : 'Drag a .log or .txt file here'}
+          </p>
           <p className="my-2 text-sm text-slate-400">or</p>
           <button
             type="button"
-            onClick={() => inputRef.current.click()}
-            className="rounded-md bg-slate-900 px-4 py-2 text-sm font-medium ring-1 ring-slate-700 hover:bg-slate-800"
+            onClick={(e) => {
+              e.stopPropagation() // the whole box already opens the picker; don't open it twice
+              inputRef.current.click()
+            }}
+            className="btn-secondary px-4"
           >
             Choose file
           </button>
@@ -98,15 +122,20 @@ export default function UploadPage() {
         </div>
 
         {file && (
-          <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-lg bg-slate-900 p-4 ring-1 ring-slate-800">
-            <div className="min-w-0">
-              <p className="truncate font-medium">{file.name}</p>
-              <p className="text-sm text-slate-400">{formatBytes(file.size)}</p>
+          <div className="card rise mt-4 flex flex-wrap items-center justify-between gap-3 p-4">
+            <div className="flex min-w-0 items-center gap-3">
+              <span className="rounded-lg bg-blue-500/15 px-2 py-1 font-mono text-xs text-blue-300 ring-1 ring-blue-500/30">
+                LOG
+              </span>
+              <div className="min-w-0">
+                <p className="truncate font-medium">{file.name}</p>
+                <p className="text-sm text-slate-400">{formatBytes(file.size)}</p>
+              </div>
             </div>
             <button
               onClick={() => run('upload', () => uploadLog(file, setProgress))}
               disabled={uploadDisabled}
-              className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-slate-700"
+              className="btn-primary"
             >
               {busy === 'upload' ? 'Analyzing...' : 'Upload and analyze'}
             </button>
@@ -115,8 +144,11 @@ export default function UploadPage() {
 
         {busy === 'upload' && (
           <div className="mt-4">
-            <div className="h-2 overflow-hidden rounded-full bg-slate-700">
-              <div className="h-full bg-blue-600 transition-all" style={{ width: `${progress}%` }} />
+            <div className="h-2.5 overflow-hidden rounded-full bg-slate-800">
+              <div
+                className={`h-full rounded-full bg-linear-to-r from-blue-500 to-violet-500 transition-all ${progress >= 100 ? 'animate-pulse' : ''}`}
+                style={{ width: `${progress}%` }}
+              />
             </div>
             <p className="mt-2 text-sm text-slate-400">
               {progress < 100 ? `Uploading... ${progress}%` : 'Uploaded. Finding incidents and asking for root causes...'}
@@ -131,8 +163,8 @@ export default function UploadPage() {
         )}
       </section>
 
-      <aside className="rounded-xl bg-slate-900 p-5 ring-1 ring-slate-800">
-        <h2 className="font-semibold">No log at hand?</h2>
+      <aside className="card p-5">
+        <h2 className="text-lg font-semibold">No log at hand?</h2>
         <p className="mt-1 text-sm text-slate-400">Try one of the sample logs with a known failure.</p>
         <div className="mt-4">
           {samples.loading && <Loading text="Loading samples..." />}
@@ -140,25 +172,32 @@ export default function UploadPage() {
           {samples.data && samples.data.length === 0 && <EmptyState title="No sample logs on the server" />}
           {samples.data && samples.data.length > 0 && (
             <>
-              <label htmlFor="sample" className="text-sm font-medium text-slate-300">
-                Sample
-              </label>
-              <select
-                id="sample"
-                value={selectedSample}
-                onChange={(e) => setSampleName(e.target.value)}
-                className="mt-1 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm"
-              >
-                {samples.data.map((s) => (
-                  <option key={s.name} value={s.name}>
-                    {s.name} ({formatBytes(s.size_bytes)})
-                  </option>
-                ))}
-              </select>
+              {/* Each sample is a button; the selected one is highlighted (works like radio buttons) */}
+              <div role="radiogroup" aria-label="Sample log" className="max-h-80 space-y-1.5 overflow-y-auto pr-1">
+                {samples.data.map((s) => {
+                  const selected = s.name === selectedSample
+                  return (
+                    <button
+                      key={s.name}
+                      role="radio"
+                      aria-checked={selected}
+                      onClick={() => setSampleName(s.name)}
+                      className={`flex w-full items-center justify-between gap-2 rounded-lg px-3 py-2 text-left text-sm transition ${
+                        selected
+                          ? 'bg-blue-500/15 text-white ring-1 ring-blue-500/60'
+                          : 'text-slate-300 ring-1 ring-white/5 hover:bg-white/5 hover:ring-white/15'
+                      }`}
+                    >
+                      <span className="min-w-0 truncate">{prettyName(s.name)}</span>
+                      <span className="shrink-0 text-xs text-slate-500">{formatBytes(s.size_bytes)}</span>
+                    </button>
+                  )
+                })}
+              </div>
               <button
                 onClick={() => run('sample', () => loadSample(selectedSample))}
                 disabled={busy !== null}
-                className="mt-3 w-full rounded-md bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-white disabled:bg-slate-700"
+                className="btn-primary mt-4 w-full"
               >
                 {busy === 'sample' ? 'Analyzing sample...' : 'Load sample log'}
               </button>

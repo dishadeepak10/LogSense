@@ -22,7 +22,7 @@ export default function ReportButton({ fileId }) {
       <button
         onClick={download}
         disabled={busy}
-        className="rounded-md bg-slate-900 px-3 py-2 text-sm font-medium ring-1 ring-slate-700 hover:bg-slate-800 disabled:text-slate-600"
+        className="btn-secondary text-sm"
       >
         {busy ? 'Preparing...' : 'Download report (.md)'}
       </button>
