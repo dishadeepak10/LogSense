@@ -4,7 +4,7 @@ import { LogoMark } from './Logo'
 
 export function Loading({ text = 'Loading...' }) {
   return (
-    <div role="status" className="flex flex-col items-center justify-center gap-3 py-16 text-slate-400">
+    <div role="status" className="flex flex-col items-center justify-center gap-3 py-16 text-zinc-400">
       <LogoMark size={44} looping />
       {text}
     </div>
@@ -19,7 +19,7 @@ export function ErrorState({ message, onRetry }) {
       {onRetry && (
         <button
           onClick={onRetry}
-          className="mt-3 rounded-md bg-slate-900 px-3 py-1.5 text-sm font-medium text-red-300 ring-1 ring-red-800 hover:bg-red-900"
+          className="mt-3 rounded-md bg-panel px-3 py-1.5 text-sm font-medium text-red-300 ring-1 ring-red-800 hover:bg-red-900"
         >
           Try again
         </button>
@@ -30,9 +30,9 @@ export function ErrorState({ message, onRetry }) {
 
 export function EmptyState({ title, children }) {
   return (
-    <div className="rounded-lg border border-dashed border-slate-700 bg-slate-900 p-8 text-center">
-      <p className="font-medium text-slate-300">{title}</p>
-      {children && <div className="mt-1 text-sm text-slate-400">{children}</div>}
+    <div className="rounded-lg border border-dashed border-zinc-700 bg-panel p-8 text-center">
+      <p className="font-medium text-zinc-300">{title}</p>
+      {children && <div className="mt-1 text-sm text-zinc-400">{children}</div>}
     </div>
   )
 }

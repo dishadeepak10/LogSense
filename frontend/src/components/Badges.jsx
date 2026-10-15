@@ -14,7 +14,7 @@ export function SeverityBadge({ severity }) {
 
 export function CategoryTag({ category }) {
   return (
-    <span className="inline-flex rounded-md bg-slate-800 px-2 py-0.5 text-xs font-medium text-slate-300">
+    <span className="inline-flex rounded-md bg-zinc-800 px-2 py-0.5 text-xs font-medium text-zinc-300">
       {CATEGORY_LABELS[category] || category}
     </span>
   )
@@ -39,7 +39,7 @@ export function ConfidenceBadge({ confidence }) {
 
 export function SourceTag({ source }) {
   return (
-    <span className="text-xs text-slate-400">
+    <span className="text-xs text-zinc-400">
       {source === 'llm' ? 'Explained by the AI model' : 'Rule-based explanation (no AI used)'}
     </span>
   )

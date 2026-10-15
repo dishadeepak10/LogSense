@@ -26,7 +26,7 @@ export default function IncidentListPage() {
   return (
     <div className="space-y-4">
       <div>
-        <Link to={`/files/${file.id}`} className="text-sm text-blue-400 hover:underline">
+        <Link to={`/files/${file.id}`} className="text-sm text-accent-soft hover:underline">
           ← Back to dashboard
         </Link>
         <h1 className="mt-1 break-all text-3xl font-bold tracking-tight">Incidents in {file.file_name}</h1>
@@ -34,16 +34,16 @@ export default function IncidentListPage() {
 
       <div className="flex flex-wrap gap-3">
         <select value={severity} onChange={(e) => setSeverity(e.target.value)}
-          className="rounded-lg border border-white/10 bg-slate-900 px-3 py-1.5 text-sm transition hover:border-white/25" aria-label="Severity">
+          className="rounded-lg border border-white/10 bg-panel px-3 py-1.5 text-sm transition hover:border-white/25" aria-label="Severity">
           <option value="all">All severities</option>
           {SEVERITY_ORDER.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
         <select value={category} onChange={(e) => setCategory(e.target.value)}
-          className="rounded-lg border border-white/10 bg-slate-900 px-3 py-1.5 text-sm transition hover:border-white/25" aria-label="Category">
+          className="rounded-lg border border-white/10 bg-panel px-3 py-1.5 text-sm transition hover:border-white/25" aria-label="Category">
           <option value="all">All categories</option>
           {categories.map((c) => <option key={c} value={c}>{CATEGORY_LABELS[c] || c}</option>)}
         </select>
-        <span className="self-center text-sm text-slate-400">
+        <span className="self-center text-sm text-zinc-400">
           Showing {shown.length} of {incidents.length}
         </span>
       </div>

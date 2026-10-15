@@ -20,16 +20,16 @@ export default function IncidentDetailPage() {
   return (
     <div className="space-y-6">
       <div>
-        <Link to={`/files/${incident.file_id}`} className="text-sm text-blue-400 hover:underline">
+        <Link to={`/files/${incident.file_id}`} className="text-sm text-accent-soft hover:underline">
           ← {incident.file_name}
         </Link>
         <div className="mt-2 flex flex-wrap items-center gap-2">
           <SeverityBadge severity={incident.severity} />
           <CategoryTag category={incident.category} />
-          <span className="text-sm text-slate-400">Incident #{incident.id}</span>
+          <span className="text-sm text-zinc-400">Incident #{incident.id}</span>
         </div>
         <h1 className="mt-2 break-words text-2xl font-bold tracking-tight sm:text-3xl">{incident.title}</h1>
-        <p className="mt-1 text-sm text-slate-400">
+        <p className="mt-1 text-sm text-zinc-400">
           {incident.error_count} errors from {formatLogTime(incident.start_time)} to{' '}
           {formatLogTime(incident.end_time)} · services: {incident.services.join(', ') || 'unknown'}
         </p>
@@ -41,7 +41,7 @@ export default function IncidentDetailPage() {
 
           <section className="card p-5">
             <h2 className="text-lg font-semibold">Failure timeline</h2>
-            <p className="mb-4 text-sm text-slate-400">When each service logged its first error.</p>
+            <p className="mb-4 text-sm text-zinc-400">When each service logged its first error.</p>
             <ServiceTimeline rows={incident.service_timeline} startTime={incident.start_time} endTime={incident.end_time} />
           </section>
         </div>
@@ -50,8 +50,8 @@ export default function IncidentDetailPage() {
           <SimilarIncidents items={incident.similar_incidents} />
           <section className="card p-5">
             <h2 className="text-lg font-semibold">Candidate trigger</h2>
-            <p className="mt-1 text-xs text-slate-400">Earliest related line (line {incident.candidate_trigger_line ?? '-'})</p>
-            <p className="mt-2 break-words rounded bg-slate-800/60 p-2 font-mono text-xs text-slate-200">
+            <p className="mt-1 text-xs text-zinc-400">Earliest related line (line {incident.candidate_trigger_line ?? '-'})</p>
+            <p className="mt-2 break-words rounded bg-zinc-800/60 p-2 font-mono text-xs text-zinc-200">
               {incident.candidate_trigger || '-'}
             </p>
           </section>

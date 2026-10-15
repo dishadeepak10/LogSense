@@ -17,12 +17,12 @@ export default function HistoryPage() {
       <h1 className="mb-4 text-3xl font-bold tracking-tight">History</h1>
       {data.length === 0 ? (
         <EmptyState title="No files analyzed yet">
-          <Link to="/" className="text-blue-400 underline">Upload a log</Link> or load a sample to get started.
+          <Link to="/" className="text-accent-soft underline">Upload a log</Link> or load a sample to get started.
         </EmptyState>
       ) : (
         <div className="overflow-x-auto card">
           <table className="w-full text-left text-sm">
-            <thead className="bg-slate-800/60 text-slate-400">
+            <thead className="bg-zinc-800/60 text-zinc-400">
               <tr>
                 <th className="px-4 py-2">File</th>
                 <th className="px-4">Analyzed</th>
@@ -32,12 +32,12 @@ export default function HistoryPage() {
             </thead>
             <tbody>
               {data.map((file) => (
-                <tr key={file.id} className="border-t border-slate-800">
+                <tr key={file.id} className="border-t border-zinc-800">
                   <td className="px-4 py-2">
-                    <Link to={`/files/${file.id}`} className="break-all font-medium text-blue-400 hover:underline">
+                    <Link to={`/files/${file.id}`} className="break-all font-medium text-accent-soft hover:underline">
                       {file.file_name}
                     </Link>
-                    {file.source === 'sample' && <span className="ml-2 text-xs text-slate-400">sample</span>}
+                    {file.source === 'sample' && <span className="ml-2 text-xs text-zinc-400">sample</span>}
                   </td>
                   <td className="whitespace-nowrap px-4">{formatUtc(file.uploaded_at)}</td>
                   <td className="whitespace-nowrap px-4">{formatBytes(file.size_bytes)}</td>

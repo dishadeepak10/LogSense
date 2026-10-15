@@ -21,8 +21,8 @@ export default function App() {
           <Route
             path="*"
             element={
-              <p className="text-slate-400">
-                Page not found. <Link to="/" className="text-blue-400 underline">Go to upload</Link>
+              <p className="text-zinc-400">
+                Page not found. <Link to="/" className="text-accent-soft underline">Go to upload</Link>
               </p>
             }
           />

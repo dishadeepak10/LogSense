@@ -2,10 +2,11 @@ import { NavLink, Outlet, useLocation } from 'react-router-dom'
 
 import { USE_MOCK } from '../api/client'
 import Logo from './Logo'
+import ThemeSwitcher from './ThemeSwitcher'
 
 function navClass({ isActive }) {
   return `rounded-lg px-3 py-1.5 text-sm font-medium transition ${
-    isActive ? 'bg-white/10 text-white ring-1 ring-white/15' : 'text-slate-400 hover:bg-white/5 hover:text-white'
+    isActive ? 'bg-white/10 text-white ring-1 ring-white/15' : 'text-zinc-400 hover:bg-white/5 hover:text-white'
   }`
 }
 
@@ -15,18 +16,21 @@ export default function Layout() {
   return (
     <div className="min-h-screen">
       {/* sticky + backdrop-blur: the header stays on top and the page blurs behind it */}
-      <header className="sticky top-0 z-20 border-b border-white/10 bg-slate-950/70 backdrop-blur-md">
+      <header className="sticky top-0 z-20 border-b border-white/10 bg-base/70 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
           <NavLink to="/" aria-label="LogSense home">
             <Logo />
           </NavLink>
-          <nav className="flex gap-1">
+          <nav className="flex items-center gap-1">
             <NavLink to="/" end className={navClass}>
               Upload
             </NavLink>
             <NavLink to="/history" className={navClass}>
               History
             </NavLink>
+            <span className="ml-2">
+              <ThemeSwitcher />
+            </span>
           </nav>
         </div>
       </header>

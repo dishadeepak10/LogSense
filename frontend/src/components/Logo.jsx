@@ -1,7 +1,7 @@
 import { useId, useState } from 'react'
 
 // The LogSense mark: faint log lines with a "heartbeat" line through them.
-// The amber dot sits on the spike, the anomaly that LogSense senses.
+// The colored dot sits on the spike, the anomaly that LogSense senses.
 //
 // Interactions (styles in index.css, section "Logo"):
 //   hover  -> the heartbeat line draws itself again, the dot pops, the mark tilts and glows
@@ -19,8 +19,8 @@ export function LogoMark({ size = 36, looping = false, scanKey = 0 }) {
     >
       <defs>
         <linearGradient id={`${id}-bg`} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#3b82f6" />
-          <stop offset="1" stopColor="#7c3aed" />
+          <stop offset="0" style={{ stopColor: 'var(--btn-1)' }} />
+          <stop offset="1" style={{ stopColor: 'var(--btn-2)' }} />
         </linearGradient>
         <linearGradient id={`${id}-scan`} x1="0" y1="0" x2="1" y2="0">
           <stop offset="0" stopColor="#fff" stopOpacity="0" />
@@ -50,7 +50,7 @@ export function LogoMark({ size = 36, looping = false, scanKey = 0 }) {
         strokeLinejoin="round"
       />
       {/* the anomaly */}
-      <circle className="logo-dot" cx="24" cy="11" r="3" fill="#fbbf24" stroke="#1e1b4b" strokeWidth="1" />
+      <circle className="logo-dot" cx="24" cy="11" r="3" style={{ fill: 'var(--accent-dot)' }} stroke="#111" strokeWidth="1" />
       {/* scan beam: re-mounted (new key) on every click so the sweep plays again */}
       {scanKey > 0 && (
         <g clipPath={`url(#${id}-clip)`}>
@@ -69,9 +69,9 @@ export default function Logo() {
       <LogoMark scanKey={scanKey} />
       <span className="text-xl font-bold tracking-tight">
         <span className="text-white">Log</span>
-        <span className="bg-linear-to-r from-blue-300 to-violet-300 bg-clip-text text-transparent">Sense</span>
+        <span className="bg-linear-to-r from-accent-soft to-accent-2 bg-clip-text text-transparent">Sense</span>
       </span>
-      <span className="hidden max-w-0 overflow-hidden whitespace-nowrap text-sm text-slate-400 opacity-0 transition-all duration-500 group-hover:max-w-56 group-hover:opacity-100 md:inline">
+      <span className="hidden max-w-0 overflow-hidden whitespace-nowrap text-sm text-zinc-400 opacity-0 transition-all duration-500 group-hover:max-w-56 group-hover:opacity-100 md:inline">
         · logs, made sense of
       </span>
     </span>

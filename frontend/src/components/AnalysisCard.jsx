@@ -6,7 +6,7 @@ export default function AnalysisCard({ analysis }) {
   if (!analysis) {
     return (
       <section className="card p-5">
-        <p className="text-slate-400">No analysis available for this incident.</p>
+        <p className="text-zinc-400">No analysis available for this incident.</p>
       </section>
     )
   }
@@ -18,21 +18,21 @@ export default function AnalysisCard({ analysis }) {
       </div>
       <dl className="mt-4 space-y-4">
         <div>
-          <dt className="text-sm font-semibold text-slate-400">Probable root cause</dt>
-          <dd className="mt-1 text-slate-100">{analysis.root_cause}</dd>
+          <dt className="text-sm font-semibold text-zinc-400">Probable root cause</dt>
+          <dd className="mt-1 text-zinc-100">{analysis.root_cause}</dd>
         </div>
         <div>
-          <dt className="text-sm font-semibold text-slate-400">Why</dt>
-          <dd className="mt-1 whitespace-pre-line break-words text-slate-200">{analysis.why}</dd>
+          <dt className="text-sm font-semibold text-zinc-400">Why</dt>
+          <dd className="mt-1 whitespace-pre-line break-words text-zinc-200">{analysis.why}</dd>
         </div>
         <div>
-          <dt className="text-sm font-semibold text-slate-400">Suggested action</dt>
-          <dd className="mt-1 whitespace-pre-line text-slate-200">{analysis.suggested_action}</dd>
+          <dt className="text-sm font-semibold text-zinc-400">Suggested action</dt>
+          <dd className="mt-1 whitespace-pre-line text-zinc-200">{analysis.suggested_action}</dd>
         </div>
       </dl>
-      <p className="mt-4 border-t border-slate-800 pt-3">
+      <p className="mt-4 border-t border-zinc-800 pt-3">
         <SourceTag source={analysis.source} />
-        <span className="text-xs text-slate-500"> · {formatUtc(analysis.created_at)}</span>
+        <span className="text-xs text-zinc-500"> · {formatUtc(analysis.created_at)}</span>
       </p>
     </section>
   )

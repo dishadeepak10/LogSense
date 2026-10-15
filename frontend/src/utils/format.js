@@ -47,7 +47,7 @@ export const SEVERITY_STYLES = {
   critical: 'bg-red-950 text-red-300 ring-red-800',
   high: 'bg-orange-950 text-orange-300 ring-orange-800',
   medium: 'bg-amber-950 text-amber-300 ring-amber-800',
-  low: 'bg-slate-800 text-slate-300 ring-slate-700',
+  low: 'bg-zinc-800 text-zinc-300 ring-zinc-700',
 }
 
 export const CATEGORY_LABELS = {
@@ -65,6 +65,6 @@ export const LEVEL_STYLES = {
   FATAL: 'text-red-300 bg-red-950',
   ERROR: 'text-red-400 bg-red-950/40',
   WARN: 'text-amber-300 bg-amber-950/40',
-  INFO: 'text-slate-300 bg-slate-800',
-  DEBUG: 'text-slate-400 bg-slate-800/60',
+  INFO: 'text-zinc-300 bg-zinc-800',
+  DEBUG: 'text-zinc-400 bg-zinc-800/60',
 }

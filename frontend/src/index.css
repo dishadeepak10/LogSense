@@ -1,9 +1,32 @@
 @import "tailwindcss";
 
-/* Dark theme. Chart colors are set in ErrorTimelineChart.jsx and ServiceTimeline.jsx
-   (checked for color-blind separation and contrast on the dark cards). */
+/* Dark theme with three color palettes (theme.jsx). Error/warning chart colors never change:
+   they mean "error" and "warning" in every palette. */
 :root {
   color-scheme: dark; /* dark scrollbars, file picker and dropdowns */
+  /* Theme colors. These are the "Terminal Green" defaults; theme.jsx overwrites them
+     when another palette is picked in the header. */
+  --accent-1: #10b981;
+  --accent-2: #14b8a6;
+  --accent-soft: #6ee7b7;
+  --accent-dot: #a3e635;
+  --btn-1: #059669;
+  --btn-2: #0d9488;
+  --btn-text: #ffffff;
+  --surface-base: #09090b;
+  --surface-panel: #18181b;
+  --glow-1: rgb(16 185 129 / 0.12);
+  --glow-2: rgb(20 184 166 / 0.08);
+}
+
+/* Makes Tailwind classes from the variables: bg-accent-1, text-accent-soft, ring-accent-1/50, bg-panel, bg-base ... */
+@theme inline {
+  --color-accent-1: var(--accent-1);
+  --color-accent-2: var(--accent-2);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-dot: var(--accent-dot);
+  --color-base: var(--surface-base);
+  --color-panel: var(--surface-panel);
 }
 
 /* Tailwind sizes are in rem, so this one line makes ALL text and spacing ~12% bigger. */
@@ -12,11 +35,12 @@ html {
 }
 
 body {
-  @apply bg-slate-950 text-slate-100 antialiased;
+  @apply bg-base text-zinc-100 antialiased;
+  transition: background-color 0.4s;
   /* Two soft colored glows behind the page */
   background-image:
-    radial-gradient(60rem 30rem at 10% -10%, rgb(59 130 246 / 0.12), transparent 60%),
-    radial-gradient(50rem 30rem at 100% 0%, rgb(139 92 246 / 0.10), transparent 60%);
+    radial-gradient(60rem 30rem at 10% -10%, var(--glow-1), transparent 60%),
+    radial-gradient(50rem 30rem at 100% 0%, var(--glow-2), transparent 60%);
   background-attachment: fixed;
 }
 
@@ -24,31 +48,40 @@ body {
 
 /* A panel. Its border brightens a little on hover. */
 @utility card {
-  @apply rounded-xl bg-slate-900/70 ring-1 ring-white/10 transition duration-200 hover:ring-white/20;
+  @apply rounded-xl bg-panel/80 ring-1 ring-white/10 transition duration-200 hover:ring-white/20;
 }
 
 /* A panel you can click: it lifts and glows on hover. */
 @utility card-link {
-  @apply rounded-xl bg-slate-900/70 ring-1 ring-white/10 transition duration-200
-    hover:-translate-y-0.5 hover:ring-blue-500/50 hover:shadow-[0_10px_40px_-12px_rgb(59_130_246/0.5)];
+  @apply rounded-xl bg-panel/80 ring-1 ring-white/10 transition duration-200 hover:-translate-y-0.5 hover:ring-accent-1/50;
+  &:hover {
+    box-shadow: 0 10px 40px -12px color-mix(in srgb, var(--accent-1) 55%, transparent);
+  }
 }
 
 /* The main action button. */
 @utility btn-primary {
-  @apply rounded-lg bg-linear-to-r from-blue-600 to-violet-600 px-4 py-2 font-semibold text-white shadow-lg
-    shadow-blue-900/40 transition hover:brightness-110 active:scale-95
-    disabled:cursor-not-allowed disabled:from-slate-700 disabled:to-slate-700 disabled:shadow-none;
+  @apply rounded-lg px-4 py-2 font-semibold transition hover:brightness-110 active:scale-95;
+  background-image: linear-gradient(to right, var(--btn-1), var(--btn-2));
+  color: var(--btn-text);
+  box-shadow: 0 8px 24px -10px color-mix(in srgb, var(--btn-1) 70%, transparent);
+  &:disabled {
+    @apply cursor-not-allowed text-zinc-400;
+    background-image: none;
+    background-color: var(--color-zinc-700);
+    box-shadow: none;
+  }
 }
 
 /* A quieter button. */
 @utility btn-secondary {
-  @apply rounded-lg bg-slate-800/80 px-3 py-2 font-medium text-slate-100 ring-1 ring-white/10 transition
-    hover:bg-slate-700 hover:ring-white/20 active:scale-95 disabled:text-slate-500;
+  @apply rounded-lg bg-zinc-800/80 px-3 py-2 font-medium text-zinc-100 ring-1 ring-white/10 transition
+    hover:bg-zinc-700 hover:ring-white/20 active:scale-95 disabled:text-zinc-500;
 }
 
 /* Visible keyboard focus everywhere */
 :focus-visible {
-  outline: 2px solid rgb(96 165 250);
+  outline: 2px solid var(--accent-1);
   outline-offset: 2px;
 }
 
@@ -65,8 +98,8 @@ body {
 
 /* Slow glow for the drop zone while a file is dragged over it */
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgb(59 130 246 / 0.0); }
-  50% { box-shadow: 0 0 40px 4px rgb(59 130 246 / 0.35); }
+  0%, 100% { box-shadow: 0 0 0 0 transparent; }
+  50% { box-shadow: 0 0 40px 4px color-mix(in srgb, var(--accent-1) 35%, transparent); }
 }
 .glow {
   animation: glow 1.6s ease-in-out infinite;
@@ -79,7 +112,7 @@ body {
 }
 .logo:hover .logo-mark {
   transform: rotate(-8deg) scale(1.1);
-  filter: drop-shadow(0 0 10px rgb(99 102 241 / 0.7));
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--accent-1) 70%, transparent));
 }
 .logo:active .logo-mark {
   transform: rotate(-8deg) scale(0.95);
