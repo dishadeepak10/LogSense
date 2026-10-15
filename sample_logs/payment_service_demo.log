@@ -1,0 +1,225 @@
+2026-10-01 09:00:00,331 INFO  [api-gateway] Service started on port 8080, version 2.4.1
+2026-10-01 09:00:00,049 INFO  [payment-service] Payment 61750 authorized amount=338.00 INR
+2026-10-01 09:00:07,059 INFO  [api-gateway] GET /api/orders/6991 200 86ms
+2026-10-01 09:00:28,444 INFO  [payment-service] Payment 14914 authorized amount=49.00 INR
+2026-10-01 09:00:46,564 INFO  [api-gateway] GET /api/orders/4943 200 23ms
+2026-10-01 09:01:04,645 INFO  [api-gateway] GET /api/orders/3028 200 40ms
+2026-10-01 09:01:29,999 INFO  [api-gateway] GET /api/orders/7499 200 18ms
+2026-10-01 09:01:41,429 INFO  [api-gateway] GET /api/orders/3181 200 49ms
+2026-10-01 09:01:50,835 INFO  [api-gateway] GET /api/orders/6054 200 83ms
+2026-10-01 09:02:00,099 INFO  [api-gateway] GET /api/orders/4078 200 59ms
+2026-10-01 09:02:22,508 INFO  [api-gateway] GET /api/orders/1976 200 38ms
+2026-10-01 09:02:44,599 DEBUG [db-proxy] Pool stats active=15 idle=34 max=50
+2026-10-01 09:03:03,813 INFO  [order-service] Order 49291 created for user 255
+2026-10-01 09:03:13,307 INFO  [payment-service] Payment 20728 authorized amount=299.00 INR
+2026-10-01 09:03:34,294 DEBUG [db-proxy] Pool stats active=15 idle=34 max=50
+2026-10-01 09:03:58,428 INFO  [api-gateway] GET /api/orders/2934 200 77ms
+2026-10-01 09:04:08,500 INFO  [order-service] Order 29920 created for user 956
+2026-10-01 09:04:26,586 INFO  [api-gateway] GET /api/orders/2271 200 83ms
+2026-10-01 09:04:41,508 INFO  [order-service] Order 55898 created for user 609
+2026-10-01 09:05:04,967 DEBUG [db-proxy] Pool stats active=7 idle=22 max=50
+2026-10-01 09:05:17,748 DEBUG [db-proxy] Pool stats active=7 idle=21 max=50
+2026-10-01 09:05:31,908 DEBUG [db-proxy] Pool stats active=14 idle=32 max=50
+2026-10-01 09:05:47,172 INFO  [api-gateway] GET /api/orders/8564 200 57ms
+2026-10-01 09:06:11,223 INFO  [api-gateway] GET /api/orders/9088 200 19ms
+2026-10-01 09:06:25,400 INFO  [payment-service] Payment 42455 authorized amount=208.00 INR
+2026-10-01 09:06:45,411 INFO  [api-gateway] GET /api/orders/3725 200 69ms
+2026-10-01 09:07:07,440 INFO  [order-service] Order 27947 created for user 839
+2026-10-01 09:07:29,699 INFO  [order-service] Order 64433 created for user 368
+2026-10-01 09:07:46,180 INFO  [payment-service] Payment 29781 authorized amount=47.00 INR
+2026-10-01 09:07:55,012 INFO  [payment-service] Payment 96313 authorized amount=124.00 INR
+2026-10-01 09:08:15,004 INFO  [payment-service] Payment 44438 authorized amount=149.00 INR
+2026-10-01 09:08:24,579 DEBUG [db-proxy] Pool stats active=16 idle=39 max=50
+2026-10-01 09:08:39,632 INFO  [payment-service] Payment 77566 authorized amount=491.00 INR
+2026-10-01 09:09:04,401 INFO  [api-gateway] GET /api/orders/8481 200 83ms
+2026-10-01 09:09:21,493 DEBUG [db-proxy] Pool stats active=17 idle=23 max=50
+2026-10-01 09:09:46,068 DEBUG [db-proxy] Pool stats active=6 idle=26 max=50
+2026-10-01 09:09:57,348 DEBUG [db-proxy] Pool stats active=10 idle=23 max=50
+2026-10-01 09:10:21,580 INFO  [api-gateway] GET /api/orders/2677 200 12ms
+2026-10-01 09:10:30,026 INFO  [api-gateway] GET /api/orders/6957 200 90ms
+2026-10-01 09:10:37,152 INFO  [payment-service] Payment 90487 authorized amount=197.00 INR
+2026-10-01 09:11:02,372 INFO  [order-service] Order 55533 created for user 617
+2026-10-01 09:11:22,477 INFO  [api-gateway] GET /api/orders/2889 200 74ms
+2026-10-01 09:11:42,147 DEBUG [db-proxy] Pool stats active=14 idle=22 max=50
+2026-10-01 09:11:50,848 INFO  [order-service] Order 44702 created for user 491
+2026-10-01 09:12:00,370 INFO  [api-gateway] GET /api/orders/4362 200 79ms
+2026-10-01 09:12:09,658 INFO  [api-gateway] GET /api/orders/9652 200 50ms
+2026-10-01 09:12:16,930 INFO  [order-service] Order 77947 created for user 376
+2026-10-01 09:12:26,554 INFO  [order-service] Order 39201 created for user 546
+2026-10-01 09:12:47,627 INFO  [order-service] Order 93419 created for user 229
+2026-10-01 09:12:58,822 INFO  [payment-service] Payment 62518 authorized amount=383.00 INR
+2026-10-01 09:13:10,364 INFO  [payment-service] Payment 77847 authorized amount=257.00 INR
+2026-10-01 09:13:15,265 INFO  [api-gateway] GET /api/orders/5577 200 72ms
+2026-10-01 09:13:26,959 INFO  [order-service] Order 68619 created for user 828
+2026-10-01 09:13:42,104 INFO  [order-service] Order 20556 created for user 226
+2026-10-01 09:13:54,209 DEBUG [db-proxy] Pool stats active=11 idle=30 max=50
+2026-10-01 09:14:14,818 INFO  [api-gateway] GET /api/orders/8855 200 56ms
+2026-10-01 09:14:39,801 INFO  [api-gateway] GET /api/orders/2964 200 61ms
+2026-10-01 09:14:50,808 DEBUG [db-proxy] Pool stats active=10 idle=33 max=50
+2026-10-01 09:15:15,968 INFO  [order-service] Order 21370 created for user 821
+2026-10-01 09:15:32,742 DEBUG [db-proxy] Pool stats active=17 idle=22 max=50
+2026-10-01 09:15:42,154 INFO  [payment-service] Payment 26651 authorized amount=19.00 INR
+2026-10-01 09:16:05,846 DEBUG [db-proxy] Pool stats active=9 idle=39 max=50
+2026-10-01 09:16:29,561 DEBUG [db-proxy] Pool stats active=16 idle=24 max=50
+2026-10-01 09:16:51,818 INFO  [payment-service] Payment 12804 authorized amount=12.00 INR
+2026-10-01 09:17:16,444 INFO  [api-gateway] GET /api/orders/9627 200 29ms
+2026-10-01 09:17:27,217 INFO  [payment-service] Payment 13669 authorized amount=133.00 INR
+2026-10-01 09:17:41,265 INFO  [payment-service] Payment 86865 authorized amount=171.00 INR
+2026-10-01 09:18:03,931 DEBUG [db-proxy] Pool stats active=9 idle=21 max=50
+2026-10-01 09:18:19,133 DEBUG [db-proxy] Pool stats active=18 idle=36 max=50
+2026-10-01 09:18:41,019 INFO  [payment-service] Payment 78617 authorized amount=266.00 INR
+2026-10-01 09:19:00,794 INFO  [payment-service] Payment 89764 authorized amount=7.00 INR
+2026-10-01 09:19:09,633 INFO  [payment-service] Payment 28554 authorized amount=247.00 INR
+2026-10-01 09:19:17,543 INFO  [api-gateway] GET /api/orders/6340 200 78ms
+2026-10-01 09:19:39,058 DEBUG [db-proxy] Pool stats active=8 idle=37 max=50
+2026-10-01 09:19:51,790 INFO  [payment-service] Payment 46296 authorized amount=26.00 INR
+2026-10-01 09:19:59,453 DEBUG [db-proxy] Pool stats active=5 idle=22 max=50
+=== log rotated by logrotate ===
+2026-10-01 09:20:14,627 WARN  [db-proxy] Connection pool usage at 92% (46/50)
+2026-10-01 09:20:32,620 WARN  [payment-service] Slow query took 4200 ms: SELECT * FROM payments WHERE status = 'PENDING'
+2026-10-01 09:20:50,204 ERROR [payment-service] Could not get JDBC connection: pool exhausted after 30000 ms
+java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
+	at com.shop.payment.PaymentRepository.save(PaymentRepository.java:58)
+Caused by: org.postgresql.util.PSQLException: FATAL: remaining connection slots are reserved
+	... 12 more
+2026-10-01 09:20:57,826 ERROR [order-service] Failed to save order 79898: database connection timed out
+2026-10-01 09:21:07,715 ERROR [order-service] Failed to save order 42460: database connection timed out
+2026-10-01 09:21:18,950 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30964ms
+2026-10-01 09:21:25,965 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30914ms
+2026-10-01 09:21:31,426 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30140ms
+2026-10-01 09:21:35,074 ERROR [payment-service] Timeout waiting for connection from pool after 29647 ms
+2026-10-01 09:21:41,685 ERROR [order-service] Failed to save order 37877: database connection timed out
+2026-10-01 09:21:48,795 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30918ms
+2026-10-01 09:21:53,676 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30658ms
+2026-10-01 09:22:01,140 ERROR [payment-service] Timeout waiting for connection from pool after 30808 ms
+2026-10-01 09:22:11,096 ERROR [payment-service] Timeout waiting for connection from pool after 30950 ms
+2026-10-01 09:22:20,683 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30166ms
+2026-10-01 09:22:26,527 ERROR [payment-service] Timeout waiting for connection from pool after 29883 ms
+2026-10-01 09:22:35,365 ERROR [payment-service] Timeout waiting for connection from pool after 29400 ms
+2026-10-01 09:23:05,094 INFO  [db-proxy] Connection pool recovered, active=18 idle=32 max=50
+2026-10-01 09:23:05,567 INFO  [order-service] Order 12553 created for user 347
+2026-10-01 09:23:24,339 DEBUG [db-proxy] Pool stats active=5 idle=32 max=50
+2026-10-01 09:23:45,065 INFO  [order-service] Order 77143 created for user 984
+2026-10-01 09:23:53,271 INFO  [payment-service] Payment 23733 authorized amount=48.00 INR
+2026-10-01 09:24:06,773 INFO  [api-gateway] GET /api/orders/3974 200 46ms
+2026-10-01 09:24:15,152 DEBUG [db-proxy] Pool stats active=13 idle=32 max=50
+2026-10-01 09:24:37,285 DEBUG [db-proxy] Pool stats active=15 idle=22 max=50
+2026-10-01 09:24:43,074 INFO  [payment-service] Payment 65747 authorized amount=463.00 INR
+2026-10-01 09:24:56,085 INFO  [api-gateway] GET /api/orders/2451 200 45ms
+2026-10-01 09:25:20,883 INFO  [payment-service] Payment 18732 authorized amount=140.00 INR
+2026-10-01 09:25:28,566 DEBUG [db-proxy] Pool stats active=5 idle=30 max=50
+2026-10-01 09:25:46,044 INFO  [order-service] Order 91487 created for user 133
+2026-10-01 09:26:07,268 INFO  [payment-service] Payment 24346 authorized amount=87.00 INR
+2026-10-01 09:26:13,319 INFO  [payment-service] Payment 36446 authorized amount=482.00 INR
+2026-10-01 09:26:38,210 INFO  [order-service] Order 79610 created for user 778
+2026-10-01 09:26:52,355 DEBUG [db-proxy] Pool stats active=10 idle=28 max=50
+2026-10-01 09:26:57,018 INFO  [order-service] Order 14843 created for user 16
+2026-10-01 09:27:18,251 INFO  [payment-service] Payment 77401 authorized amount=248.00 INR
+2026-10-01 09:27:37,559 INFO  [api-gateway] GET /api/orders/8080 200 75ms
+2026-10-01 09:27:54,350 INFO  [order-service] Order 38204 created for user 236
+2026-10-01 09:28:05,055 INFO  [payment-service] Payment 63044 authorized amount=182.00 INR
+2026-10-01 09:28:14,441 INFO  [api-gateway] GET /api/orders/2158 200 44ms
+2026-10-01 09:28:24,891 INFO  [api-gateway] GET /api/orders/2384 200 60ms
+2026-10-01 09:28:45,709 INFO  [order-service] Order 88483 created for user 249
+2026-10-01 09:28:59,161 INFO  [api-gateway] GET /api/orders/8527 200 35ms
+2026-10-01 09:29:12,372 DEBUG [db-proxy] Pool stats active=5 idle=28 max=50
+2026-10-01 09:29:27,988 INFO  [order-service] Order 42040 created for user 36
+2026-10-01 09:29:41,001 INFO  [payment-service] Payment 56738 authorized amount=98.00 INR
+2026-10-01 09:29:56,285 DEBUG [db-proxy] Pool stats active=7 idle=35 max=50
+2026-10-01 09:30:17,794 INFO  [payment-service] Payment 42529 authorized amount=263.00 INR
+2026-10-01 09:30:22,147 INFO  [api-gateway] GET /api/orders/5328 200 23ms
+2026-10-01 09:30:39,306 INFO  [api-gateway] GET /api/orders/7454 200 14ms
+2026-10-01 09:30:53,980 INFO  [payment-service] Payment 21073 authorized amount=304.00 INR
+2026-10-01 09:31:14,733 INFO  [payment-service] Payment 96185 authorized amount=462.00 INR
+2026-10-01 09:31:38,153 DEBUG [db-proxy] Pool stats active=15 idle=35 max=50
+2026-10-01 09:31:52,855 INFO  [payment-service] Payment 15739 authorized amount=427.00 INR
+2026-10-01 09:32:13,770 DEBUG [db-proxy] Pool stats active=9 idle=36 max=50
+2026-10-01 09:32:34,031 INFO  [api-gateway] GET /api/orders/4767 200 22ms
+2026-10-01 09:32:40,982 INFO  [payment-service] Payment 93508 authorized amount=189.00 INR
+2026-10-01 09:32:48,051 DEBUG [db-proxy] Pool stats active=19 idle=37 max=50
+2026-10-01 09:33:13,501 INFO  [api-gateway] GET /api/orders/9707 200 43ms
+2026-10-01 09:33:26,766 INFO  [api-gateway] GET /api/orders/8486 200 20ms
+2026-10-01 09:33:47,763 INFO  [api-gateway] GET /api/orders/9617 200 20ms
+2026-10-01 09:34:07,271 INFO  [order-service] Order 19758 created for user 867
+2026-10-01 09:34:19,665 INFO  [payment-service] Payment 40243 authorized amount=383.00 INR
+2026-10-01 09:34:38,490 DEBUG [db-proxy] Pool stats active=17 idle=22 max=50
+2026-10-01 09:34:52,614 INFO  [api-gateway] GET /api/orders/4248 200 21ms
+2026-10-01 09:35:01,761 INFO  [order-service] Order 43284 created for user 668
+2026-10-01 09:35:15,062 INFO  [payment-service] Payment 11634 authorized amount=251.00 INR
+2026-10-01 09:35:35,708 INFO  [order-service] Order 98080 created for user 102
+2026-10-01 09:35:46,292 DEBUG [db-proxy] Pool stats active=14 idle=36 max=50
+2026-10-01 09:36:05,915 DEBUG [db-proxy] Pool stats active=19 idle=23 max=50
+2026-10-01 09:36:27,958 INFO  [payment-service] Payment 50851 authorized amount=48.00 INR
+2026-10-01 09:36:47,078 INFO  [api-gateway] GET /api/orders/5744 200 70ms
+2026-10-01 09:37:08,214 DEBUG [db-proxy] Pool stats active=13 idle=32 max=50
+2026-10-01 09:37:19,765 INFO  [api-gateway] GET /api/orders/2479 200 30ms
+2026-10-01 09:37:40,617 INFO  [order-service] Order 57127 created for user 136
+2026-10-01 09:38:05,520 WARN  [order-service] Heap usage at 88% of 2048 MB
+2026-10-01 09:38:33,908 WARN  [order-service] GC overhead high: 61% of time spent in garbage collection
+2026-10-01 09:38:44,720 ERROR [order-service] Unhandled exception while processing batch 7781
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:3236)
+	at com.shop.order.ReportBuilder.build(ReportBuilder.java:122)
+2026-10-01 09:38:48,236 ERROR [order-service] java.lang.OutOfMemoryError: Java heap space in worker thread pool-3-thread-2
+2026-10-01 09:38:50,919 FATAL [order-service] Service crashed, exit code 137, restarting
+2026-10-01 09:39:48,497 INFO  [order-service] Service started on port 8082, version 3.1.0
+2026-10-01 09:39:48,003 DEBUG [db-proxy] Pool stats active=5 idle=25 max=50
+2026-10-01 09:40:08,744 DEBUG [db-proxy] Pool stats active=17 idle=29 max=50
+2026-10-01 09:40:17,323 DEBUG [db-proxy] Pool stats active=16 idle=32 max=50
+2026-10-01 09:40:25,768 INFO  [order-service] Order 10228 created for user 333
+2026-10-01 09:40:40,730 DEBUG [db-proxy] Pool stats active=8 idle=26 max=50
+2026-10-01 09:40:45,066 INFO  [order-service] Order 43189 created for user 382
+2026-10-01 09:41:02,947 DEBUG [db-proxy] Pool stats active=7 idle=31 max=50
+2026-10-01 09:41:20,104 INFO  [order-service] Order 16326 created for user 288
+2026-10-01 09:41:26,152 INFO  [order-service] Order 93225 created for user 959
+2026-10-01 09:41:38,323 INFO  [order-service] Order 67178 created for user 524
+2026-10-01 09:41:49,029 INFO  [order-service] Order 66065 created for user 906
+2026-10-01 09:42:14,050 DEBUG [db-proxy] Pool stats active=11 idle=22 max=50
+2026-10-01 09:42:32,890 DEBUG [db-proxy] Pool stats active=9 idle=40 max=50
+2026-10-01 09:42:46,130 DEBUG [db-proxy] Pool stats active=6 idle=37 max=50
+2026-10-01 09:42:56,288 DEBUG [db-proxy] Pool stats active=18 idle=30 max=50
+2026-10-01 09:43:10,415 INFO  [order-service] Order 95566 created for user 267
+2026-10-01 09:43:35,570 INFO  [payment-service] Payment 49431 authorized amount=252.00 INR
+2026-10-01 09:43:52,076 INFO  [api-gateway] GET /api/orders/3741 200 32ms
+2026-10-01 09:44:03,928 DEBUG [db-proxy] Pool stats active=12 idle=34 max=50
+2026-10-01 09:44:18,560 DEBUG [db-proxy] Pool stats active=18 idle=24 max=50
+2026-10-01 09:44:29,350 INFO  [payment-service] Payment 21890 authorized amount=94.00 INR
+2026-10-01 09:44:51,377 INFO  [api-gateway] GET /api/orders/6231 200 42ms
+2026-10-01 09:45:04,891 INFO  [payment-service] Payment 12632 authorized amount=388.00 INR
+2026-10-01 09:45:22,215 DEBUG [db-proxy] Pool stats active=18 idle=36 max=50
+2026-10-01 09:45:39,063 INFO  [order-service] Order 54328 created for user 771
+2026-10-01 09:45:59,368 INFO  [order-service] Order 85272 created for user 991
+2026-10-01 09:46:08,918 INFO  [payment-service] Payment 22137 authorized amount=143.00 INR
+2026-10-01 09:46:20,456 DEBUG [db-proxy] Pool stats active=17 idle=40 max=50
+2026-10-01 09:46:38,033 INFO  [order-service] Order 12858 created for user 131
+2026-10-01 09:46:56,074 DEBUG [db-proxy] Pool stats active=20 idle=20 max=50
+2026-10-01 09:47:13,801 DEBUG [db-proxy] Pool stats active=19 idle=27 max=50
+2026-10-01 09:47:21,534 INFO  [payment-service] Payment 30234 authorized amount=82.00 INR
+2026-10-01 09:47:29,795 DEBUG [db-proxy] Pool stats active=7 idle=37 max=50
+2026-10-01 09:47:35,583 INFO  [api-gateway] GET /api/orders/3058 200 41ms
+2026-10-01 09:47:41,257 INFO  [order-service] Order 26772 created for user 642
+2026-10-01 09:48:02,651 ERROR [auth-service] Invalid token for user 4512: signature expired
+2026-10-01 09:48:02,072 DEBUG [db-proxy] Pool stats active=8 idle=23 max=50
+2026-10-01 09:48:16,228 INFO  [payment-service] Payment 60866 authorized amount=138.00 INR
+2026-10-01 09:48:40,308 INFO  [api-gateway] GET /api/orders/1171 200 80ms
+2026-10-01 09:48:59,859 INFO  [order-service] Order 51465 created for user 661
+2026-10-01 09:49:11,252 DEBUG [db-proxy] Pool stats active=12 idle=37 max=50
+2026-10-01 09:49:16,022 DEBUG [db-proxy] Pool stats active=14 idle=21 max=50
+2026-10-01 09:49:27,263 DEBUG [db-proxy] Pool stats active=18 idle=22 max=50
+2026-10-01 09:49:39,504 DEBUG [db-proxy] Pool stats active=16 idle=27 max=50
+2026-10-01 09:49:45,698 INFO  [order-service] Order 65123 created for user 372
+2026-10-01 09:50:02,299 INFO  [payment-service] Payment 10885 authorized amount=413.00 INR
+2026-10-01 09:50:23,993 INFO  [api-gateway] GET /api/orders/4362 200 75ms
+2026-10-01 09:50:34,476 INFO  [order-service] Order 35419 created for user 237
+2026-10-01 09:50:46,974 INFO  [order-service] Order 48657 created for user 112
+2026-10-01 09:51:10,496 DEBUG [db-proxy] Pool stats active=10 idle=27 max=50
+2026-10-01 09:51:28,055 INFO  [api-gateway] GET /api/orders/3398 200 62ms
+2026-10-01 09:51:39,053 INFO  [api-gateway] GET /api/orders/3325 200 65ms
+2026-10-01 09:51:45,919 INFO  [payment-service] Payment 61553 authorized amount=235.00 INR
+2026-10-01 09:52:00,337 INFO  [api-gateway] GET /api/orders/2300 200 33ms
+2026-10-01 09:52:11,537 INFO  [payment-service] Payment 95520 authorized amount=484.00 INR
+2026-10-01 09:52:30,859 INFO  [api-gateway] GET /api/orders/6108 200 60ms
+2026-10-01 09:52:46,111 INFO  [order-service] Order 67990 created for user 174
+2026-10-01 09:52:51,359 INFO  [api-gateway] GET /api/orders/5584 200 22ms
