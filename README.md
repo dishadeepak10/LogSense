@@ -47,3 +47,4 @@ venv\Scripts\python scripts/evaluate.py   # sample logs vs expected results -> d
 - `docs/API_CONTRACT.md`: JSON shapes (single source of truth)
 - `docs/ANALYSIS_VIVA_NOTES.md`: how the detectors, LLM client, confidence and similarity work
 - `docs/EVALUATION.md`: evaluation results table
+- `TODO.md`: what is still open (start here)
