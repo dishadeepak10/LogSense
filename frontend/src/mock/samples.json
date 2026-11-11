@@ -1,0 +1,42 @@
+[
+  {
+    "name": "auth_certificate_expired.log",
+    "size_bytes": 30980
+  },
+  {
+    "name": "hadoop_loghub_2k.log",
+    "size_bytes": 384948
+  },
+  {
+    "name": "healthy_service.log",
+    "size_bytes": 22190
+  },
+  {
+    "name": "inventory_db_outage.log",
+    "size_bytes": 36094
+  },
+  {
+    "name": "notification_bad_config.log",
+    "size_bytes": 48881
+  },
+  {
+    "name": "order_prompt_injection.log",
+    "size_bytes": 24131
+  },
+  {
+    "name": "payment_network_timeout.log",
+    "size_bytes": 32476
+  },
+  {
+    "name": "payment_service_demo.log",
+    "size_bytes": 18616
+  },
+  {
+    "name": "report_memory_leak.log",
+    "size_bytes": 32303
+  },
+  {
+    "name": "upload_disk_full.log",
+    "size_bytes": 28632
+  }
+]

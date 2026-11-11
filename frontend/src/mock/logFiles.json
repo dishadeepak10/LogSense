@@ -1,0 +1,24 @@
+[
+  {
+    "id": 2,
+    "file_name": "payment_service_demo.log",
+    "size_bytes": 18616,
+    "source": "sample",
+    "uploaded_at": "2026-10-15T14:07:34.873324Z",
+    "total_lines": 225,
+    "parsed_lines": 224,
+    "unparsed_lines": 1,
+    "incident_count": 2
+  },
+  {
+    "id": 1,
+    "file_name": "small_app.log",
+    "size_bytes": 1098,
+    "source": "upload",
+    "uploaded_at": "2026-10-15T14:07:34.836451Z",
+    "total_lines": 14,
+    "parsed_lines": 13,
+    "unparsed_lines": 1,
+    "incident_count": 1
+  }
+]

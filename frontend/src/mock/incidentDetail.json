@@ -1,0 +1,197 @@
+{
+  "id": 3,
+  "file_id": 2,
+  "file_name": "payment_service_demo.log",
+  "title": "Database issue: Could not get JDBC connection: pool exhausted after <*> ms",
+  "category": "database",
+  "severity": "high",
+  "start_time": "2026-10-01T09:20:32.620000",
+  "end_time": "2026-10-01T09:22:35.365000",
+  "error_count": 15,
+  "services": [
+    "api-gateway",
+    "order-service",
+    "payment-service"
+  ],
+  "candidate_trigger": "2026-10-01 09:20:32,620 WARN  [payment-service] Slow query took 4200 ms: SELECT * FROM payments WHERE status = 'PENDING'",
+  "candidate_trigger_line": 79,
+  "service_timeline": [
+    {
+      "service": "payment-service",
+      "first_error": "2026-10-01T09:20:50.204000",
+      "error_count": 6
+    },
+    {
+      "service": "order-service",
+      "first_error": "2026-10-01T09:20:57.826000",
+      "error_count": 3
+    },
+    {
+      "service": "api-gateway",
+      "first_error": "2026-10-01T09:21:18.950000",
+      "error_count": 6
+    }
+  ],
+  "similar_incidents": [
+    {
+      "incident_id": 1,
+      "file_name": "small_app.log",
+      "similarity": 0.43
+    }
+  ],
+  "analysis": {
+    "root_cause": "The payment database ran out of connections: the HikariCP pool (50 connections) was exhausted, so new queries could not get a connection.",
+    "why": "The first warning is a 4.2 s slow query on payments (line 79), followed 18 s later by 'pool exhausted' and 'remaining connection slots are reserved' from PostgreSQL. order-service and api-gateway errors start after payment-service, so they look like knock-on effects.",
+    "suggested_action": "1) Find and fix the slow SELECT on payments (add an index on status). 2) Check for connections that are not returned to the pool. 3) Temporarily raise the pool size or max_connections while the fix is deployed.",
+    "confidence": "high",
+    "source": "llm",
+    "created_at": "2026-10-15T14:07:34.880121Z"
+  },
+  "total_entries": 16,
+  "entries": [
+    {
+      "id": 87,
+      "line_number": 79,
+      "timestamp": "2026-10-01T09:20:32.620000",
+      "level": "WARN",
+      "service": "payment-service",
+      "message": "Slow query took 4200 ms: SELECT * FROM payments WHERE status = 'PENDING'",
+      "raw": "2026-10-01 09:20:32,620 WARN  [payment-service] Slow query took 4200 ms: SELECT * FROM payments WHERE status = 'PENDING'"
+    },
+    {
+      "id": 88,
+      "line_number": 80,
+      "timestamp": "2026-10-01T09:20:50.204000",
+      "level": "ERROR",
+      "service": "payment-service",
+      "message": "Could not get JDBC connection: pool exhausted after 30000 ms",
+      "raw": "2026-10-01 09:20:50,204 ERROR [payment-service] Could not get JDBC connection: pool exhausted after 30000 ms\njava.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.\n\tat com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)\n\tat com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)\n\tat com.shop.payment.PaymentRepository.save(PaymentRepository.java:58)\nCaused by: org.postgresql.util.PSQLException: FATAL: remaining connection slots are reserved\n\t... 12 more"
+    },
+    {
+      "id": 89,
+      "line_number": 87,
+      "timestamp": "2026-10-01T09:20:57.826000",
+      "level": "ERROR",
+      "service": "order-service",
+      "message": "Failed to save order 79898: database connection timed out",
+      "raw": "2026-10-01 09:20:57,826 ERROR [order-service] Failed to save order 79898: database connection timed out"
+    },
+    {
+      "id": 90,
+      "line_number": 88,
+      "timestamp": "2026-10-01T09:21:07.715000",
+      "level": "ERROR",
+      "service": "order-service",
+      "message": "Failed to save order 42460: database connection timed out",
+      "raw": "2026-10-01 09:21:07,715 ERROR [order-service] Failed to save order 42460: database connection timed out"
+    },
+    {
+      "id": 91,
+      "line_number": 89,
+      "timestamp": "2026-10-01T09:21:18.950000",
+      "level": "ERROR",
+      "service": "api-gateway",
+      "message": "Upstream payment-service returned 503 for POST /api/payments in 30964ms",
+      "raw": "2026-10-01 09:21:18,950 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30964ms"
+    },
+    {
+      "id": 92,
+      "line_number": 90,
+      "timestamp": "2026-10-01T09:21:25.965000",
+      "level": "ERROR",
+      "service": "api-gateway",
+      "message": "Upstream payment-service returned 503 for POST /api/payments in 30914ms",
+      "raw": "2026-10-01 09:21:25,965 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30914ms"
+    },
+    {
+      "id": 93,
+      "line_number": 91,
+      "timestamp": "2026-10-01T09:21:31.426000",
+      "level": "ERROR",
+      "service": "api-gateway",
+      "message": "Upstream payment-service returned 503 for POST /api/payments in 30140ms",
+      "raw": "2026-10-01 09:21:31,426 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30140ms"
+    },
+    {
+      "id": 94,
+      "line_number": 92,
+      "timestamp": "2026-10-01T09:21:35.074000",
+      "level": "ERROR",
+      "service": "payment-service",
+      "message": "Timeout waiting for connection from pool after 29647 ms",
+      "raw": "2026-10-01 09:21:35,074 ERROR [payment-service] Timeout waiting for connection from pool after 29647 ms"
+    },
+    {
+      "id": 95,
+      "line_number": 93,
+      "timestamp": "2026-10-01T09:21:41.685000",
+      "level": "ERROR",
+      "service": "order-service",
+      "message": "Failed to save order 37877: database connection timed out",
+      "raw": "2026-10-01 09:21:41,685 ERROR [order-service] Failed to save order 37877: database connection timed out"
+    },
+    {
+      "id": 96,
+      "line_number": 94,
+      "timestamp": "2026-10-01T09:21:48.795000",
+      "level": "ERROR",
+      "service": "api-gateway",
+      "message": "Upstream payment-service returned 503 for POST /api/payments in 30918ms",
+      "raw": "2026-10-01 09:21:48,795 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30918ms"
+    },
+    {
+      "id": 97,
+      "line_number": 95,
+      "timestamp": "2026-10-01T09:21:53.676000",
+      "level": "ERROR",
+      "service": "api-gateway",
+      "message": "Upstream payment-service returned 503 for POST /api/payments in 30658ms",
+      "raw": "2026-10-01 09:21:53,676 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30658ms"
+    },
+    {
+      "id": 98,
+      "line_number": 96,
+      "timestamp": "2026-10-01T09:22:01.140000",
+      "level": "ERROR",
+      "service": "payment-service",
+      "message": "Timeout waiting for connection from pool after 30808 ms",
+      "raw": "2026-10-01 09:22:01,140 ERROR [payment-service] Timeout waiting for connection from pool after 30808 ms"
+    },
+    {
+      "id": 99,
+      "line_number": 97,
+      "timestamp": "2026-10-01T09:22:11.096000",
+      "level": "ERROR",
+      "service": "payment-service",
+      "message": "Timeout waiting for connection from pool after 30950 ms",
+      "raw": "2026-10-01 09:22:11,096 ERROR [payment-service] Timeout waiting for connection from pool after 30950 ms"
+    },
+    {
+      "id": 100,
+      "line_number": 98,
+      "timestamp": "2026-10-01T09:22:20.683000",
+      "level": "ERROR",
+      "service": "api-gateway",
+      "message": "Upstream payment-service returned 503 for POST /api/payments in 30166ms",
+      "raw": "2026-10-01 09:22:20,683 ERROR [api-gateway] Upstream payment-service returned 503 for POST /api/payments in 30166ms"
+    },
+    {
+      "id": 101,
+      "line_number": 99,
+      "timestamp": "2026-10-01T09:22:26.527000",
+      "level": "ERROR",
+      "service": "payment-service",
+      "message": "Timeout waiting for connection from pool after 29883 ms",
+      "raw": "2026-10-01 09:22:26,527 ERROR [payment-service] Timeout waiting for connection from pool after 29883 ms"
+    },
+    {
+      "id": 102,
+      "line_number": 100,
+      "timestamp": "2026-10-01T09:22:35.365000",
+      "level": "ERROR",
+      "service": "payment-service",
+      "message": "Timeout waiting for connection from pool after 29400 ms",
+      "raw": "2026-10-01 09:22:35,365 ERROR [payment-service] Timeout waiting for connection from pool after 29400 ms"
+    }
+  ]
+}

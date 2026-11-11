@@ -1,7 +1,7 @@
 """Pydantic schemas: the exact JSON shapes the API sends.
 
-PROVISIONAL: docs/API_CONTRACT.md doesn't exist yet. Check these against it
-once Anusha publishes it, and tell her before changing any shape.
+These must match docs/API_CONTRACT.md (owned by Anusha). Change the contract
+first (in a reviewed PR), then these shapes.
 
 Times:
 - Our own times (uploaded_at, created_at) are saved in UTC and returned with a "Z".

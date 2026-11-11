@@ -23,7 +23,9 @@ Interface we call (agree these with Disha; change only this file if hers differ)
         past_incidents: [{"incident_id", "file_name", "templates": [str, ...]}] from earlier
         files (identical files already excluded)
 
-    decide_confidence(incident, analysis) -> "high" | "low"
+    decide_confidence(llm_root_cause_text, rule_category) -> "high" | "low"
+        Only called for LLM answers. A fallback answer is built FROM the rule category,
+        so comparing it with that category would always "agree": fallback is always "low".
 """
 from __future__ import annotations
 
@@ -205,6 +207,8 @@ def find_similar_incidents(templates: list[str], past_incidents: list[dict]) -> 
 # ---------- decide_confidence ----------
 
 def decide_confidence(incident: dict, analysis: dict) -> str:
-    """Defaults to "low" when Disha's function is missing or returns something unexpected."""
-    _found, result = _call("decide_confidence", incident, analysis)
+    """"low" for fallback answers, or when Disha's function is missing or returns something unexpected."""
+    if analysis.get("source") != "llm":
+        return "low"
+    _found, result = _call("decide_confidence", analysis.get("root_cause", ""), incident["category"])
     return result if result in ("high", "low") else "low"

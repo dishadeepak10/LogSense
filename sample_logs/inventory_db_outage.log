@@ -1,0 +1,452 @@
+2026-09-14 10:00:10,899 INFO  [order-service] Order 33145 created for user 894
+2026-09-14 10:00:31,870 DEBUG [db-proxy] Pool stats active=14 idle=34 max=50
+2026-09-14 10:00:46,458 DEBUG [db-proxy] Pool stats active=14 idle=21 max=50
+2026-09-14 10:01:07,081 INFO  [payment-service] Payment 70284 authorized amount=639.00 INR
+2026-09-14 10:01:18,309 INFO  [api-gateway] GET /api/orders/9883 200 26ms
+2026-09-14 10:01:32,466 INFO  [inventory-service] Stock check sku=894 ok
+2026-09-14 10:01:47,963 INFO  [api-gateway] GET /api/orders/3888 200 49ms
+2026-09-14 10:02:01,274 INFO  [order-service] Order 46765 created for user 983
+2026-09-14 10:02:13,612 DEBUG [db-proxy] Pool stats active=6 idle=38 max=50
+2026-09-14 10:02:21,243 DEBUG [db-proxy] Pool stats active=12 idle=23 max=50
+2026-09-14 10:02:36,314 INFO  [order-service] Order 23011 created for user 376
+2026-09-14 10:02:56,921 INFO  [api-gateway] GET /api/orders/3744 200 35ms
+2026-09-14 10:03:12,912 INFO  [payment-service] Payment 57713 authorized amount=116.00 INR
+2026-09-14 10:03:18,373 INFO  [order-service] Order 84939 created for user 516
+2026-09-14 10:03:30,431 INFO  [api-gateway] GET /api/orders/3211 200 78ms
+2026-09-14 10:03:38,382 INFO  [order-service] Order 57878 created for user 363
+2026-09-14 10:03:48,582 INFO  [api-gateway] GET /api/orders/1216 200 21ms
+2026-09-14 10:03:56,484 INFO  [api-gateway] GET /api/orders/7490 200 94ms
+2026-09-14 10:04:00,898 INFO  [api-gateway] GET /api/orders/4287 200 60ms
+2026-09-14 10:04:12,295 INFO  [api-gateway] GET /api/orders/6655 200 66ms
+2026-09-14 10:04:25,908 INFO  [order-service] Order 44878 created for user 542
+2026-09-14 10:04:29,922 INFO  [inventory-service] Stock check sku=581 ok
+2026-09-14 10:04:45,882 DEBUG [db-proxy] Pool stats active=5 idle=34 max=50
+2026-09-14 10:05:01,286 INFO  [api-gateway] GET /api/orders/3289 200 28ms
+2026-09-14 10:05:16,650 INFO  [order-service] Order 28629 created for user 342
+2026-09-14 10:05:25,659 INFO  [payment-service] Payment 74213 authorized amount=840.00 INR
+2026-09-14 10:05:30,228 INFO  [order-service] Order 63365 created for user 302
+2026-09-14 10:05:42,341 INFO  [payment-service] Payment 71396 authorized amount=607.00 INR
+2026-09-14 10:05:46,818 INFO  [order-service] Order 30112 created for user 735
+2026-09-14 10:05:59,961 DEBUG [db-proxy] Pool stats active=15 idle=24 max=50
+2026-09-14 10:06:16,236 INFO  [order-service] Order 45799 created for user 795
+2026-09-14 10:06:24,303 INFO  [inventory-service] Stock check sku=180 ok
+2026-09-14 10:06:33,860 INFO  [order-service] Order 41068 created for user 315
+2026-09-14 10:06:52,949 INFO  [inventory-service] Stock check sku=858 ok
+2026-09-14 10:06:59,511 INFO  [payment-service] Payment 66013 authorized amount=88.00 INR
+2026-09-14 10:07:20,096 INFO  [api-gateway] GET /api/orders/5530 200 95ms
+2026-09-14 10:07:30,382 INFO  [api-gateway] GET /api/orders/2795 200 86ms
+2026-09-14 10:07:41,306 INFO  [api-gateway] GET /api/orders/8536 200 56ms
+2026-09-14 10:07:50,870 INFO  [api-gateway] GET /api/orders/6365 200 53ms
+2026-09-14 10:08:11,806 INFO  [order-service] Order 53753 created for user 548
+2026-09-14 10:08:24,350 DEBUG [db-proxy] Pool stats active=10 idle=34 max=50
+2026-09-14 10:08:30,443 INFO  [api-gateway] GET /api/orders/4465 200 82ms
+2026-09-14 10:08:42,518 INFO  [api-gateway] GET /api/orders/2610 200 73ms
+2026-09-14 10:09:00,192 INFO  [inventory-service] Stock check sku=468 ok
+2026-09-14 10:09:04,331 WARN  [api-gateway] Slow response 1314ms for GET /api/catalog
+2026-09-14 10:09:08,594 WARN  [api-gateway] Slow response 834ms for GET /api/catalog
+2026-09-14 10:09:15,697 INFO  [inventory-service] Stock check sku=114 ok
+2026-09-14 10:09:23,828 INFO  [order-service] Order 39513 created for user 741
+2026-09-14 10:09:30,745 INFO  [payment-service] Payment 94660 authorized amount=304.00 INR
+2026-09-14 10:09:50,158 DEBUG [db-proxy] Pool stats active=10 idle=33 max=50
+2026-09-14 10:09:55,055 INFO  [payment-service] Payment 69616 authorized amount=584.00 INR
+2026-09-14 10:10:12,273 DEBUG [db-proxy] Pool stats active=9 idle=20 max=50
+2026-09-14 10:10:31,499 INFO  [payment-service] Payment 97670 authorized amount=285.00 INR
+2026-09-14 10:10:35,500 INFO  [payment-service] Payment 16669 authorized amount=258.00 INR
+2026-09-14 10:10:54,699 INFO  [api-gateway] GET /api/orders/9643 200 12ms
+2026-09-14 10:11:11,502 INFO  [api-gateway] GET /api/orders/7183 200 82ms
+2026-09-14 10:11:27,647 INFO  [api-gateway] GET /api/orders/7945 200 30ms
+2026-09-14 10:11:48,017 INFO  [inventory-service] Stock check sku=509 ok
+2026-09-14 10:12:08,287 INFO  [api-gateway] GET /api/orders/5722 200 76ms
+2026-09-14 10:12:14,320 INFO  [api-gateway] GET /api/orders/4328 200 51ms
+2026-09-14 10:12:18,870 INFO  [api-gateway] GET /api/orders/9282 200 67ms
+2026-09-14 10:12:30,756 INFO  [inventory-service] Stock check sku=952 ok
+2026-09-14 10:12:39,653 INFO  [order-service] Order 92231 created for user 869
+2026-09-14 10:12:50,068 INFO  [inventory-service] Stock check sku=690 ok
+2026-09-14 10:13:08,574 INFO  [inventory-service] Stock check sku=164 ok
+2026-09-14 10:13:14,307 INFO  [inventory-service] Stock check sku=188 ok
+2026-09-14 10:13:27,916 INFO  [inventory-service] Stock check sku=272 ok
+2026-09-14 10:13:45,211 INFO  [api-gateway] GET /api/orders/3914 200 54ms
+2026-09-14 10:13:56,311 DEBUG [db-proxy] Pool stats active=9 idle=33 max=50
+2026-09-14 10:14:08,623 INFO  [payment-service] Payment 40853 authorized amount=720.00 INR
+2026-09-14 10:14:21,850 INFO  [api-gateway] GET /api/orders/8934 200 16ms
+2026-09-14 10:14:39,348 INFO  [api-gateway] GET /api/orders/6340 200 38ms
+2026-09-14 10:14:57,687 INFO  [api-gateway] GET /api/orders/1655 200 30ms
+2026-09-14 10:15:16,593 INFO  [payment-service] Payment 57033 authorized amount=263.00 INR
+2026-09-14 10:15:28,631 INFO  [order-service] Order 81627 created for user 555
+2026-09-14 10:15:34,032 INFO  [api-gateway] GET /api/orders/2784 200 24ms
+2026-09-14 10:15:40,383 INFO  [payment-service] Payment 90117 authorized amount=699.00 INR
+2026-09-14 10:15:54,034 INFO  [order-service] Order 30346 created for user 665
+2026-09-14 10:16:00,845 INFO  [api-gateway] GET /api/orders/1598 200 24ms
+2026-09-14 10:16:15,263 INFO  [payment-service] Payment 27119 authorized amount=198.00 INR
+2026-09-14 10:16:30,097 INFO  [api-gateway] GET /api/orders/3461 200 47ms
+2026-09-14 10:16:45,933 INFO  [order-service] Order 80559 created for user 828
+2026-09-14 10:17:00,684 DEBUG [db-proxy] Pool stats active=14 idle=20 max=50
+2026-09-14 10:17:19,656 INFO  [api-gateway] GET /api/orders/4512 200 56ms
+2026-09-14 10:17:39,092 INFO  [inventory-service] Stock check sku=505 ok
+2026-09-14 10:17:50,457 INFO  [api-gateway] GET /api/orders/5819 200 72ms
+2026-09-14 10:18:04,571 INFO  [order-service] Order 89617 created for user 967
+2026-09-14 10:18:24,805 INFO  [api-gateway] GET /api/orders/5619 200 60ms
+2026-09-14 10:18:35,944 INFO  [payment-service] Payment 84120 authorized amount=96.00 INR
+2026-09-14 10:18:53,587 INFO  [api-gateway] GET /api/orders/9365 200 40ms
+2026-09-14 10:19:14,366 INFO  [order-service] Order 26525 created for user 937
+2026-09-14 10:19:21,845 DEBUG [db-proxy] Pool stats active=15 idle=38 max=50
+2026-09-14 10:19:28,150 INFO  [api-gateway] GET /api/orders/7282 200 14ms
+2026-09-14 10:19:42,866 INFO  [api-gateway] GET /api/orders/4930 200 13ms
+2026-09-14 10:19:51,216 INFO  [api-gateway] GET /api/orders/8174 200 44ms
+2026-09-14 10:20:01,938 INFO  [api-gateway] GET /api/orders/7510 200 77ms
+2026-09-14 10:20:08,298 INFO  [payment-service] Payment 78460 authorized amount=271.00 INR
+2026-09-14 10:20:27,274 DEBUG [db-proxy] Pool stats active=6 idle=20 max=50
+2026-09-14 10:20:46,855 INFO  [api-gateway] GET /api/orders/7206 200 13ms
+2026-09-14 10:21:07,732 DEBUG [db-proxy] Pool stats active=9 idle=35 max=50
+2026-09-14 10:21:28,076 DEBUG [db-proxy] Pool stats active=11 idle=27 max=50
+2026-09-14 10:21:43,630 INFO  [inventory-service] Stock check sku=725 ok
+2026-09-14 10:22:02,419 INFO  [payment-service] Payment 34202 authorized amount=693.00 INR
+2026-09-14 10:22:19,002 INFO  [order-service] Order 37621 created for user 235
+2026-09-14 10:22:36,379 INFO  [inventory-service] Stock check sku=643 ok
+2026-09-14 10:22:56,724 DEBUG [db-proxy] Pool stats active=19 idle=31 max=50
+2026-09-14 10:23:01,332 INFO  [payment-service] Payment 57529 authorized amount=772.00 INR
+2026-09-14 10:23:18,189 INFO  [inventory-service] Stock check sku=966 ok
+2026-09-14 10:23:33,840 INFO  [api-gateway] GET /api/orders/7270 200 21ms
+2026-09-14 10:23:41,550 INFO  [order-service] Order 35414 created for user 207
+2026-09-14 10:23:47,196 INFO  [order-service] Order 81653 created for user 363
+2026-09-14 10:23:57,223 INFO  [api-gateway] GET /api/orders/6196 200 49ms
+2026-09-14 10:24:13,509 INFO  [order-service] Order 90858 created for user 728
+2026-09-14 10:24:27,090 INFO  [inventory-service] Stock check sku=217 ok
+2026-09-14 10:24:42,048 INFO  [order-service] Order 17885 created for user 315
+2026-09-14 10:24:47,548 INFO  [order-service] Order 88143 created for user 816
+2026-09-14 10:25:04,162 INFO  [payment-service] Payment 67035 authorized amount=363.00 INR
+2026-09-14 10:25:24,261 WARN  [api-gateway] Slow response 893ms for GET /api/catalog
+2026-09-14 10:25:40,534 WARN  [api-gateway] Slow response 878ms for GET /api/catalog
+2026-09-14 10:25:59,296 INFO  [api-gateway] GET /api/orders/7004 200 49ms
+2026-09-14 10:26:16,847 INFO  [api-gateway] GET /api/orders/2538 200 32ms
+2026-09-14 10:26:29,825 INFO  [api-gateway] GET /api/orders/7534 200 70ms
+2026-09-14 10:26:38,055 INFO  [inventory-service] Stock check sku=327 ok
+2026-09-14 10:26:55,075 DEBUG [db-proxy] Pool stats active=18 idle=32 max=50
+2026-09-14 10:27:02,250 INFO  [payment-service] Payment 43214 authorized amount=632.00 INR
+2026-09-14 10:27:21,331 INFO  [api-gateway] GET /api/orders/8808 200 66ms
+2026-09-14 10:27:35,974 INFO  [payment-service] Payment 26754 authorized amount=887.00 INR
+2026-09-14 10:27:45,744 INFO  [api-gateway] GET /api/orders/7051 200 39ms
+2026-09-14 10:28:01,552 INFO  [api-gateway] GET /api/orders/5864 200 38ms
+2026-09-14 10:28:10,752 INFO  [api-gateway] GET /api/orders/1167 200 25ms
+2026-09-14 10:28:17,670 INFO  [order-service] Order 80819 created for user 113
+2026-09-14 10:28:37,828 DEBUG [db-proxy] Pool stats active=20 idle=39 max=50
+2026-09-14 10:28:44,669 INFO  [api-gateway] GET /api/orders/6208 200 95ms
+2026-09-14 10:29:01,963 INFO  [order-service] Order 64495 created for user 618
+2026-09-14 10:29:20,369 INFO  [order-service] Order 88995 created for user 656
+2026-09-14 10:29:35,477 INFO  [api-gateway] GET /api/orders/8535 200 22ms
+2026-09-14 10:29:41,572 INFO  [order-service] Order 16345 created for user 866
+2026-09-14 10:29:57,087 INFO  [api-gateway] GET /api/orders/3459 200 42ms
+2026-09-14 10:30:12,398 INFO  [payment-service] Payment 95359 authorized amount=142.00 INR
+2026-09-14 10:30:29,116 DEBUG [db-proxy] Pool stats active=20 idle=34 max=50
+2026-09-14 10:30:49,141 INFO  [order-service] Order 61010 created for user 662
+2026-09-14 10:30:54,527 INFO  [api-gateway] GET /api/orders/1573 200 77ms
+2026-09-14 10:31:09,345 INFO  [api-gateway] GET /api/orders/8836 200 89ms
+2026-09-14 10:31:28,344 DEBUG [db-proxy] Pool stats active=12 idle=31 max=50
+2026-09-14 10:31:48,538 INFO  [api-gateway] GET /api/orders/6563 200 68ms
+2026-09-14 10:31:56,582 INFO  [inventory-service] Stock check sku=946 ok
+2026-09-14 10:32:01,687 INFO  [payment-service] Payment 37453 authorized amount=389.00 INR
+2026-09-14 10:32:17,162 INFO  [payment-service] Payment 94924 authorized amount=672.00 INR
+2026-09-14 10:32:24,646 INFO  [order-service] Order 61871 created for user 482
+2026-09-14 10:32:44,536 INFO  [api-gateway] GET /api/orders/9571 200 85ms
+2026-09-14 10:33:03,827 DEBUG [db-proxy] Pool stats active=5 idle=26 max=50
+2026-09-14 10:33:15,011 DEBUG [db-proxy] Pool stats active=18 idle=21 max=50
+2026-09-14 10:33:35,505 INFO  [order-service] Order 84986 created for user 927
+2026-09-14 10:33:43,853 DEBUG [db-proxy] Pool stats active=6 idle=32 max=50
+2026-09-14 10:33:56,202 INFO  [api-gateway] GET /api/orders/5456 200 21ms
+2026-09-14 10:34:03,758 INFO  [api-gateway] GET /api/orders/1014 200 76ms
+2026-09-14 10:34:16,264 INFO  [api-gateway] GET /api/orders/4145 200 61ms
+2026-09-14 10:34:36,703 INFO  [order-service] Order 91211 created for user 939
+2026-09-14 10:34:57,034 INFO  [order-service] Order 34069 created for user 134
+2026-09-14 10:35:06,023 DEBUG [db-proxy] Pool stats active=17 idle=36 max=50
+2026-09-14 10:35:16,288 DEBUG [db-proxy] Pool stats active=15 idle=28 max=50
+2026-09-14 10:35:25,617 INFO  [payment-service] Payment 72592 authorized amount=137.00 INR
+2026-09-14 10:35:45,128 INFO  [api-gateway] GET /api/orders/6997 200 80ms
+2026-09-14 10:35:56,600 INFO  [payment-service] Payment 72337 authorized amount=825.00 INR
+2026-09-14 10:36:15,428 INFO  [api-gateway] GET /api/orders/9230 200 57ms
+2026-09-14 10:36:20,614 INFO  [inventory-service] Stock check sku=858 ok
+2026-09-14 10:36:37,101 INFO  [payment-service] Payment 44515 authorized amount=383.00 INR
+2026-09-14 10:36:49,285 INFO  [order-service] Order 38983 created for user 409
+2026-09-14 10:37:05,588 DEBUG [db-proxy] Pool stats active=12 idle=39 max=50
+2026-09-14 10:37:25,127 INFO  [inventory-service] Stock check sku=899 ok
+2026-09-14 10:37:41,049 INFO  [api-gateway] GET /api/orders/3768 200 81ms
+2026-09-14 10:37:49,886 INFO  [order-service] Order 83797 created for user 431
+2026-09-14 10:37:55,714 INFO  [api-gateway] GET /api/orders/9588 200 79ms
+2026-09-14 10:38:15,029 INFO  [order-service] Order 66020 created for user 823
+2026-09-14 10:38:27,697 INFO  [order-service] Order 35649 created for user 627
+2026-09-14 10:38:42,749 INFO  [payment-service] Payment 29208 authorized amount=429.00 INR
+2026-09-14 10:38:48,883 DEBUG [db-proxy] Pool stats active=20 idle=30 max=50
+2026-09-14 10:38:53,930 DEBUG [db-proxy] Pool stats active=18 idle=36 max=50
+2026-09-14 10:39:08,203 DEBUG [db-proxy] Pool stats active=10 idle=36 max=50
+2026-09-14 10:39:25,573 INFO  [api-gateway] GET /api/orders/5611 200 95ms
+2026-09-14 10:39:34,113 INFO  [payment-service] Payment 52501 authorized amount=267.00 INR
+2026-09-14 10:39:39,846 INFO  [api-gateway] GET /api/orders/1682 200 16ms
+2026-09-14 10:40:00,061 DEBUG [db-proxy] Pool stats active=9 idle=34 max=50
+2026-09-14 10:40:17,492 INFO  [order-service] Order 73484 created for user 841
+2026-09-14 10:40:34,339 DEBUG [db-proxy] Pool stats active=19 idle=30 max=50
+2026-09-14 10:40:39,884 INFO  [api-gateway] GET /api/orders/9684 200 61ms
+2026-09-14 10:40:54,017 INFO  [api-gateway] GET /api/orders/2319 200 78ms
+2026-09-14 10:41:03,108 INFO  [api-gateway] GET /api/orders/9897 200 17ms
+2026-09-14 10:41:21,560 DEBUG [db-proxy] Pool stats active=20 idle=29 max=50
+2026-09-14 10:41:37,609 INFO  [api-gateway] GET /api/orders/7646 200 74ms
+2026-09-14 10:41:54,269 DEBUG [db-proxy] Pool stats active=16 idle=38 max=50
+2026-09-14 10:42:08,489 INFO  [api-gateway] GET /api/orders/2587 200 69ms
+2026-09-14 10:42:21,545 INFO  [api-gateway] GET /api/orders/4623 200 87ms
+2026-09-14 10:42:32,566 INFO  [api-gateway] GET /api/orders/6064 200 18ms
+2026-09-14 10:42:48,381 DEBUG [db-proxy] Pool stats active=9 idle=38 max=50
+2026-09-14 10:42:58,428 INFO  [api-gateway] GET /api/orders/2846 200 69ms
+2026-09-14 10:43:08,266 INFO  [payment-service] Payment 12722 authorized amount=787.00 INR
+2026-09-14 10:43:17,426 INFO  [api-gateway] GET /api/orders/5526 200 73ms
+2026-09-14 10:43:27,569 INFO  [order-service] Order 41519 created for user 139
+2026-09-14 10:43:35,239 INFO  [api-gateway] GET /api/orders/9948 200 84ms
+2026-09-14 10:43:50,058 INFO  [payment-service] Payment 24141 authorized amount=876.00 INR
+2026-09-14 10:44:02,025 INFO  [order-service] Order 71640 created for user 171
+2026-09-14 10:44:19,826 INFO  [api-gateway] GET /api/orders/3565 200 43ms
+2026-09-14 10:44:28,828 DEBUG [db-proxy] Pool stats active=13 idle=37 max=50
+2026-09-14 10:44:46,953 INFO  [api-gateway] GET /api/orders/8170 200 64ms
+2026-09-14 10:44:56,570 WARN  [api-gateway] Slow response 1049ms for GET /api/catalog
+2026-09-14 10:45:02,199 INFO  [api-gateway] GET /api/orders/4626 200 75ms
+2026-09-14 10:45:15,239 INFO  [api-gateway] GET /api/orders/8771 200 93ms
+2026-09-14 10:45:27,012 INFO  [api-gateway] GET /api/orders/3715 200 75ms
+2026-09-14 10:45:46,012 INFO  [inventory-service] Stock check sku=818 ok
+2026-09-14 10:46:02,403 DEBUG [db-proxy] Pool stats active=9 idle=29 max=50
+2026-09-14 10:46:07,228 WARN  [api-gateway] Slow response 1324ms for GET /api/catalog
+2026-09-14 10:46:21,894 INFO  [payment-service] Payment 15098 authorized amount=435.00 INR
+2026-09-14 10:46:28,954 INFO  [order-service] Order 46851 created for user 491
+2026-09-14 10:46:48,790 INFO  [order-service] Order 26772 created for user 927
+2026-09-14 10:47:05,009 INFO  [inventory-service] Stock check sku=930 ok
+2026-09-14 10:47:13,213 INFO  [api-gateway] GET /api/orders/1394 200 87ms
+2026-09-14 10:47:17,814 INFO  [order-service] Order 82098 created for user 838
+2026-09-14 10:47:25,220 INFO  [order-service] Order 56447 created for user 177
+2026-09-14 10:47:39,591 INFO  [api-gateway] GET /api/orders/8121 200 25ms
+2026-09-14 10:47:53,799 INFO  [order-service] Order 87360 created for user 344
+2026-09-14 10:47:59,178 INFO  [inventory-service] Stock check sku=329 ok
+2026-09-14 10:48:19,337 INFO  [inventory-service] Stock check sku=484 ok
+2026-09-14 10:48:36,980 INFO  [order-service] Order 51938 created for user 719
+2026-09-14 10:48:43,709 INFO  [order-service] Order 69014 created for user 116
+2026-09-14 10:48:49,052 INFO  [payment-service] Payment 16179 authorized amount=205.00 INR
+2026-09-14 10:49:02,552 INFO  [order-service] Order 33367 created for user 938
+2026-09-14 10:49:15,228 INFO  [inventory-service] Stock check sku=742 ok
+2026-09-14 10:49:20,000 WARN  [db-proxy] Connection pool usage at 94% (47/50)
+2026-09-14 10:49:31,606 INFO  [payment-service] Payment 78797 authorized amount=299.00 INR
+2026-09-14 10:49:41,394 INFO  [inventory-service] Stock check sku=984 ok
+2026-09-14 10:49:45,000 WARN  [inventory-service] Slow query took 5100 ms: SELECT * FROM stock WHERE warehouse_id = 7
+2026-09-14 10:49:52,567 INFO  [order-service] Order 86882 created for user 343
+2026-09-14 10:49:57,527 INFO  [inventory-service] Stock check sku=182 ok
+2026-09-14 10:50:00,000 ERROR [inventory-service] Could not get JDBC connection: pool exhausted after 30828 ms
+2026-09-14 10:50:02,415 INFO  [payment-service] Payment 59976 authorized amount=169.00 INR
+2026-09-14 10:50:04,565 ERROR [order-service] Failed to reserve stock for order 86006: database connection timed out
+2026-09-14 10:50:07,751 ERROR [api-gateway] Upstream order-service returned 503 for POST /api/orders in 30860ms
+2026-09-14 10:50:11,767 ERROR [inventory-service] Could not get JDBC connection: pool exhausted after 30976 ms
+2026-09-14 10:50:15,529 INFO  [api-gateway] GET /api/orders/7442 200 51ms
+2026-09-14 10:50:15,659 ERROR [order-service] Failed to reserve stock for order 70410: database connection timed out
+2026-09-14 10:50:20,955 ERROR [api-gateway] Upstream order-service returned 503 for POST /api/orders in 30162ms
+2026-09-14 10:50:24,215 ERROR [inventory-service] Could not get JDBC connection: pool exhausted after 29046 ms
+2026-09-14 10:50:26,554 INFO  [order-service] Order 57309 created for user 147
+2026-09-14 10:50:27,469 ERROR [order-service] Failed to reserve stock for order 65931: database connection timed out
+2026-09-14 10:50:31,719 ERROR [api-gateway] Upstream order-service returned 503 for POST /api/orders in 30645ms
+2026-09-14 10:50:35,595 ERROR [inventory-service] Could not get JDBC connection: pool exhausted after 29409 ms
+2026-09-14 10:50:40,472 INFO  [api-gateway] GET /api/orders/2090 200 84ms
+2026-09-14 10:50:41,112 ERROR [order-service] Failed to reserve stock for order 10943: database connection timed out
+2026-09-14 10:50:45,332 ERROR [api-gateway] Upstream order-service returned 503 for POST /api/orders in 30691ms
+2026-09-14 10:50:48,759 ERROR [inventory-service] Could not get JDBC connection: pool exhausted after 29094 ms
+2026-09-14 10:50:53,474 ERROR [order-service] Failed to reserve stock for order 54626: database connection timed out
+2026-09-14 10:50:56,493 INFO  [payment-service] Payment 48046 authorized amount=114.00 INR
+2026-09-14 10:50:57,746 ERROR [api-gateway] Upstream order-service returned 503 for POST /api/orders in 30104ms
+2026-09-14 10:51:01,542 ERROR [inventory-service] Could not get JDBC connection: pool exhausted after 30180 ms
+2026-09-14 10:51:05,153 ERROR [order-service] Failed to reserve stock for order 64811: database connection timed out
+2026-09-14 10:51:05,862 INFO  [api-gateway] GET /api/orders/8876 200 56ms
+2026-09-14 10:51:09,206 ERROR [api-gateway] Upstream order-service returned 503 for POST /api/orders in 30216ms
+2026-09-14 10:51:12,408 ERROR [inventory-service] Could not get JDBC connection: pool exhausted after 29548 ms
+2026-09-14 10:51:16,065 INFO  [order-service] Order 42287 created for user 931
+2026-09-14 10:51:17,371 ERROR [order-service] Failed to reserve stock for order 93325: database connection timed out
+2026-09-14 10:51:20,831 ERROR [api-gateway] Upstream order-service returned 503 for POST /api/orders in 30287ms
+2026-09-14 10:51:23,817 ERROR [inventory-service] Could not get JDBC connection: pool exhausted after 30012 ms
+2026-09-14 10:51:27,172 ERROR [order-service] Failed to reserve stock for order 52177: database connection timed out
+2026-09-14 10:51:32,229 ERROR [api-gateway] Upstream order-service returned 503 for POST /api/orders in 30719ms
+2026-09-14 10:51:32,523 DEBUG [db-proxy] Pool stats active=13 idle=22 max=50
+2026-09-14 10:51:34,739 ERROR [inventory-service] Could not get JDBC connection: pool exhausted after 29656 ms
+2026-09-14 10:51:43,330 DEBUG [db-proxy] Pool stats active=18 idle=38 max=50
+2026-09-14 10:51:57,549 INFO  [inventory-service] Stock check sku=687 ok
+2026-09-14 10:52:15,507 INFO  [payment-service] Payment 91566 authorized amount=446.00 INR
+2026-09-14 10:52:20,393 INFO  [inventory-service] Stock check sku=226 ok
+2026-09-14 10:52:35,611 DEBUG [db-proxy] Pool stats active=14 idle=25 max=50
+2026-09-14 10:52:56,362 DEBUG [db-proxy] Pool stats active=9 idle=26 max=50
+2026-09-14 10:53:16,252 INFO  [api-gateway] GET /api/orders/5368 200 28ms
+2026-09-14 10:53:20,488 INFO  [api-gateway] GET /api/orders/6019 200 32ms
+2026-09-14 10:53:36,432 INFO  [api-gateway] GET /api/orders/6696 200 52ms
+2026-09-14 10:53:44,697 INFO  [api-gateway] GET /api/orders/4466 200 84ms
+2026-09-14 10:53:57,387 INFO  [api-gateway] GET /api/orders/4165 200 26ms
+2026-09-14 10:54:07,395 INFO  [order-service] Order 24006 created for user 664
+2026-09-14 10:54:27,262 INFO  [payment-service] Payment 24685 authorized amount=887.00 INR
+2026-09-14 10:54:44,754 INFO  [api-gateway] GET /api/orders/2213 200 39ms
+2026-09-14 10:54:59,940 INFO  [order-service] Order 40777 created for user 406
+2026-09-14 10:55:11,449 INFO  [order-service] Order 35584 created for user 993
+2026-09-14 10:55:17,414 INFO  [api-gateway] GET /api/orders/6875 200 66ms
+2026-09-14 10:55:25,976 DEBUG [db-proxy] Pool stats active=13 idle=27 max=50
+2026-09-14 10:55:33,658 INFO  [api-gateway] GET /api/orders/2037 200 60ms
+2026-09-14 10:55:46,286 INFO  [api-gateway] GET /api/orders/2850 200 60ms
+2026-09-14 10:55:54,541 INFO  [inventory-service] Stock check sku=520 ok
+2026-09-14 10:56:13,316 INFO  [api-gateway] GET /api/orders/5536 200 78ms
+2026-09-14 10:56:19,701 INFO  [api-gateway] GET /api/orders/3444 200 16ms
+2026-09-14 10:56:28,683 INFO  [api-gateway] GET /api/orders/7984 200 39ms
+2026-09-14 10:56:48,424 INFO  [api-gateway] GET /api/orders/6885 200 44ms
+2026-09-14 10:56:58,452 INFO  [inventory-service] Stock check sku=613 ok
+2026-09-14 10:57:14,419 INFO  [api-gateway] GET /api/orders/3531 200 56ms
+2026-09-14 10:57:24,501 INFO  [api-gateway] GET /api/orders/3914 200 65ms
+2026-09-14 10:57:42,150 INFO  [payment-service] Payment 85668 authorized amount=846.00 INR
+2026-09-14 10:57:53,933 DEBUG [db-proxy] Pool stats active=20 idle=31 max=50
+2026-09-14 10:58:05,414 INFO  [api-gateway] GET /api/orders/4982 200 34ms
+2026-09-14 10:58:16,204 INFO  [api-gateway] GET /api/orders/7080 200 55ms
+2026-09-14 10:58:27,215 INFO  [api-gateway] GET /api/orders/4627 200 51ms
+2026-09-14 10:58:33,949 INFO  [api-gateway] GET /api/orders/2142 200 86ms
+2026-09-14 10:58:52,425 INFO  [order-service] Order 19863 created for user 983
+2026-09-14 10:58:58,967 INFO  [payment-service] Payment 22263 authorized amount=797.00 INR
+2026-09-14 10:59:07,893 INFO  [inventory-service] Stock check sku=435 ok
+2026-09-14 10:59:26,553 INFO  [order-service] Order 10132 created for user 304
+2026-09-14 10:59:37,082 INFO  [api-gateway] GET /api/orders/1326 200 76ms
+2026-09-14 10:59:51,348 INFO  [api-gateway] GET /api/orders/5876 200 71ms
+2026-09-14 11:00:09,249 INFO  [api-gateway] GET /api/orders/7251 200 37ms
+2026-09-14 11:00:20,276 DEBUG [db-proxy] Pool stats active=16 idle=23 max=50
+2026-09-14 11:00:25,221 INFO  [order-service] Order 31558 created for user 212
+2026-09-14 11:00:41,345 INFO  [order-service] Order 64907 created for user 643
+2026-09-14 11:00:45,477 INFO  [api-gateway] GET /api/orders/3594 200 70ms
+2026-09-14 11:01:02,658 INFO  [order-service] Order 50710 created for user 925
+2026-09-14 11:01:14,850 INFO  [order-service] Order 60448 created for user 147
+2026-09-14 11:01:30,964 INFO  [api-gateway] GET /api/orders/8183 200 37ms
+2026-09-14 11:01:44,951 INFO  [api-gateway] GET /api/orders/2035 200 86ms
+2026-09-14 11:02:04,843 INFO  [api-gateway] GET /api/orders/4850 200 26ms
+2026-09-14 11:02:11,494 INFO  [payment-service] Payment 80935 authorized amount=700.00 INR
+2026-09-14 11:02:25,838 INFO  [order-service] Order 93961 created for user 149
+2026-09-14 11:02:44,998 INFO  [order-service] Order 75805 created for user 545
+2026-09-14 11:02:57,929 INFO  [api-gateway] GET /api/orders/6612 200 36ms
+2026-09-14 11:03:13,268 INFO  [api-gateway] GET /api/orders/5919 200 82ms
+2026-09-14 11:03:33,261 INFO  [order-service] Order 48975 created for user 427
+2026-09-14 11:03:43,086 INFO  [api-gateway] GET /api/orders/7569 200 55ms
+2026-09-14 11:03:57,094 INFO  [api-gateway] GET /api/orders/3291 200 38ms
+2026-09-14 11:04:16,602 INFO  [order-service] Order 14774 created for user 376
+2026-09-14 11:04:21,231 INFO  [order-service] Order 92890 created for user 275
+2026-09-14 11:04:41,485 INFO  [api-gateway] GET /api/orders/8421 200 16ms
+2026-09-14 11:04:48,329 INFO  [api-gateway] GET /api/orders/4068 200 50ms
+2026-09-14 11:05:00,395 INFO  [inventory-service] Stock check sku=121 ok
+2026-09-14 11:05:21,121 DEBUG [db-proxy] Pool stats active=8 idle=27 max=50
+2026-09-14 11:05:39,619 INFO  [order-service] Order 48798 created for user 124
+2026-09-14 11:05:46,208 DEBUG [db-proxy] Pool stats active=17 idle=40 max=50
+2026-09-14 11:06:02,019 INFO  [payment-service] Payment 10577 authorized amount=36.00 INR
+2026-09-14 11:06:06,411 INFO  [payment-service] Payment 67991 authorized amount=259.00 INR
+2026-09-14 11:06:22,662 INFO  [api-gateway] GET /api/orders/2878 200 17ms
+2026-09-14 11:06:30,068 DEBUG [db-proxy] Pool stats active=15 idle=20 max=50
+2026-09-14 11:06:50,364 INFO  [api-gateway] GET /api/orders/2646 200 62ms
+2026-09-14 11:06:58,312 DEBUG [db-proxy] Pool stats active=6 idle=36 max=50
+2026-09-14 11:07:11,005 INFO  [api-gateway] GET /api/orders/1696 200 14ms
+2026-09-14 11:07:16,401 DEBUG [db-proxy] Pool stats active=10 idle=37 max=50
+2026-09-14 11:07:35,517 INFO  [inventory-service] Stock check sku=111 ok
+2026-09-14 11:07:45,297 INFO  [order-service] Order 58266 created for user 518
+2026-09-14 11:07:55,196 INFO  [inventory-service] Stock check sku=847 ok
+2026-09-14 11:08:08,198 INFO  [payment-service] Payment 81449 authorized amount=302.00 INR
+2026-09-14 11:08:20,757 INFO  [api-gateway] GET /api/orders/3006 200 74ms
+2026-09-14 11:08:31,951 INFO  [payment-service] Payment 86381 authorized amount=364.00 INR
+2026-09-14 11:08:40,554 INFO  [payment-service] Payment 43994 authorized amount=506.00 INR
+2026-09-14 11:08:52,422 DEBUG [db-proxy] Pool stats active=9 idle=34 max=50
+2026-09-14 11:09:05,900 INFO  [api-gateway] GET /api/orders/5995 200 30ms
+2026-09-14 11:09:16,015 WARN  [api-gateway] Slow response 1300ms for GET /api/catalog
+2026-09-14 11:09:36,171 INFO  [inventory-service] Stock check sku=662 ok
+2026-09-14 11:09:44,770 INFO  [payment-service] Payment 93798 authorized amount=78.00 INR
+2026-09-14 11:09:50,619 INFO  [api-gateway] GET /api/orders/9779 200 58ms
+2026-09-14 11:10:05,732 INFO  [api-gateway] GET /api/orders/1526 200 32ms
+2026-09-14 11:10:20,858 INFO  [api-gateway] GET /api/orders/5717 200 47ms
+2026-09-14 11:10:41,345 INFO  [api-gateway] GET /api/orders/4255 200 42ms
+2026-09-14 11:10:50,819 INFO  [api-gateway] GET /api/orders/1921 200 33ms
+2026-09-14 11:10:58,982 INFO  [api-gateway] GET /api/orders/8256 200 94ms
+2026-09-14 11:11:17,472 INFO  [inventory-service] Stock check sku=814 ok
+2026-09-14 11:11:30,261 INFO  [payment-service] Payment 65181 authorized amount=508.00 INR
+2026-09-14 11:11:51,191 INFO  [api-gateway] GET /api/orders/7312 200 78ms
+2026-09-14 11:11:59,966 INFO  [api-gateway] GET /api/orders/1621 200 22ms
+2026-09-14 11:12:06,446 INFO  [api-gateway] GET /api/orders/5729 200 41ms
+2026-09-14 11:12:25,510 DEBUG [db-proxy] Pool stats active=7 idle=37 max=50
+2026-09-14 11:12:39,020 INFO  [payment-service] Payment 17769 authorized amount=270.00 INR
+2026-09-14 11:12:45,609 INFO  [api-gateway] GET /api/orders/4978 200 82ms
+2026-09-14 11:12:59,408 DEBUG [db-proxy] Pool stats active=10 idle=33 max=50
+2026-09-14 11:13:08,018 INFO  [inventory-service] Stock check sku=712 ok
+2026-09-14 11:13:28,327 INFO  [inventory-service] Stock check sku=571 ok
+2026-09-14 11:13:42,284 INFO  [api-gateway] GET /api/orders/2103 200 24ms
+2026-09-14 11:13:55,380 INFO  [inventory-service] Stock check sku=434 ok
+2026-09-14 11:14:03,924 INFO  [payment-service] Payment 82032 authorized amount=785.00 INR
+2026-09-14 11:14:08,648 INFO  [inventory-service] Stock check sku=971 ok
+2026-09-14 11:14:22,579 INFO  [api-gateway] GET /api/orders/1193 200 34ms
+2026-09-14 11:14:34,157 INFO  [api-gateway] GET /api/orders/4700 200 44ms
+2026-09-14 11:14:42,123 INFO  [api-gateway] GET /api/orders/4376 200 90ms
+2026-09-14 11:15:00,183 INFO  [order-service] Order 87605 created for user 616
+2026-09-14 11:15:07,716 DEBUG [db-proxy] Pool stats active=10 idle=34 max=50
+2026-09-14 11:15:23,195 INFO  [api-gateway] GET /api/orders/5930 200 55ms
+2026-09-14 11:15:35,036 INFO  [api-gateway] GET /api/orders/1509 200 40ms
+2026-09-14 11:15:46,778 INFO  [api-gateway] GET /api/orders/8050 200 41ms
+2026-09-14 11:15:56,433 INFO  [payment-service] Payment 81484 authorized amount=393.00 INR
+2026-09-14 11:16:02,514 WARN  [api-gateway] Slow response 1105ms for GET /api/catalog
+2026-09-14 11:16:10,204 INFO  [inventory-service] Stock check sku=460 ok
+2026-09-14 11:16:16,651 DEBUG [db-proxy] Pool stats active=14 idle=39 max=50
+2026-09-14 11:16:22,967 INFO  [api-gateway] GET /api/orders/5074 200 60ms
+2026-09-14 11:16:33,492 DEBUG [db-proxy] Pool stats active=12 idle=40 max=50
+2026-09-14 11:16:41,762 INFO  [order-service] Order 22425 created for user 814
+2026-09-14 11:17:01,168 DEBUG [db-proxy] Pool stats active=9 idle=36 max=50
+2026-09-14 11:17:15,926 INFO  [api-gateway] GET /api/orders/4840 200 74ms
+2026-09-14 11:17:27,581 INFO  [api-gateway] GET /api/orders/6105 200 55ms
+2026-09-14 11:17:40,179 DEBUG [db-proxy] Pool stats active=17 idle=23 max=50
+2026-09-14 11:17:57,328 DEBUG [db-proxy] Pool stats active=11 idle=24 max=50
+2026-09-14 11:18:06,631 INFO  [order-service] Order 80439 created for user 369
+2026-09-14 11:18:25,751 INFO  [payment-service] Payment 51056 authorized amount=651.00 INR
+2026-09-14 11:18:43,499 WARN  [api-gateway] Slow response 1474ms for GET /api/catalog
+2026-09-14 11:18:51,144 INFO  [api-gateway] GET /api/orders/6033 200 57ms
+2026-09-14 11:19:09,500 INFO  [api-gateway] GET /api/orders/8629 200 28ms
+2026-09-14 11:19:29,519 INFO  [api-gateway] GET /api/orders/8598 200 84ms
+2026-09-14 11:19:46,185 INFO  [order-service] Order 76323 created for user 464
+2026-09-14 11:19:55,409 INFO  [payment-service] Payment 50782 authorized amount=807.00 INR
+2026-09-14 11:20:07,951 INFO  [api-gateway] GET /api/orders/1735 200 75ms
+2026-09-14 11:20:24,923 INFO  [api-gateway] GET /api/orders/4637 200 60ms
+2026-09-14 11:20:28,993 INFO  [api-gateway] GET /api/orders/7053 200 76ms
+2026-09-14 11:20:37,651 INFO  [payment-service] Payment 72558 authorized amount=262.00 INR
+2026-09-14 11:20:54,579 INFO  [order-service] Order 86274 created for user 142
+2026-09-14 11:21:07,941 INFO  [api-gateway] GET /api/orders/8527 200 70ms
+2026-09-14 11:21:20,066 INFO  [api-gateway] GET /api/orders/8808 200 87ms
+2026-09-14 11:21:34,528 INFO  [api-gateway] GET /api/orders/8058 200 50ms
+2026-09-14 11:21:46,766 INFO  [api-gateway] GET /api/orders/5533 200 94ms
+2026-09-14 11:21:52,462 DEBUG [db-proxy] Pool stats active=20 idle=36 max=50
+2026-09-14 11:22:02,377 INFO  [api-gateway] GET /api/orders/2224 200 64ms
+2026-09-14 11:22:10,301 INFO  [payment-service] Payment 63502 authorized amount=643.00 INR
+2026-09-14 11:22:23,742 INFO  [order-service] Order 85378 created for user 517
+2026-09-14 11:22:33,780 INFO  [inventory-service] Stock check sku=857 ok
+2026-09-14 11:22:54,227 INFO  [api-gateway] GET /api/orders/2221 200 76ms
+2026-09-14 11:23:08,485 INFO  [api-gateway] GET /api/orders/4530 200 35ms
+2026-09-14 11:23:23,359 INFO  [api-gateway] GET /api/orders/5093 200 64ms
+2026-09-14 11:23:29,956 DEBUG [db-proxy] Pool stats active=7 idle=20 max=50
+2026-09-14 11:23:47,082 INFO  [order-service] Order 83016 created for user 386
+2026-09-14 11:23:58,608 INFO  [payment-service] Payment 54827 authorized amount=499.00 INR
+2026-09-14 11:24:12,774 INFO  [api-gateway] GET /api/orders/1642 200 43ms
+2026-09-14 11:24:30,203 INFO  [inventory-service] Stock check sku=245 ok
+2026-09-14 11:24:34,429 INFO  [inventory-service] Stock check sku=411 ok
+2026-09-14 11:24:39,709 WARN  [api-gateway] Slow response 912ms for GET /api/catalog
+2026-09-14 11:24:55,948 INFO  [api-gateway] GET /api/orders/6852 200 62ms
+2026-09-14 11:25:02,529 INFO  [payment-service] Payment 10724 authorized amount=731.00 INR
+2026-09-14 11:25:19,449 INFO  [api-gateway] GET /api/orders/6802 200 53ms
+2026-09-14 11:25:35,386 INFO  [inventory-service] Stock check sku=564 ok
+2026-09-14 11:25:48,776 INFO  [api-gateway] GET /api/orders/4913 200 16ms
+2026-09-14 11:26:02,689 INFO  [order-service] Order 31903 created for user 818
+2026-09-14 11:26:10,520 INFO  [inventory-service] Stock check sku=884 ok
+2026-09-14 11:26:20,431 INFO  [api-gateway] GET /api/orders/6691 200 39ms
+2026-09-14 11:26:28,276 INFO  [api-gateway] GET /api/orders/4406 200 25ms
+2026-09-14 11:26:42,386 INFO  [api-gateway] GET /api/orders/5013 200 15ms
+2026-09-14 11:27:02,577 INFO  [inventory-service] Stock check sku=327 ok
+2026-09-14 11:27:12,488 INFO  [order-service] Order 66882 created for user 398
+2026-09-14 11:27:30,272 INFO  [api-gateway] GET /api/orders/8037 200 82ms
+2026-09-14 11:27:41,469 INFO  [payment-service] Payment 66740 authorized amount=440.00 INR
+2026-09-14 11:27:49,481 INFO  [inventory-service] Stock check sku=806 ok
+2026-09-14 11:28:02,597 INFO  [order-service] Order 50479 created for user 842
+2026-09-14 11:28:19,833 INFO  [api-gateway] GET /api/orders/5613 200 84ms
+2026-09-14 11:28:30,193 INFO  [api-gateway] GET /api/orders/1949 200 63ms
+2026-09-14 11:28:39,864 DEBUG [db-proxy] Pool stats active=14 idle=23 max=50
+2026-09-14 11:28:58,885 INFO  [api-gateway] GET /api/orders/5602 200 60ms
+2026-09-14 11:29:02,910 INFO  [api-gateway] GET /api/orders/5102 200 33ms
+2026-09-14 11:29:10,620 INFO  [api-gateway] GET /api/orders/7018 200 14ms
+2026-09-14 11:29:27,720 INFO  [api-gateway] GET /api/orders/4625 200 74ms
+2026-09-14 11:29:33,369 INFO  [api-gateway] GET /api/orders/4907 200 58ms
+2026-09-14 11:29:46,257 INFO  [payment-service] Payment 77056 authorized amount=165.00 INR
+2026-09-14 11:30:00,338 INFO  [payment-service] Payment 85298 authorized amount=376.00 INR

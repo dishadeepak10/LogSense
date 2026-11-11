@@ -1,0 +1,39 @@
+import { formatUtc } from '../utils/format'
+import { ConfidenceBadge, SourceTag } from './Badges'
+
+// The three fields from the LLM (or the rule-based fallback) plus the confidence badge.
+export default function AnalysisCard({ analysis }) {
+  if (!analysis) {
+    return (
+      <section className="card p-5">
+        <p className="text-zinc-400">No analysis available for this incident.</p>
+      </section>
+    )
+  }
+  return (
+    <section className="card p-5">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <h2 className="text-lg font-semibold">AI analysis</h2>
+        <ConfidenceBadge confidence={analysis.confidence} />
+      </div>
+      <dl className="mt-4 space-y-4">
+        <div>
+          <dt className="text-sm font-semibold text-zinc-400">Probable root cause</dt>
+          <dd className="mt-1 text-zinc-100">{analysis.root_cause}</dd>
+        </div>
+        <div>
+          <dt className="text-sm font-semibold text-zinc-400">Why</dt>
+          <dd className="mt-1 whitespace-pre-line break-words text-zinc-200">{analysis.why}</dd>
+        </div>
+        <div>
+          <dt className="text-sm font-semibold text-zinc-400">Suggested action</dt>
+          <dd className="mt-1 whitespace-pre-line text-zinc-200">{analysis.suggested_action}</dd>
+        </div>
+      </dl>
+      <p className="mt-4 border-t border-zinc-800 pt-3">
+        <SourceTag source={analysis.source} />
+        <span className="text-xs text-zinc-500"> · {formatUtc(analysis.created_at)}</span>
+      </p>
+    </section>
+  )
+}

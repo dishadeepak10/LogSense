@@ -21,7 +21,7 @@ from app.services.ingest import create_log_file, validate_log_file
 from app.services.parser import ParsedEntry, parse_log
 
 PAST_INCIDENT_LIMIT = 200  # how many earlier incidents similarity looks at
-SAMPLE_LINES = 30          # raw lines given to the analysis per incident
+SAMPLE_LINES = 200         # raw lines given to the analysis per incident (guide asks 20-40; pass more so evidence builder can pick the best)
 
 
 def entry_dict(entry: ParsedEntry) -> dict:

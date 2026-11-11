@@ -31,12 +31,13 @@ def test_placeholders_when_functions_are_missing(disha):
 def test_real_functions_are_used(disha):
     disha(
         analyze_incident=lambda incident, use_llm: {"root_cause": "rc", "why": "w", "suggested_action": "a"},
-        decide_confidence=lambda incident, analysis: "high",
+        decide_confidence=lambda root_cause, category: "high" if category == "database" else "low",
         find_similar_incidents=lambda templates, past: [{"incident_id": "7", "file_name": "old.log", "similarity": 1.7}],
     )
     assert analysis_adapter.analyze_incident(INCIDENT, True) == {
         "root_cause": "rc", "why": "w", "suggested_action": "a", "source": "llm"}
-    assert analysis_adapter.decide_confidence(INCIDENT, {}) == "high"
+    assert analysis_adapter.decide_confidence(INCIDENT, {"root_cause": "rc", "source": "llm"}) == "high"
+    assert analysis_adapter.decide_confidence(INCIDENT, {"root_cause": "rc", "source": "fallback"}) == "low"
     assert analysis_adapter.find_similar_incidents(["t"], [{"incident_id": 7}]) == [
         {"incident_id": 7, "file_name": "old.log", "similarity": 1.0}]  # cleaned and clamped
 
@@ -47,7 +48,7 @@ def test_crashing_or_malformed_functions_fall_back(disha):
     disha(analyze_incident=crash, decide_confidence=lambda *a: "maybe",
           detect_anomalies=lambda entries, groups: "not a list")
     assert analysis_adapter.analyze_incident(INCIDENT, True)["source"] == "fallback"
-    assert analysis_adapter.decide_confidence(INCIDENT, {}) == "low"
+    assert analysis_adapter.decide_confidence(INCIDENT, {"root_cause": "rc", "source": "llm"}) == "low"
     entries = [
         {"index": i, "line_number": i + 1, "timestamp": datetime(2026, 10, 1, 9, 0, i), "level": "ERROR",
          "service": "pay", "message": "x", "template": "x"}

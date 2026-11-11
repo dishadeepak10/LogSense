@@ -1,0 +1,458 @@
+{
+  "file": {
+    "id": 2,
+    "file_name": "payment_service_demo.log",
+    "size_bytes": 18616,
+    "source": "sample",
+    "uploaded_at": "2026-10-15T14:07:34.873324Z",
+    "total_lines": 225,
+    "parsed_lines": 224,
+    "unparsed_lines": 1,
+    "incident_count": 2
+  },
+  "summary": {
+    "file_id": 2,
+    "file_name": "payment_service_demo.log",
+    "total_lines": 225,
+    "parsed_lines": 224,
+    "unparsed_lines": 1,
+    "entry_count": 215,
+    "level_counts": {
+      "DEBUG": 55,
+      "INFO": 137,
+      "WARN": 4,
+      "ERROR": 18,
+      "FATAL": 1
+    },
+    "error_count": 19,
+    "warning_count": 4,
+    "services": [
+      "api-gateway",
+      "auth-service",
+      "db-proxy",
+      "order-service",
+      "payment-service"
+    ],
+    "start_time": "2026-10-01T09:00:00.049000",
+    "end_time": "2026-10-01T09:52:51.359000",
+    "incident_count": 2,
+    "top_error_groups": [
+      {
+        "template": "Upstream payment-service returned <*> for POST /api/payments in <*>",
+        "level": "ERROR",
+        "count": 6,
+        "first_seen": "2026-10-01T09:21:18.950000",
+        "last_seen": "2026-10-01T09:22:20.683000",
+        "example": "Upstream payment-service returned 503 for POST /api/payments in 30140ms"
+      },
+      {
+        "template": "Timeout waiting for connection from pool after <*> ms",
+        "level": "ERROR",
+        "count": 5,
+        "first_seen": "2026-10-01T09:21:35.074000",
+        "last_seen": "2026-10-01T09:22:35.365000",
+        "example": "Timeout waiting for connection from pool after 29400 ms"
+      },
+      {
+        "template": "Failed to save order <*> database connection timed out",
+        "level": "ERROR",
+        "count": 3,
+        "first_seen": "2026-10-01T09:20:57.826000",
+        "last_seen": "2026-10-01T09:21:41.685000",
+        "example": "Failed to save order 37877: database connection timed out"
+      },
+      {
+        "template": "Could not get JDBC connection: pool exhausted after <*> ms",
+        "level": "ERROR",
+        "count": 1,
+        "first_seen": "2026-10-01T09:20:50.204000",
+        "last_seen": "2026-10-01T09:20:50.204000",
+        "example": "Could not get JDBC connection: pool exhausted after 30000 ms"
+      },
+      {
+        "template": "Invalid token for user <*> signature expired",
+        "level": "ERROR",
+        "count": 1,
+        "first_seen": "2026-10-01T09:48:02.651000",
+        "last_seen": "2026-10-01T09:48:02.651000",
+        "example": "Invalid token for user 4512: signature expired"
+      },
+      {
+        "template": "Service crashed, exit code <*> restarting",
+        "level": "FATAL",
+        "count": 1,
+        "first_seen": "2026-10-01T09:38:50.919000",
+        "last_seen": "2026-10-01T09:38:50.919000",
+        "example": "Service crashed, exit code 137, restarting"
+      },
+      {
+        "template": "Unhandled exception while processing batch <*>",
+        "level": "ERROR",
+        "count": 1,
+        "first_seen": "2026-10-01T09:38:44.720000",
+        "last_seen": "2026-10-01T09:38:44.720000",
+        "example": "Unhandled exception while processing batch 7781"
+      },
+      {
+        "template": "java.lang.OutOfMemoryError: Java heap space in worker thread <*>",
+        "level": "ERROR",
+        "count": 1,
+        "first_seen": "2026-10-01T09:38:48.236000",
+        "last_seen": "2026-10-01T09:38:48.236000",
+        "example": "java.lang.OutOfMemoryError: Java heap space in worker thread pool-3-thread-2"
+      }
+    ],
+    "bucket_seconds": 60,
+    "error_timeline": [
+      {
+        "time": "2026-10-01T09:00:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:01:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:02:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:03:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:04:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:05:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:06:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:07:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:08:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:09:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:10:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:11:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:12:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:13:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:14:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:15:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:16:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:17:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:18:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:19:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:20:00",
+        "errors": 2,
+        "warnings": 2
+      },
+      {
+        "time": "2026-10-01T09:21:00",
+        "errors": 8,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:22:00",
+        "errors": 5,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:23:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:24:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:25:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:26:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:27:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:28:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:29:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:30:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:31:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:32:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:33:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:34:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:35:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:36:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:37:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:38:00",
+        "errors": 3,
+        "warnings": 2
+      },
+      {
+        "time": "2026-10-01T09:39:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:40:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:41:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:42:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:43:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:44:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:45:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:46:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:47:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:48:00",
+        "errors": 1,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:49:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:50:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:51:00",
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "time": "2026-10-01T09:52:00",
+        "errors": 0,
+        "warnings": 0
+      }
+    ]
+  },
+  "incidents": [
+    {
+      "id": 2,
+      "file_id": 2,
+      "file_name": "payment_service_demo.log",
+      "title": "Memory issue: Unhandled exception while processing batch <*>",
+      "category": "memory",
+      "severity": "critical",
+      "start_time": "2026-10-01T09:38:05.520000",
+      "end_time": "2026-10-01T09:38:50.919000",
+      "error_count": 3,
+      "services": [
+        "order-service"
+      ],
+      "candidate_trigger": "2026-10-01 09:38:05,520 WARN  [order-service] Heap usage at 88% of 2048 MB",
+      "candidate_trigger_line": 159,
+      "service_timeline": [
+        {
+          "service": "order-service",
+          "first_error": "2026-10-01T09:38:44.720000",
+          "error_count": 3
+        }
+      ],
+      "similar_incidents": [],
+      "analysis": {
+        "root_cause": "The process ran out of memory.",
+        "why": "Rule-based guess from keywords (category: memory). 3 errors from order-service between 2026-10-01 09:38:05 and 2026-10-01 09:38:50. Most frequent error: \"Unhandled exception while processing batch <*>\". Earliest related line: 2026-10-01 09:38:05,520 WARN  [order-service] Heap usage at 88% of 2048 MB",
+        "suggested_action": "1) Check memory usage and limits for the affected service. 2) Look for a memory leak or a very large request around the start time. 3) Raise the heap or container memory limit if usage is normal.",
+        "confidence": "low",
+        "source": "fallback",
+        "created_at": "2026-10-15T14:07:34.880121Z"
+      }
+    },
+    {
+      "id": 3,
+      "file_id": 2,
+      "file_name": "payment_service_demo.log",
+      "title": "Database issue: Could not get JDBC connection: pool exhausted after <*> ms",
+      "category": "database",
+      "severity": "high",
+      "start_time": "2026-10-01T09:20:32.620000",
+      "end_time": "2026-10-01T09:22:35.365000",
+      "error_count": 15,
+      "services": [
+        "api-gateway",
+        "order-service",
+        "payment-service"
+      ],
+      "candidate_trigger": "2026-10-01 09:20:32,620 WARN  [payment-service] Slow query took 4200 ms: SELECT * FROM payments WHERE status = 'PENDING'",
+      "candidate_trigger_line": 79,
+      "service_timeline": [
+        {
+          "service": "payment-service",
+          "first_error": "2026-10-01T09:20:50.204000",
+          "error_count": 6
+        },
+        {
+          "service": "order-service",
+          "first_error": "2026-10-01T09:20:57.826000",
+          "error_count": 3
+        },
+        {
+          "service": "api-gateway",
+          "first_error": "2026-10-01T09:21:18.950000",
+          "error_count": 6
+        }
+      ],
+      "similar_incidents": [
+        {
+          "incident_id": 1,
+          "file_name": "small_app.log",
+          "similarity": 0.43
+        }
+      ],
+      "analysis": {
+        "root_cause": "The payment database ran out of connections: the HikariCP pool (50 connections) was exhausted, so new queries could not get a connection.",
+        "why": "The first warning is a 4.2 s slow query on payments (line 79), followed 18 s later by 'pool exhausted' and 'remaining connection slots are reserved' from PostgreSQL. order-service and api-gateway errors start after payment-service, so they look like knock-on effects.",
+        "suggested_action": "1) Find and fix the slow SELECT on payments (add an index on status). 2) Check for connections that are not returned to the pool. 3) Temporarily raise the pool size or max_connections while the fix is deployed.",
+        "confidence": "high",
+        "source": "llm",
+        "created_at": "2026-10-15T14:07:34.880121Z"
+      }
+    }
+  ]
+}

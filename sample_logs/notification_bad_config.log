@@ -1,0 +1,605 @@
+2026-09-14 10:00:05,477 INFO  [api-gateway] GET /api/orders/2604 200 77ms
+2026-09-14 10:00:13,969 INFO  [api-gateway] GET /api/orders/2973 200 89ms
+2026-09-14 10:00:32,036 INFO  [inventory-service] Stock check sku=423 ok
+2026-09-14 10:00:41,658 INFO  [payment-service] Payment 81479 authorized amount=646.00 INR
+2026-09-14 10:00:48,530 INFO  [api-gateway] GET /api/orders/2125 200 56ms
+2026-09-14 10:01:04,610 INFO  [api-gateway] GET /api/orders/6096 200 80ms
+2026-09-14 10:01:09,254 INFO  [api-gateway] GET /api/orders/5849 200 50ms
+2026-09-14 10:01:25,015 INFO  [api-gateway] GET /api/orders/8917 200 21ms
+2026-09-14 10:01:30,873 INFO  [order-service] Order 68053 created for user 958
+2026-09-14 10:01:36,481 DEBUG [db-proxy] Pool stats active=11 idle=39 max=50
+2026-09-14 10:01:47,178 INFO  [payment-service] Payment 16495 authorized amount=344.00 INR
+2026-09-14 10:01:55,033 INFO  [api-gateway] GET /api/orders/4953 200 41ms
+2026-09-14 10:02:13,737 INFO  [order-service] Order 21525 created for user 121
+2026-09-14 10:02:19,070 INFO  [order-service] Order 32845 created for user 276
+2026-09-14 10:02:34,391 INFO  [payment-service] Payment 81643 authorized amount=810.00 INR
+2026-09-14 10:02:52,998 INFO  [api-gateway] GET /api/orders/4775 200 75ms
+2026-09-14 10:03:04,094 INFO  [api-gateway] GET /api/orders/5886 200 20ms
+2026-09-14 10:03:19,267 INFO  [api-gateway] GET /api/orders/7234 200 93ms
+2026-09-14 10:03:34,639 INFO  [api-gateway] GET /api/orders/9567 200 47ms
+2026-09-14 10:03:39,909 INFO  [inventory-service] Stock check sku=514 ok
+2026-09-14 10:03:53,341 INFO  [payment-service] Payment 10343 authorized amount=324.00 INR
+2026-09-14 10:04:13,819 WARN  [api-gateway] Slow response 1385ms for GET /api/catalog
+2026-09-14 10:04:21,681 INFO  [inventory-service] Stock check sku=927 ok
+2026-09-14 10:04:31,345 INFO  [api-gateway] GET /api/orders/8892 200 17ms
+2026-09-14 10:04:46,815 INFO  [inventory-service] Stock check sku=436 ok
+2026-09-14 10:05:01,916 INFO  [payment-service] Payment 26065 authorized amount=888.00 INR
+2026-09-14 10:05:19,974 INFO  [order-service] Order 37973 created for user 508
+2026-09-14 10:05:26,228 INFO  [api-gateway] GET /api/orders/8505 200 91ms
+2026-09-14 10:05:32,113 INFO  [order-service] Order 43509 created for user 190
+2026-09-14 10:05:44,023 INFO  [payment-service] Payment 36919 authorized amount=646.00 INR
+2026-09-14 10:06:03,790 INFO  [payment-service] Payment 79727 authorized amount=546.00 INR
+2026-09-14 10:06:10,662 DEBUG [db-proxy] Pool stats active=14 idle=24 max=50
+2026-09-14 10:06:17,420 INFO  [payment-service] Payment 10369 authorized amount=30.00 INR
+2026-09-14 10:06:22,658 DEBUG [db-proxy] Pool stats active=14 idle=33 max=50
+2026-09-14 10:06:34,314 INFO  [payment-service] Payment 76441 authorized amount=766.00 INR
+2026-09-14 10:06:54,783 INFO  [api-gateway] GET /api/orders/9802 200 32ms
+2026-09-14 10:07:05,930 INFO  [order-service] Order 22762 created for user 759
+2026-09-14 10:07:14,841 DEBUG [db-proxy] Pool stats active=10 idle=32 max=50
+2026-09-14 10:07:33,338 INFO  [inventory-service] Stock check sku=882 ok
+2026-09-14 10:07:46,290 INFO  [order-service] Order 22552 created for user 174
+2026-09-14 10:07:54,767 INFO  [api-gateway] GET /api/orders/4617 200 71ms
+2026-09-14 10:08:03,311 INFO  [inventory-service] Stock check sku=783 ok
+2026-09-14 10:08:08,140 INFO  [api-gateway] GET /api/orders/6091 200 92ms
+2026-09-14 10:08:28,254 INFO  [payment-service] Payment 99500 authorized amount=36.00 INR
+2026-09-14 10:08:38,969 DEBUG [db-proxy] Pool stats active=18 idle=38 max=50
+2026-09-14 10:08:48,352 INFO  [order-service] Order 97669 created for user 720
+2026-09-14 10:09:02,780 INFO  [order-service] Order 23460 created for user 248
+2026-09-14 10:09:13,917 INFO  [api-gateway] GET /api/orders/6998 200 16ms
+2026-09-14 10:09:19,523 WARN  [api-gateway] Slow response 1216ms for GET /api/catalog
+2026-09-14 10:09:34,437 INFO  [api-gateway] GET /api/orders/2014 200 47ms
+2026-09-14 10:09:54,035 INFO  [api-gateway] GET /api/orders/1927 200 83ms
+2026-09-14 10:10:04,199 INFO  [api-gateway] GET /api/orders/7225 200 39ms
+2026-09-14 10:10:14,993 INFO  [api-gateway] GET /api/orders/2784 200 30ms
+2026-09-14 10:10:25,134 INFO  [api-gateway] GET /api/orders/2988 200 47ms
+2026-09-14 10:10:31,713 INFO  [order-service] Order 64627 created for user 746
+2026-09-14 10:10:36,400 INFO  [api-gateway] GET /api/orders/9898 200 78ms
+2026-09-14 10:10:44,723 INFO  [order-service] Order 22233 created for user 162
+2026-09-14 10:10:59,156 INFO  [api-gateway] GET /api/orders/4544 200 54ms
+2026-09-14 10:11:19,207 INFO  [order-service] Order 47854 created for user 220
+2026-09-14 10:11:32,608 INFO  [inventory-service] Stock check sku=637 ok
+2026-09-14 10:11:37,506 INFO  [order-service] Order 30232 created for user 318
+2026-09-14 10:11:45,034 INFO  [inventory-service] Stock check sku=156 ok
+2026-09-14 10:11:54,295 DEBUG [db-proxy] Pool stats active=9 idle=40 max=50
+2026-09-14 10:12:03,673 INFO  [payment-service] Payment 19450 authorized amount=678.00 INR
+2026-09-14 10:12:08,545 INFO  [payment-service] Payment 61737 authorized amount=177.00 INR
+2026-09-14 10:12:18,454 INFO  [order-service] Order 51817 created for user 549
+2026-09-14 10:12:34,753 DEBUG [db-proxy] Pool stats active=9 idle=27 max=50
+2026-09-14 10:12:48,029 INFO  [api-gateway] GET /api/orders/8177 200 80ms
+2026-09-14 10:13:03,877 DEBUG [db-proxy] Pool stats active=16 idle=27 max=50
+2026-09-14 10:13:08,364 INFO  [order-service] Order 92878 created for user 904
+2026-09-14 10:13:25,986 INFO  [inventory-service] Stock check sku=816 ok
+2026-09-14 10:13:41,917 DEBUG [db-proxy] Pool stats active=16 idle=23 max=50
+2026-09-14 10:13:53,547 INFO  [api-gateway] GET /api/orders/5812 200 25ms
+2026-09-14 10:13:59,837 INFO  [order-service] Order 44656 created for user 228
+2026-09-14 10:14:15,364 INFO  [inventory-service] Stock check sku=394 ok
+2026-09-14 10:14:19,620 INFO  [payment-service] Payment 59317 authorized amount=494.00 INR
+2026-09-14 10:14:24,405 INFO  [api-gateway] GET /api/orders/5058 200 57ms
+2026-09-14 10:14:41,272 INFO  [api-gateway] GET /api/orders/7807 200 50ms
+2026-09-14 10:14:51,632 INFO  [api-gateway] GET /api/orders/1149 200 59ms
+2026-09-14 10:15:06,008 INFO  [payment-service] Payment 99057 authorized amount=115.00 INR
+2026-09-14 10:15:14,317 INFO  [order-service] Order 94837 created for user 951
+2026-09-14 10:15:30,490 INFO  [api-gateway] GET /api/orders/8503 200 73ms
+2026-09-14 10:15:40,715 INFO  [payment-service] Payment 45396 authorized amount=290.00 INR
+2026-09-14 10:15:58,727 INFO  [payment-service] Payment 22922 authorized amount=295.00 INR
+2026-09-14 10:16:16,172 DEBUG [db-proxy] Pool stats active=17 idle=40 max=50
+2026-09-14 10:16:28,614 INFO  [api-gateway] GET /api/orders/1536 200 95ms
+2026-09-14 10:16:42,520 INFO  [order-service] Order 36340 created for user 403
+2026-09-14 10:16:52,966 INFO  [api-gateway] GET /api/orders/2417 200 57ms
+2026-09-14 10:17:06,790 INFO  [api-gateway] GET /api/orders/2625 200 34ms
+2026-09-14 10:17:12,283 INFO  [api-gateway] GET /api/orders/7510 200 90ms
+2026-09-14 10:17:26,627 INFO  [inventory-service] Stock check sku=172 ok
+2026-09-14 10:17:32,911 DEBUG [db-proxy] Pool stats active=5 idle=31 max=50
+2026-09-14 10:17:49,054 INFO  [api-gateway] GET /api/orders/2202 200 73ms
+2026-09-14 10:18:05,811 INFO  [api-gateway] GET /api/orders/1758 200 28ms
+2026-09-14 10:18:19,665 INFO  [order-service] Order 25636 created for user 723
+2026-09-14 10:18:28,943 INFO  [api-gateway] GET /api/orders/5176 200 26ms
+2026-09-14 10:18:47,526 INFO  [payment-service] Payment 99127 authorized amount=182.00 INR
+2026-09-14 10:19:07,750 INFO  [api-gateway] GET /api/orders/5275 200 75ms
+2026-09-14 10:19:21,168 INFO  [inventory-service] Stock check sku=235 ok
+2026-09-14 10:19:28,141 INFO  [payment-service] Payment 41060 authorized amount=728.00 INR
+2026-09-14 10:19:34,164 INFO  [order-service] Order 16913 created for user 127
+2026-09-14 10:19:45,943 INFO  [payment-service] Payment 25212 authorized amount=149.00 INR
+2026-09-14 10:19:58,715 INFO  [inventory-service] Stock check sku=472 ok
+2026-09-14 10:20:18,758 INFO  [payment-service] Payment 11449 authorized amount=380.00 INR
+2026-09-14 10:20:36,175 DEBUG [db-proxy] Pool stats active=17 idle=31 max=50
+2026-09-14 10:20:47,028 INFO  [api-gateway] GET /api/orders/8700 200 59ms
+2026-09-14 10:20:52,126 INFO  [api-gateway] GET /api/orders/2868 200 55ms
+2026-09-14 10:20:58,662 INFO  [payment-service] Payment 75239 authorized amount=290.00 INR
+2026-09-14 10:21:10,908 INFO  [api-gateway] GET /api/orders/3195 200 26ms
+2026-09-14 10:21:26,507 INFO  [api-gateway] GET /api/orders/3489 200 72ms
+2026-09-14 10:21:41,474 INFO  [api-gateway] GET /api/orders/4404 200 74ms
+2026-09-14 10:21:46,750 INFO  [payment-service] Payment 49613 authorized amount=682.00 INR
+2026-09-14 10:21:56,782 INFO  [api-gateway] GET /api/orders/2726 200 85ms
+2026-09-14 10:22:10,507 INFO  [api-gateway] GET /api/orders/2133 200 31ms
+2026-09-14 10:22:14,723 INFO  [order-service] Order 59866 created for user 640
+2026-09-14 10:22:30,720 INFO  [api-gateway] GET /api/orders/2919 200 28ms
+2026-09-14 10:22:49,586 INFO  [payment-service] Payment 11111 authorized amount=789.00 INR
+2026-09-14 10:23:08,356 INFO  [api-gateway] GET /api/orders/2282 200 56ms
+2026-09-14 10:23:27,223 INFO  [api-gateway] GET /api/orders/7418 200 59ms
+2026-09-14 10:23:33,631 INFO  [api-gateway] GET /api/orders/9251 200 25ms
+2026-09-14 10:23:42,575 INFO  [payment-service] Payment 57886 authorized amount=496.00 INR
+2026-09-14 10:23:56,454 INFO  [order-service] Order 53424 created for user 943
+2026-09-14 10:24:12,117 INFO  [inventory-service] Stock check sku=406 ok
+2026-09-14 10:24:21,630 DEBUG [db-proxy] Pool stats active=9 idle=35 max=50
+2026-09-14 10:24:34,638 WARN  [api-gateway] Slow response 1082ms for GET /api/catalog
+2026-09-14 10:24:47,077 INFO  [api-gateway] GET /api/orders/7485 200 55ms
+2026-09-14 10:25:05,639 INFO  [order-service] Order 27559 created for user 155
+2026-09-14 10:25:12,366 INFO  [api-gateway] GET /api/orders/6652 200 14ms
+2026-09-14 10:25:25,076 INFO  [order-service] Order 18792 created for user 418
+2026-09-14 10:25:36,104 INFO  [payment-service] Payment 62639 authorized amount=311.00 INR
+2026-09-14 10:25:43,126 INFO  [payment-service] Payment 58332 authorized amount=333.00 INR
+2026-09-14 10:25:54,533 INFO  [api-gateway] GET /api/orders/8701 200 86ms
+2026-09-14 10:26:00,696 INFO  [api-gateway] GET /api/orders/8850 200 58ms
+2026-09-14 10:26:19,374 INFO  [api-gateway] GET /api/orders/6585 200 51ms
+2026-09-14 10:26:35,262 INFO  [api-gateway] GET /api/orders/3018 200 80ms
+2026-09-14 10:26:54,049 INFO  [payment-service] Payment 39856 authorized amount=852.00 INR
+2026-09-14 10:27:11,473 INFO  [inventory-service] Stock check sku=601 ok
+2026-09-14 10:27:25,470 INFO  [payment-service] Payment 55390 authorized amount=107.00 INR
+2026-09-14 10:27:33,973 INFO  [api-gateway] GET /api/orders/7920 200 67ms
+2026-09-14 10:27:51,540 INFO  [inventory-service] Stock check sku=476 ok
+2026-09-14 10:28:10,434 INFO  [payment-service] Payment 73716 authorized amount=553.00 INR
+2026-09-14 10:28:24,213 INFO  [api-gateway] GET /api/orders/2137 200 62ms
+2026-09-14 10:28:41,271 INFO  [order-service] Order 93337 created for user 302
+2026-09-14 10:28:57,769 WARN  [api-gateway] Slow response 810ms for GET /api/catalog
+2026-09-14 10:29:17,485 INFO  [inventory-service] Stock check sku=598 ok
+2026-09-14 10:29:22,771 INFO  [payment-service] Payment 67482 authorized amount=387.00 INR
+2026-09-14 10:29:29,173 INFO  [order-service] Order 62442 created for user 519
+2026-09-14 10:29:46,286 INFO  [order-service] Order 29550 created for user 462
+2026-09-14 10:30:02,876 INFO  [api-gateway] GET /api/orders/8731 200 21ms
+2026-09-14 10:30:19,719 INFO  [api-gateway] GET /api/orders/1258 200 87ms
+2026-09-14 10:30:25,221 INFO  [api-gateway] GET /api/orders/1944 200 52ms
+2026-09-14 10:30:42,035 INFO  [inventory-service] Stock check sku=151 ok
+2026-09-14 10:30:48,893 INFO  [inventory-service] Stock check sku=460 ok
+2026-09-14 10:31:08,063 INFO  [payment-service] Payment 58749 authorized amount=791.00 INR
+2026-09-14 10:31:19,599 INFO  [payment-service] Payment 80473 authorized amount=855.00 INR
+2026-09-14 10:31:27,628 INFO  [payment-service] Payment 30822 authorized amount=220.00 INR
+2026-09-14 10:31:46,612 DEBUG [db-proxy] Pool stats active=14 idle=29 max=50
+2026-09-14 10:31:52,516 INFO  [order-service] Order 19950 created for user 264
+2026-09-14 10:32:02,456 INFO  [inventory-service] Stock check sku=534 ok
+2026-09-14 10:32:19,831 INFO  [api-gateway] GET /api/orders/6277 200 19ms
+2026-09-14 10:32:36,199 INFO  [api-gateway] GET /api/orders/3107 200 94ms
+2026-09-14 10:32:44,355 INFO  [order-service] Order 81746 created for user 148
+2026-09-14 10:32:50,763 INFO  [order-service] Order 84379 created for user 965
+2026-09-14 10:32:56,651 DEBUG [db-proxy] Pool stats active=17 idle=32 max=50
+2026-09-14 10:33:11,380 INFO  [inventory-service] Stock check sku=419 ok
+2026-09-14 10:33:16,181 INFO  [inventory-service] Stock check sku=796 ok
+2026-09-14 10:33:23,455 DEBUG [db-proxy] Pool stats active=17 idle=40 max=50
+2026-09-14 10:33:34,067 INFO  [api-gateway] GET /api/orders/5860 200 44ms
+2026-09-14 10:33:40,921 WARN  [api-gateway] Slow response 964ms for GET /api/catalog
+2026-09-14 10:33:52,486 INFO  [inventory-service] Stock check sku=714 ok
+2026-09-14 10:33:58,228 INFO  [inventory-service] Stock check sku=408 ok
+2026-09-14 10:34:18,726 DEBUG [db-proxy] Pool stats active=10 idle=20 max=50
+2026-09-14 10:34:38,299 DEBUG [db-proxy] Pool stats active=8 idle=36 max=50
+2026-09-14 10:34:53,774 INFO  [order-service] Order 64612 created for user 636
+2026-09-14 10:35:10,977 INFO  [payment-service] Payment 15865 authorized amount=675.00 INR
+2026-09-14 10:35:30,935 INFO  [inventory-service] Stock check sku=473 ok
+2026-09-14 10:35:36,901 INFO  [api-gateway] GET /api/orders/8406 200 19ms
+2026-09-14 10:35:48,106 INFO  [inventory-service] Stock check sku=840 ok
+2026-09-14 10:36:04,047 DEBUG [db-proxy] Pool stats active=15 idle=36 max=50
+2026-09-14 10:36:19,461 DEBUG [db-proxy] Pool stats active=14 idle=38 max=50
+2026-09-14 10:36:23,726 INFO  [api-gateway] GET /api/orders/7731 200 26ms
+2026-09-14 10:36:40,072 INFO  [order-service] Order 14373 created for user 660
+2026-09-14 10:36:54,817 DEBUG [db-proxy] Pool stats active=20 idle=20 max=50
+2026-09-14 10:37:14,581 INFO  [payment-service] Payment 29295 authorized amount=513.00 INR
+2026-09-14 10:37:33,022 INFO  [payment-service] Payment 38295 authorized amount=656.00 INR
+2026-09-14 10:37:47,067 INFO  [inventory-service] Stock check sku=859 ok
+2026-09-14 10:38:02,970 INFO  [api-gateway] GET /api/orders/9507 200 24ms
+2026-09-14 10:38:20,312 INFO  [api-gateway] GET /api/orders/4606 200 29ms
+2026-09-14 10:38:38,377 INFO  [api-gateway] GET /api/orders/8664 200 22ms
+2026-09-14 10:38:45,842 DEBUG [db-proxy] Pool stats active=7 idle=32 max=50
+2026-09-14 10:39:02,848 INFO  [order-service] Order 89472 created for user 520
+2026-09-14 10:39:18,575 INFO  [payment-service] Payment 94022 authorized amount=207.00 INR
+2026-09-14 10:39:35,424 INFO  [api-gateway] GET /api/orders/9114 200 68ms
+2026-09-14 10:39:45,519 INFO  [api-gateway] GET /api/orders/9748 200 57ms
+2026-09-14 10:39:50,195 WARN  [api-gateway] Slow response 1353ms for GET /api/catalog
+2026-09-14 10:40:09,057 INFO  [api-gateway] GET /api/orders/4859 200 87ms
+2026-09-14 10:40:20,847 INFO  [order-service] Order 35917 created for user 496
+2026-09-14 10:40:33,446 INFO  [order-service] Order 52328 created for user 197
+2026-09-14 10:40:52,230 INFO  [inventory-service] Stock check sku=394 ok
+2026-09-14 10:40:59,548 INFO  [api-gateway] GET /api/orders/5169 200 27ms
+2026-09-14 10:41:09,930 INFO  [api-gateway] GET /api/orders/4760 200 44ms
+2026-09-14 10:41:30,905 INFO  [payment-service] Payment 10616 authorized amount=625.00 INR
+2026-09-14 10:41:50,787 INFO  [payment-service] Payment 61687 authorized amount=823.00 INR
+2026-09-14 10:41:59,108 INFO  [api-gateway] GET /api/orders/3588 200 36ms
+2026-09-14 10:42:14,585 INFO  [api-gateway] GET /api/orders/8777 200 82ms
+2026-09-14 10:42:19,564 INFO  [inventory-service] Stock check sku=969 ok
+2026-09-14 10:42:39,584 INFO  [payment-service] Payment 56643 authorized amount=684.00 INR
+2026-09-14 10:42:53,620 INFO  [payment-service] Payment 67938 authorized amount=660.00 INR
+2026-09-14 10:43:09,961 INFO  [payment-service] Payment 96354 authorized amount=329.00 INR
+2026-09-14 10:43:20,448 INFO  [api-gateway] GET /api/orders/2379 200 34ms
+2026-09-14 10:43:39,054 INFO  [api-gateway] GET /api/orders/3375 200 81ms
+2026-09-14 10:43:44,927 INFO  [payment-service] Payment 20220 authorized amount=609.00 INR
+2026-09-14 10:43:49,377 INFO  [order-service] Order 32767 created for user 863
+2026-09-14 10:44:03,742 INFO  [payment-service] Payment 26074 authorized amount=395.00 INR
+2026-09-14 10:44:24,402 INFO  [api-gateway] GET /api/orders/1365 200 29ms
+2026-09-14 10:44:41,759 INFO  [api-gateway] GET /api/orders/9359 200 32ms
+2026-09-14 10:44:49,927 WARN  [api-gateway] Slow response 903ms for GET /api/catalog
+2026-09-14 10:44:57,304 INFO  [api-gateway] GET /api/orders/2742 200 14ms
+2026-09-14 10:45:07,545 INFO  [inventory-service] Stock check sku=342 ok
+2026-09-14 10:45:27,191 WARN  [api-gateway] Slow response 839ms for GET /api/catalog
+2026-09-14 10:45:44,504 INFO  [order-service] Order 26246 created for user 485
+2026-09-14 10:46:00,773 DEBUG [db-proxy] Pool stats active=8 idle=29 max=50
+2026-09-14 10:46:12,417 INFO  [order-service] Order 22833 created for user 352
+2026-09-14 10:46:26,425 INFO  [order-service] Order 59595 created for user 637
+2026-09-14 10:46:45,649 INFO  [payment-service] Payment 68154 authorized amount=393.00 INR
+2026-09-14 10:46:50,956 INFO  [api-gateway] GET /api/orders/5466 200 62ms
+2026-09-14 10:46:55,164 INFO  [order-service] Order 41609 created for user 511
+2026-09-14 10:47:15,691 INFO  [payment-service] Payment 55277 authorized amount=644.00 INR
+2026-09-14 10:47:30,769 DEBUG [db-proxy] Pool stats active=11 idle=20 max=50
+2026-09-14 10:47:44,406 INFO  [api-gateway] GET /api/orders/7709 200 56ms
+2026-09-14 10:47:56,161 INFO  [api-gateway] GET /api/orders/6970 200 53ms
+2026-09-14 10:48:12,224 INFO  [order-service] Order 59028 created for user 971
+2026-09-14 10:48:25,618 DEBUG [db-proxy] Pool stats active=5 idle=29 max=50
+2026-09-14 10:48:30,247 INFO  [api-gateway] GET /api/orders/4984 200 23ms
+2026-09-14 10:48:35,004 INFO  [inventory-service] Stock check sku=124 ok
+2026-09-14 10:48:42,854 DEBUG [db-proxy] Pool stats active=5 idle=34 max=50
+2026-09-14 10:48:54,219 INFO  [inventory-service] Stock check sku=318 ok
+2026-09-14 10:49:12,590 INFO  [api-gateway] GET /api/orders/4149 200 79ms
+2026-09-14 10:49:28,523 DEBUG [db-proxy] Pool stats active=13 idle=30 max=50
+2026-09-14 10:49:39,316 INFO  [api-gateway] GET /api/orders/9720 200 22ms
+2026-09-14 10:49:52,836 INFO  [order-service] Order 43769 created for user 528
+2026-09-14 10:50:00,000 INFO  [notification-service] Deployed version 3.2.0 (config profile: prod)
+2026-09-14 10:50:01,664 INFO  [payment-service] Payment 28828 authorized amount=135.00 INR
+2026-09-14 10:50:13,033 DEBUG [db-proxy] Pool stats active=12 idle=31 max=50
+2026-09-14 10:50:20,651 DEBUG [db-proxy] Pool stats active=6 idle=38 max=50
+2026-09-14 10:50:32,529 INFO  [payment-service] Payment 23638 authorized amount=20.00 INR
+2026-09-14 10:50:51,073 INFO  [api-gateway] GET /api/orders/2113 200 15ms
+2026-09-14 10:51:00,563 INFO  [order-service] Order 36437 created for user 434
+2026-09-14 10:51:05,953 DEBUG [db-proxy] Pool stats active=11 idle=26 max=50
+2026-09-14 10:51:26,313 INFO  [order-service] Order 24143 created for user 434
+2026-09-14 10:51:32,047 INFO  [inventory-service] Stock check sku=781 ok
+2026-09-14 10:51:46,233 DEBUG [db-proxy] Pool stats active=6 idle=35 max=50
+2026-09-14 10:52:00,000 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 10:52:00,820 INFO  [inventory-service] Stock check sku=163 ok
+2026-09-14 10:52:10,256 INFO  [inventory-service] Stock check sku=483 ok
+2026-09-14 10:52:28,543 DEBUG [db-proxy] Pool stats active=15 idle=34 max=50
+2026-09-14 10:52:32,794 INFO  [order-service] Order 27981 created for user 258
+2026-09-14 10:52:40,285 INFO  [order-service] Order 33399 created for user 704
+2026-09-14 10:52:51,858 INFO  [order-service] Order 53542 created for user 760
+2026-09-14 10:53:09,296 DEBUG [db-proxy] Pool stats active=12 idle=20 max=50
+2026-09-14 10:53:18,532 INFO  [payment-service] Payment 95902 authorized amount=891.00 INR
+2026-09-14 10:53:34,760 WARN  [api-gateway] Slow response 1248ms for GET /api/catalog
+2026-09-14 10:53:39,592 INFO  [payment-service] Payment 41945 authorized amount=140.00 INR
+2026-09-14 10:53:49,782 INFO  [inventory-service] Stock check sku=791 ok
+2026-09-14 10:54:09,910 DEBUG [db-proxy] Pool stats active=11 idle=22 max=50
+2026-09-14 10:54:27,482 INFO  [order-service] Order 93422 created for user 705
+2026-09-14 10:54:34,829 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 10:54:40,621 INFO  [order-service] Order 61350 created for user 279
+2026-09-14 10:54:47,931 WARN  [api-gateway] Slow response 1035ms for GET /api/catalog
+2026-09-14 10:55:01,656 INFO  [payment-service] Payment 39228 authorized amount=395.00 INR
+2026-09-14 10:55:06,236 INFO  [payment-service] Payment 30567 authorized amount=25.00 INR
+2026-09-14 10:55:22,762 INFO  [api-gateway] GET /api/orders/1579 200 64ms
+2026-09-14 10:55:34,692 INFO  [order-service] Order 81085 created for user 663
+2026-09-14 10:55:46,226 INFO  [api-gateway] GET /api/orders/4377 200 95ms
+2026-09-14 10:55:51,861 INFO  [api-gateway] GET /api/orders/1213 200 28ms
+2026-09-14 10:55:58,884 DEBUG [db-proxy] Pool stats active=19 idle=32 max=50
+2026-09-14 10:56:18,254 DEBUG [db-proxy] Pool stats active=17 idle=20 max=50
+2026-09-14 10:56:35,193 INFO  [order-service] Order 73645 created for user 262
+2026-09-14 10:56:48,250 INFO  [api-gateway] GET /api/orders/6043 200 60ms
+2026-09-14 10:56:53,400 INFO  [order-service] Order 10924 created for user 718
+2026-09-14 10:57:13,029 INFO  [order-service] Order 84003 created for user 950
+2026-09-14 10:57:17,376 INFO  [api-gateway] GET /api/orders/1367 200 69ms
+2026-09-14 10:57:27,412 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 10:57:35,756 INFO  [api-gateway] GET /api/orders/2378 200 45ms
+2026-09-14 10:57:45,930 INFO  [order-service] Order 70030 created for user 807
+2026-09-14 10:57:53,022 INFO  [inventory-service] Stock check sku=340 ok
+2026-09-14 10:57:58,810 INFO  [order-service] Order 85251 created for user 250
+2026-09-14 10:58:06,212 INFO  [api-gateway] GET /api/orders/8623 200 22ms
+2026-09-14 10:58:13,957 INFO  [api-gateway] GET /api/orders/5424 200 23ms
+2026-09-14 10:58:33,288 WARN  [api-gateway] Slow response 1226ms for GET /api/catalog
+2026-09-14 10:58:40,979 INFO  [api-gateway] GET /api/orders/2703 200 79ms
+2026-09-14 10:58:57,054 INFO  [api-gateway] GET /api/orders/3775 200 30ms
+2026-09-14 10:59:14,891 INFO  [order-service] Order 27971 created for user 510
+2026-09-14 10:59:28,842 INFO  [order-service] Order 99325 created for user 595
+2026-09-14 10:59:49,347 INFO  [api-gateway] GET /api/orders/2987 200 61ms
+2026-09-14 11:00:09,049 INFO  [inventory-service] Stock check sku=691 ok
+2026-09-14 11:00:27,890 INFO  [api-gateway] GET /api/orders/4893 200 48ms
+2026-09-14 11:00:36,515 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:00:36,539 INFO  [payment-service] Payment 39841 authorized amount=233.00 INR
+2026-09-14 11:00:48,708 INFO  [payment-service] Payment 49178 authorized amount=464.00 INR
+2026-09-14 11:01:04,357 INFO  [api-gateway] GET /api/orders/8191 200 78ms
+2026-09-14 11:01:16,558 DEBUG [db-proxy] Pool stats active=11 idle=20 max=50
+2026-09-14 11:01:34,629 INFO  [api-gateway] GET /api/orders/6609 200 80ms
+2026-09-14 11:01:52,969 DEBUG [db-proxy] Pool stats active=12 idle=29 max=50
+2026-09-14 11:02:07,147 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:02:10,581 INFO  [payment-service] Payment 95062 authorized amount=281.00 INR
+2026-09-14 11:02:15,847 DEBUG [db-proxy] Pool stats active=7 idle=21 max=50
+2026-09-14 11:02:22,871 INFO  [api-gateway] GET /api/orders/9845 200 29ms
+2026-09-14 11:02:37,655 DEBUG [db-proxy] Pool stats active=17 idle=38 max=50
+2026-09-14 11:02:45,364 INFO  [order-service] Order 88919 created for user 749
+2026-09-14 11:03:05,812 INFO  [api-gateway] GET /api/orders/6447 200 71ms
+2026-09-14 11:03:18,486 INFO  [payment-service] Payment 83456 authorized amount=772.00 INR
+2026-09-14 11:03:34,844 INFO  [api-gateway] GET /api/orders/1161 200 82ms
+2026-09-14 11:03:44,148 INFO  [api-gateway] GET /api/orders/8557 200 91ms
+2026-09-14 11:03:57,380 INFO  [payment-service] Payment 24135 authorized amount=743.00 INR
+2026-09-14 11:04:05,691 INFO  [payment-service] Payment 84233 authorized amount=92.00 INR
+2026-09-14 11:04:24,794 INFO  [payment-service] Payment 37975 authorized amount=478.00 INR
+2026-09-14 11:04:34,206 INFO  [api-gateway] GET /api/orders/2098 200 30ms
+2026-09-14 11:04:53,870 DEBUG [db-proxy] Pool stats active=15 idle=25 max=50
+2026-09-14 11:05:06,770 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:05:09,465 INFO  [api-gateway] GET /api/orders/8198 200 33ms
+2026-09-14 11:05:19,901 INFO  [api-gateway] GET /api/orders/2051 200 17ms
+2026-09-14 11:05:36,571 INFO  [api-gateway] GET /api/orders/5803 200 80ms
+2026-09-14 11:05:47,790 INFO  [inventory-service] Stock check sku=825 ok
+2026-09-14 11:05:54,729 INFO  [api-gateway] GET /api/orders/1919 200 62ms
+2026-09-14 11:06:02,132 INFO  [api-gateway] GET /api/orders/3449 200 28ms
+2026-09-14 11:06:16,828 INFO  [api-gateway] GET /api/orders/8159 200 82ms
+2026-09-14 11:06:36,850 INFO  [api-gateway] GET /api/orders/2348 200 33ms
+2026-09-14 11:06:55,614 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:06:57,250 INFO  [api-gateway] GET /api/orders/4098 200 88ms
+2026-09-14 11:07:03,907 INFO  [api-gateway] GET /api/orders/7040 200 24ms
+2026-09-14 11:07:17,249 INFO  [api-gateway] GET /api/orders/8069 200 19ms
+2026-09-14 11:07:30,026 INFO  [inventory-service] Stock check sku=391 ok
+2026-09-14 11:07:35,765 INFO  [api-gateway] GET /api/orders/3859 200 68ms
+2026-09-14 11:07:44,868 INFO  [order-service] Order 23911 created for user 578
+2026-09-14 11:07:51,856 INFO  [api-gateway] GET /api/orders/6444 200 89ms
+2026-09-14 11:08:05,954 INFO  [order-service] Order 67406 created for user 946
+2026-09-14 11:08:17,181 INFO  [inventory-service] Stock check sku=964 ok
+2026-09-14 11:08:32,975 INFO  [payment-service] Payment 82468 authorized amount=881.00 INR
+2026-09-14 11:08:44,193 INFO  [order-service] Order 15223 created for user 551
+2026-09-14 11:08:48,995 INFO  [order-service] Order 66016 created for user 644
+2026-09-14 11:09:06,048 INFO  [api-gateway] GET /api/orders/8256 200 18ms
+2026-09-14 11:09:23,971 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:09:26,197 INFO  [order-service] Order 55228 created for user 536
+2026-09-14 11:09:40,571 INFO  [payment-service] Payment 83645 authorized amount=180.00 INR
+2026-09-14 11:09:56,826 INFO  [api-gateway] GET /api/orders/4161 200 30ms
+2026-09-14 11:10:13,613 INFO  [order-service] Order 84487 created for user 445
+2026-09-14 11:10:31,957 INFO  [inventory-service] Stock check sku=234 ok
+2026-09-14 11:10:46,901 INFO  [api-gateway] GET /api/orders/4588 200 43ms
+2026-09-14 11:11:04,511 INFO  [api-gateway] GET /api/orders/9897 200 69ms
+2026-09-14 11:11:14,698 INFO  [api-gateway] GET /api/orders/7660 200 46ms
+2026-09-14 11:11:30,061 WARN  [api-gateway] Slow response 1493ms for GET /api/catalog
+2026-09-14 11:11:45,000 INFO  [payment-service] Payment 17143 authorized amount=661.00 INR
+2026-09-14 11:11:47,142 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:11:51,827 INFO  [api-gateway] GET /api/orders/7566 200 44ms
+2026-09-14 11:11:56,472 INFO  [order-service] Order 13486 created for user 818
+2026-09-14 11:12:12,478 INFO  [api-gateway] GET /api/orders/4950 200 41ms
+2026-09-14 11:12:18,240 INFO  [api-gateway] GET /api/orders/3633 200 26ms
+2026-09-14 11:12:31,316 INFO  [payment-service] Payment 84921 authorized amount=379.00 INR
+2026-09-14 11:12:45,954 INFO  [inventory-service] Stock check sku=182 ok
+2026-09-14 11:13:06,117 INFO  [order-service] Order 40474 created for user 318
+2026-09-14 11:13:26,189 INFO  [order-service] Order 22537 created for user 723
+2026-09-14 11:13:35,073 INFO  [order-service] Order 77484 created for user 366
+2026-09-14 11:13:40,419 INFO  [api-gateway] GET /api/orders/3582 200 35ms
+2026-09-14 11:13:49,877 INFO  [api-gateway] GET /api/orders/3393 200 33ms
+2026-09-14 11:14:05,046 WARN  [api-gateway] Slow response 1154ms for GET /api/catalog
+2026-09-14 11:14:14,395 INFO  [order-service] Order 11133 created for user 593
+2026-09-14 11:14:28,530 INFO  [inventory-service] Stock check sku=498 ok
+2026-09-14 11:14:47,650 INFO  [inventory-service] Stock check sku=254 ok
+2026-09-14 11:15:00,392 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:15:08,038 INFO  [order-service] Order 55036 created for user 696
+2026-09-14 11:15:12,103 WARN  [api-gateway] Slow response 966ms for GET /api/catalog
+2026-09-14 11:15:26,949 INFO  [api-gateway] GET /api/orders/4695 200 72ms
+2026-09-14 11:15:33,370 INFO  [order-service] Order 53035 created for user 486
+2026-09-14 11:15:51,302 INFO  [order-service] Order 23853 created for user 955
+2026-09-14 11:16:01,831 INFO  [api-gateway] GET /api/orders/1503 200 38ms
+2026-09-14 11:16:20,681 INFO  [order-service] Order 17545 created for user 911
+2026-09-14 11:16:39,377 INFO  [order-service] Order 40447 created for user 238
+2026-09-14 11:16:52,057 INFO  [inventory-service] Stock check sku=864 ok
+2026-09-14 11:16:59,602 INFO  [inventory-service] Stock check sku=584 ok
+2026-09-14 11:17:07,172 DEBUG [db-proxy] Pool stats active=15 idle=34 max=50
+2026-09-14 11:17:13,613 INFO  [api-gateway] GET /api/orders/6325 200 51ms
+2026-09-14 11:17:30,815 INFO  [api-gateway] GET /api/orders/4328 200 79ms
+2026-09-14 11:17:40,587 INFO  [order-service] Order 38749 created for user 503
+2026-09-14 11:17:44,947 DEBUG [db-proxy] Pool stats active=13 idle=20 max=50
+2026-09-14 11:17:45,419 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:18:01,503 INFO  [payment-service] Payment 34489 authorized amount=563.00 INR
+2026-09-14 11:18:16,789 INFO  [inventory-service] Stock check sku=234 ok
+2026-09-14 11:18:35,932 INFO  [payment-service] Payment 47953 authorized amount=799.00 INR
+2026-09-14 11:18:40,637 DEBUG [db-proxy] Pool stats active=6 idle=25 max=50
+2026-09-14 11:18:48,420 DEBUG [db-proxy] Pool stats active=6 idle=27 max=50
+2026-09-14 11:19:05,793 INFO  [inventory-service] Stock check sku=476 ok
+2026-09-14 11:19:12,232 INFO  [inventory-service] Stock check sku=375 ok
+2026-09-14 11:19:25,047 INFO  [payment-service] Payment 60631 authorized amount=489.00 INR
+2026-09-14 11:19:32,955 DEBUG [db-proxy] Pool stats active=17 idle=34 max=50
+2026-09-14 11:19:48,580 INFO  [payment-service] Payment 43315 authorized amount=391.00 INR
+2026-09-14 11:19:49,773 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:19:58,962 DEBUG [db-proxy] Pool stats active=8 idle=29 max=50
+2026-09-14 11:20:12,601 INFO  [api-gateway] GET /api/orders/5242 200 74ms
+2026-09-14 11:20:28,335 INFO  [order-service] Order 95189 created for user 179
+2026-09-14 11:20:47,323 INFO  [api-gateway] GET /api/orders/7436 200 70ms
+2026-09-14 11:21:01,254 INFO  [api-gateway] GET /api/orders/3815 200 27ms
+2026-09-14 11:21:10,705 INFO  [api-gateway] GET /api/orders/8802 200 93ms
+2026-09-14 11:21:27,718 INFO  [api-gateway] GET /api/orders/4113 200 31ms
+2026-09-14 11:21:33,771 INFO  [api-gateway] GET /api/orders/5118 200 53ms
+2026-09-14 11:21:51,812 INFO  [api-gateway] GET /api/orders/5100 200 51ms
+2026-09-14 11:21:57,688 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:22:07,094 INFO  [api-gateway] GET /api/orders/2217 200 46ms
+2026-09-14 11:22:13,473 INFO  [api-gateway] GET /api/orders/7331 200 14ms
+2026-09-14 11:22:23,517 INFO  [api-gateway] GET /api/orders/5463 200 52ms
+2026-09-14 11:22:42,834 DEBUG [db-proxy] Pool stats active=9 idle=25 max=50
+2026-09-14 11:22:58,229 INFO  [api-gateway] GET /api/orders/8665 200 23ms
+2026-09-14 11:23:03,451 DEBUG [db-proxy] Pool stats active=12 idle=29 max=50
+2026-09-14 11:23:17,797 INFO  [api-gateway] GET /api/orders/3237 200 18ms
+2026-09-14 11:23:28,069 DEBUG [db-proxy] Pool stats active=16 idle=21 max=50
+2026-09-14 11:23:43,512 INFO  [payment-service] Payment 73541 authorized amount=90.00 INR
+2026-09-14 11:23:57,327 INFO  [api-gateway] GET /api/orders/5676 200 56ms
+2026-09-14 11:24:17,465 DEBUG [db-proxy] Pool stats active=5 idle=36 max=50
+2026-09-14 11:24:35,087 DEBUG [db-proxy] Pool stats active=12 idle=38 max=50
+2026-09-14 11:24:51,357 DEBUG [db-proxy] Pool stats active=16 idle=25 max=50
+2026-09-14 11:25:04,983 DEBUG [db-proxy] Pool stats active=8 idle=23 max=50
+2026-09-14 11:25:11,795 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:25:13,735 INFO  [order-service] Order 98640 created for user 621
+2026-09-14 11:25:25,565 INFO  [order-service] Order 41203 created for user 537
+2026-09-14 11:25:34,517 INFO  [order-service] Order 29519 created for user 865
+2026-09-14 11:25:49,184 INFO  [order-service] Order 17732 created for user 528
+2026-09-14 11:26:00,593 INFO  [api-gateway] GET /api/orders/3790 200 92ms
+2026-09-14 11:26:09,504 INFO  [payment-service] Payment 43430 authorized amount=63.00 INR
+2026-09-14 11:26:17,657 INFO  [inventory-service] Stock check sku=839 ok
+2026-09-14 11:26:29,461 INFO  [api-gateway] GET /api/orders/2333 200 87ms
+2026-09-14 11:26:37,290 INFO  [api-gateway] GET /api/orders/2198 200 53ms
+2026-09-14 11:26:48,137 INFO  [api-gateway] GET /api/orders/9957 200 26ms
+2026-09-14 11:27:02,088 INFO  [api-gateway] GET /api/orders/7305 200 31ms
+2026-09-14 11:27:22,694 INFO  [api-gateway] GET /api/orders/2590 200 77ms
+2026-09-14 11:27:40,253 INFO  [api-gateway] GET /api/orders/9089 200 82ms
+2026-09-14 11:27:53,667 INFO  [payment-service] Payment 89286 authorized amount=808.00 INR
+2026-09-14 11:28:06,191 INFO  [order-service] Order 18607 created for user 685
+2026-09-14 11:28:24,568 INFO  [order-service] Order 21658 created for user 579
+2026-09-14 11:28:41,062 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:28:42,308 DEBUG [db-proxy] Pool stats active=19 idle=29 max=50
+2026-09-14 11:28:57,037 INFO  [order-service] Order 90941 created for user 755
+2026-09-14 11:29:10,207 DEBUG [db-proxy] Pool stats active=20 idle=21 max=50
+2026-09-14 11:29:17,843 INFO  [payment-service] Payment 17576 authorized amount=582.00 INR
+2026-09-14 11:29:29,218 DEBUG [db-proxy] Pool stats active=11 idle=32 max=50
+2026-09-14 11:29:44,707 INFO  [order-service] Order 98660 created for user 405
+2026-09-14 11:29:48,921 DEBUG [db-proxy] Pool stats active=19 idle=32 max=50
+2026-09-14 11:29:59,849 INFO  [api-gateway] GET /api/orders/9706 200 34ms
+2026-09-14 11:30:20,514 INFO  [payment-service] Payment 64069 authorized amount=427.00 INR
+2026-09-14 11:30:30,910 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:30:35,335 INFO  [api-gateway] GET /api/orders/7603 200 89ms
+2026-09-14 11:30:54,893 INFO  [api-gateway] GET /api/orders/5462 200 95ms
+2026-09-14 11:31:05,756 INFO  [api-gateway] GET /api/orders/7900 200 79ms
+2026-09-14 11:31:26,496 INFO  [order-service] Order 58738 created for user 753
+2026-09-14 11:31:40,506 DEBUG [db-proxy] Pool stats active=15 idle=24 max=50
+2026-09-14 11:31:54,816 INFO  [payment-service] Payment 74476 authorized amount=643.00 INR
+2026-09-14 11:32:09,922 INFO  [payment-service] Payment 86110 authorized amount=478.00 INR
+2026-09-14 11:32:23,207 INFO  [order-service] Order 44520 created for user 124
+2026-09-14 11:32:27,275 INFO  [api-gateway] GET /api/orders/6130 200 81ms
+2026-09-14 11:32:36,728 INFO  [api-gateway] GET /api/orders/9523 200 68ms
+2026-09-14 11:32:50,398 INFO  [api-gateway] GET /api/orders/3637 200 35ms
+2026-09-14 11:33:10,803 INFO  [order-service] Order 70924 created for user 946
+2026-09-14 11:33:23,505 INFO  [api-gateway] GET /api/orders/1611 200 18ms
+2026-09-14 11:33:27,834 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:33:43,075 INFO  [api-gateway] GET /api/orders/3140 200 56ms
+2026-09-14 11:33:48,785 INFO  [api-gateway] GET /api/orders/9177 200 34ms
+2026-09-14 11:34:05,574 INFO  [api-gateway] GET /api/orders/1695 200 88ms
+2026-09-14 11:34:17,917 INFO  [api-gateway] GET /api/orders/1137 200 53ms
+2026-09-14 11:34:31,932 INFO  [inventory-service] Stock check sku=720 ok
+2026-09-14 11:34:52,210 INFO  [payment-service] Payment 88766 authorized amount=169.00 INR
+2026-09-14 11:34:56,729 INFO  [api-gateway] GET /api/orders/7683 200 40ms
+2026-09-14 11:35:03,878 DEBUG [db-proxy] Pool stats active=20 idle=39 max=50
+2026-09-14 11:35:17,198 INFO  [inventory-service] Stock check sku=762 ok
+2026-09-14 11:35:24,729 INFO  [order-service] Order 94768 created for user 942
+2026-09-14 11:35:33,356 INFO  [payment-service] Payment 42633 authorized amount=378.00 INR
+2026-09-14 11:35:39,814 DEBUG [db-proxy] Pool stats active=10 idle=20 max=50
+2026-09-14 11:35:54,651 DEBUG [db-proxy] Pool stats active=16 idle=29 max=50
+2026-09-14 11:36:05,041 INFO  [payment-service] Payment 21848 authorized amount=888.00 INR
+2026-09-14 11:36:09,644 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:36:22,941 INFO  [payment-service] Payment 66439 authorized amount=875.00 INR
+2026-09-14 11:36:42,997 INFO  [order-service] Order 41229 created for user 860
+2026-09-14 11:36:49,716 INFO  [api-gateway] GET /api/orders/5960 200 55ms
+2026-09-14 11:36:55,361 INFO  [inventory-service] Stock check sku=537 ok
+2026-09-14 11:37:00,211 INFO  [payment-service] Payment 43715 authorized amount=254.00 INR
+2026-09-14 11:37:13,235 INFO  [order-service] Order 68640 created for user 588
+2026-09-14 11:37:18,185 INFO  [order-service] Order 30870 created for user 353
+2026-09-14 11:37:25,953 INFO  [inventory-service] Stock check sku=971 ok
+2026-09-14 11:37:32,530 INFO  [payment-service] Payment 49242 authorized amount=680.00 INR
+2026-09-14 11:37:40,380 INFO  [api-gateway] GET /api/orders/8130 200 86ms
+2026-09-14 11:37:58,522 INFO  [api-gateway] GET /api/orders/9566 200 12ms
+2026-09-14 11:38:10,863 INFO  [payment-service] Payment 49344 authorized amount=449.00 INR
+2026-09-14 11:38:17,412 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:38:23,215 DEBUG [db-proxy] Pool stats active=17 idle=27 max=50
+2026-09-14 11:38:30,782 DEBUG [db-proxy] Pool stats active=10 idle=25 max=50
+2026-09-14 11:38:51,761 INFO  [api-gateway] GET /api/orders/5605 200 56ms
+2026-09-14 11:39:09,475 INFO  [order-service] Order 42537 created for user 610
+2026-09-14 11:39:25,119 INFO  [inventory-service] Stock check sku=637 ok
+2026-09-14 11:39:39,672 INFO  [payment-service] Payment 58129 authorized amount=612.00 INR
+2026-09-14 11:39:57,998 INFO  [order-service] Order 14779 created for user 179
+2026-09-14 11:40:09,097 INFO  [api-gateway] GET /api/orders/3455 200 65ms
+2026-09-14 11:40:17,650 INFO  [payment-service] Payment 44896 authorized amount=555.00 INR
+2026-09-14 11:40:26,811 WARN  [api-gateway] Slow response 959ms for GET /api/catalog
+2026-09-14 11:40:34,736 INFO  [order-service] Order 78529 created for user 927
+2026-09-14 11:40:51,279 INFO  [api-gateway] GET /api/orders/9706 200 51ms
+2026-09-14 11:41:01,974 INFO  [api-gateway] GET /api/orders/5224 200 95ms
+2026-09-14 11:41:06,526 INFO  [order-service] Order 73615 created for user 185
+2026-09-14 11:41:15,740 DEBUG [db-proxy] Pool stats active=5 idle=35 max=50
+2026-09-14 11:41:30,856 INFO  [order-service] Order 25547 created for user 231
+2026-09-14 11:41:39,530 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:41:42,721 INFO  [payment-service] Payment 93892 authorized amount=467.00 INR
+2026-09-14 11:41:56,564 INFO  [inventory-service] Stock check sku=197 ok
+2026-09-14 11:42:03,853 INFO  [api-gateway] GET /api/orders/4855 200 58ms
+2026-09-14 11:42:24,689 INFO  [order-service] Order 24387 created for user 253
+2026-09-14 11:42:33,515 INFO  [payment-service] Payment 15128 authorized amount=460.00 INR
+2026-09-14 11:42:41,704 INFO  [inventory-service] Stock check sku=759 ok
+2026-09-14 11:42:45,889 INFO  [api-gateway] GET /api/orders/7249 200 25ms
+2026-09-14 11:42:58,144 INFO  [api-gateway] GET /api/orders/1073 200 56ms
+2026-09-14 11:43:12,415 INFO  [order-service] Order 16251 created for user 110
+2026-09-14 11:43:18,056 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:43:30,301 INFO  [order-service] Order 25598 created for user 628
+2026-09-14 11:43:50,041 INFO  [payment-service] Payment 47380 authorized amount=259.00 INR
+2026-09-14 11:44:04,765 INFO  [api-gateway] GET /api/orders/6088 200 71ms
+2026-09-14 11:44:23,133 INFO  [api-gateway] GET /api/orders/1546 200 89ms
+2026-09-14 11:44:35,769 DEBUG [db-proxy] Pool stats active=11 idle=22 max=50
+2026-09-14 11:44:44,104 INFO  [api-gateway] GET /api/orders/1877 200 71ms
+2026-09-14 11:44:49,802 INFO  [api-gateway] GET /api/orders/7066 200 89ms
+2026-09-14 11:45:03,802 INFO  [order-service] Order 73045 created for user 705
+2026-09-14 11:45:19,604 INFO  [api-gateway] GET /api/orders/2128 200 61ms
+2026-09-14 11:45:38,410 DEBUG [db-proxy] Pool stats active=19 idle=23 max=50
+2026-09-14 11:45:52,997 DEBUG [db-proxy] Pool stats active=17 idle=36 max=50
+2026-09-14 11:45:54,919 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:46:01,848 INFO  [inventory-service] Stock check sku=683 ok
+2026-09-14 11:46:19,735 INFO  [api-gateway] GET /api/orders/4993 200 38ms
+2026-09-14 11:46:32,320 INFO  [inventory-service] Stock check sku=921 ok
+2026-09-14 11:46:37,431 INFO  [api-gateway] GET /api/orders/6015 200 83ms
+2026-09-14 11:46:53,073 INFO  [order-service] Order 20496 created for user 648
+2026-09-14 11:47:02,052 INFO  [payment-service] Payment 90867 authorized amount=879.00 INR
+2026-09-14 11:47:22,152 INFO  [order-service] Order 65196 created for user 336
+2026-09-14 11:47:26,724 INFO  [payment-service] Payment 27564 authorized amount=223.00 INR
+2026-09-14 11:47:46,133 DEBUG [db-proxy] Pool stats active=9 idle=30 max=50
+2026-09-14 11:47:52,408 INFO  [api-gateway] GET /api/orders/6086 200 36ms
+2026-09-14 11:48:06,811 INFO  [api-gateway] GET /api/orders/2831 200 82ms
+2026-09-14 11:48:12,008 INFO  [api-gateway] GET /api/orders/9728 200 41ms
+2026-09-14 11:48:21,596 INFO  [api-gateway] GET /api/orders/2223 200 19ms
+2026-09-14 11:48:27,298 INFO  [order-service] Order 59124 created for user 297
+2026-09-14 11:48:39,032 DEBUG [db-proxy] Pool stats active=16 idle=39 max=50
+2026-09-14 11:48:42,081 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:48:57,041 INFO  [api-gateway] GET /api/orders/7475 200 82ms
+2026-09-14 11:49:11,787 DEBUG [db-proxy] Pool stats active=17 idle=37 max=50
+2026-09-14 11:49:27,822 INFO  [payment-service] Payment 83995 authorized amount=366.00 INR
+2026-09-14 11:49:38,742 INFO  [payment-service] Payment 12511 authorized amount=529.00 INR
+2026-09-14 11:49:49,136 INFO  [order-service] Order 85804 created for user 321
+2026-09-14 11:49:58,270 INFO  [payment-service] Payment 75436 authorized amount=410.00 INR
+2026-09-14 11:50:03,892 INFO  [order-service] Order 23195 created for user 383
+2026-09-14 11:50:14,929 INFO  [payment-service] Payment 86178 authorized amount=242.00 INR
+2026-09-14 11:50:35,133 INFO  [payment-service] Payment 90752 authorized amount=778.00 INR
+2026-09-14 11:50:48,885 INFO  [api-gateway] GET /api/orders/2399 200 40ms
+2026-09-14 11:51:01,687 INFO  [order-service] Order 61979 created for user 822
+2026-09-14 11:51:16,911 DEBUG [db-proxy] Pool stats active=10 idle=37 max=50
+2026-09-14 11:51:21,558 INFO  [payment-service] Payment 61771 authorized amount=208.00 INR
+2026-09-14 11:51:34,821 INFO  [inventory-service] Stock check sku=443 ok
+2026-09-14 11:51:47,339 INFO  [api-gateway] GET /api/orders/6284 200 16ms
+2026-09-14 11:51:51,199 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:52:07,243 INFO  [api-gateway] GET /api/orders/4753 200 51ms
+2026-09-14 11:52:12,585 INFO  [payment-service] Payment 83899 authorized amount=446.00 INR
+2026-09-14 11:52:26,048 INFO  [api-gateway] GET /api/orders/2272 200 41ms
+2026-09-14 11:52:35,966 INFO  [order-service] Order 32696 created for user 671
+2026-09-14 11:52:50,821 INFO  [inventory-service] Stock check sku=900 ok
+2026-09-14 11:53:11,405 DEBUG [db-proxy] Pool stats active=19 idle=29 max=50
+2026-09-14 11:53:25,721 INFO  [api-gateway] GET /api/orders/9779 200 83ms
+2026-09-14 11:53:34,165 INFO  [api-gateway] GET /api/orders/9569 200 91ms
+2026-09-14 11:53:40,115 INFO  [payment-service] Payment 46195 authorized amount=524.00 INR
+2026-09-14 11:53:53,796 INFO  [order-service] Order 67146 created for user 492
+2026-09-14 11:54:12,228 INFO  [order-service] Order 69301 created for user 974
+2026-09-14 11:54:30,600 DEBUG [db-proxy] Pool stats active=13 idle=22 max=50
+2026-09-14 11:54:34,481 ERROR [notification-service] Failed to send email: missing property 'smtp.host' in configuration profile prod
+2026-09-14 11:54:35,380 INFO  [api-gateway] GET /api/orders/2521 200 68ms
+2026-09-14 11:54:42,614 DEBUG [db-proxy] Pool stats active=6 idle=39 max=50
+2026-09-14 11:54:54,073 INFO  [inventory-service] Stock check sku=308 ok
+2026-09-14 11:55:07,574 INFO  [inventory-service] Stock check sku=397 ok
+2026-09-14 11:55:27,823 INFO  [payment-service] Payment 14596 authorized amount=50.00 INR
+2026-09-14 11:55:32,366 INFO  [api-gateway] GET /api/orders/9396 200 85ms
+2026-09-14 11:55:39,021 INFO  [inventory-service] Stock check sku=245 ok
+2026-09-14 11:55:47,408 INFO  [payment-service] Payment 73860 authorized amount=255.00 INR
+2026-09-14 11:56:01,847 INFO  [payment-service] Payment 39815 authorized amount=858.00 INR
+2026-09-14 11:56:08,721 INFO  [api-gateway] GET /api/orders/1131 200 75ms
+2026-09-14 11:56:23,000 DEBUG [db-proxy] Pool stats active=16 idle=23 max=50
+2026-09-14 11:56:29,786 INFO  [order-service] Order 60827 created for user 812
+2026-09-14 11:56:46,356 DEBUG [db-proxy] Pool stats active=16 idle=23 max=50
+2026-09-14 11:56:57,531 INFO  [api-gateway] GET /api/orders/9464 200 32ms
+2026-09-14 11:57:09,580 INFO  [api-gateway] GET /api/orders/2246 200 48ms
+2026-09-14 11:57:16,545 DEBUG [db-proxy] Pool stats active=10 idle=39 max=50
+2026-09-14 11:57:26,149 INFO  [api-gateway] GET /api/orders/1438 200 37ms
+2026-09-14 11:57:33,163 INFO  [order-service] Order 58628 created for user 620
+2026-09-14 11:57:51,628 INFO  [order-service] Order 84542 created for user 436
+2026-09-14 11:58:01,606 INFO  [payment-service] Payment 68199 authorized amount=382.00 INR
+2026-09-14 11:58:21,938 INFO  [order-service] Order 34722 created for user 216
+2026-09-14 11:58:33,103 INFO  [order-service] Order 87472 created for user 472
+2026-09-14 11:58:53,853 INFO  [api-gateway] GET /api/orders/5894 200 65ms
+2026-09-14 11:58:59,331 INFO  [api-gateway] GET /api/orders/2078 200 64ms
+2026-09-14 11:59:13,889 DEBUG [db-proxy] Pool stats active=10 idle=29 max=50
+2026-09-14 11:59:32,003 INFO  [api-gateway] GET /api/orders/2560 200 94ms
+2026-09-14 11:59:37,464 INFO  [api-gateway] GET /api/orders/8457 200 82ms
+2026-09-14 11:59:42,113 INFO  [api-gateway] GET /api/orders/5055 200 12ms
+2026-09-14 11:59:53,915 INFO  [inventory-service] Stock check sku=273 ok
+2026-09-14 12:00:09,505 INFO  [api-gateway] GET /api/orders/3645 200 66ms

@@ -46,7 +46,8 @@ _CONTINUATION = re.compile(
     r"|\.\.\. \d+ more"                        # Java "... 12 more"
     r"|Traceback \(most recent call last\)"    # Python traceback start
     r"|Exception in thread"
-    r"|[\w.$]+(Exception|Error)(:|$)"          # "ValueError: ..." / "java.io.IOException"
+    r"|[\w.$]+(Exception|Error|Interrupt|Timeout|Warning|Fault)(:|$)"  # e.g. ValueError, UpstreamTimeout, KeyboardInterrupt
+    r"|[\w.]+\.[A-Z][\w]*(:|$)"               # dotted path: clients.errors.UpstreamTimeout:
     r"|[}\]])"                                 # closing brace of a multi-line JSON/dict dump
 )
 
