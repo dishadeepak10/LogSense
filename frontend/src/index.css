@@ -3,18 +3,18 @@
 /* Two modes: dark (default) and light, switched with the sun/moon button (theme/mode.js sets
    data-mode="light" on <html>). Error/warning chart colors are the same in both modes. */
 :root {
-  color-scheme: dark; /* dark scrollbars, file picker and dropdowns */
+  color-scheme: dark;
   --accent-1: #10b981; /* emerald */
   --accent-2: #14b8a6; /* teal */
-  --accent-soft: #6ee7b7; /* links and small accent text */
-  --accent-dot: #a3e635; /* lime: the anomaly dot in the logo */
+  --accent-soft: #6ee7b7;
+  --accent-dot: #a3e635;
   --btn-1: #059669;
   --btn-2: #0d9488;
   --btn-text: #ffffff;
-  --surface-base: #09090b; /* page background */
-  --surface-panel: #18181b; /* cards */
-  --glow-1: rgb(16 185 129 / 0.12);
-  --glow-2: rgb(20 184 166 / 0.08);
+  --surface-base: #0f0f11;
+  --surface-panel: #1a1a1f;
+  --glow-1: rgb(16 185 129 / 0.05);
+  --glow-2: rgb(20 184 166 / 0.04);
 }
 
 /* LIGHT MODE. The whole UI is written with dark-mode classes (bg-zinc-800, text-zinc-100,
@@ -57,12 +57,18 @@ html {
 body {
   @apply bg-page text-zinc-100 antialiased;
   transition: background-color 0.4s;
-  /* Two soft colored glows behind the page */
+  /* Single very subtle glow, not two competing ones */
   background-image:
-    radial-gradient(60rem 30rem at 10% -10%, var(--glow-1), transparent 60%),
-    radial-gradient(50rem 30rem at 100% 0%, var(--glow-2), transparent 60%);
+    radial-gradient(80rem 40rem at 15% -5%, var(--glow-1), transparent 60%);
   background-attachment: fixed;
 }
+
+/* ---------- Thin scrollbar (sample list, log entries, etc.) ---------- */
+/* Firefox: scrollbar-width + scrollbar-color inline styles handle it. Chrome/Edge needs these. */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgb(63 63 70 / 0.8); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgb(82 82 91 / 0.9); }
 
 /* ---------- Reusable looks ---------- */
 

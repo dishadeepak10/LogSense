@@ -1,6 +1,7 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
 import Layout from './components/Layout'
+import ComparePage from './pages/ComparePage'
 import DashboardPage from './pages/DashboardPage'
 import HistoryPage from './pages/HistoryPage'
 import IncidentDetailPage from './pages/IncidentDetailPage'
@@ -15,6 +16,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<UploadPage />} />
           <Route path="/history" element={<HistoryPage />} />
+          <Route path="/compare" element={<ComparePage />} />
           <Route path="/files/:fileId" element={<DashboardPage />} />
           <Route path="/files/:fileId/incidents" element={<IncidentListPage />} />
           <Route path="/incidents/:incidentId" element={<IncidentDetailPage />} />

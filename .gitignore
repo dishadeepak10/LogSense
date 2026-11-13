@@ -15,3 +15,4 @@ frontend/dist/
 *.db
 .vscode/
 .DS_Store
+test_logs/

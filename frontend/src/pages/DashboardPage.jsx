@@ -5,6 +5,7 @@ import ErrorTimelineChart from '../components/ErrorTimelineChart'
 import FileHeader from '../components/FileHeader'
 import IncidentCard from '../components/IncidentCard'
 import LevelMix from '../components/LevelMix'
+import ServiceDependencyGraph from '../components/ServiceDependencyGraph'
 import { ErrorState, Loading } from '../components/States'
 import SummaryTiles from '../components/SummaryTiles'
 import TopErrors from '../components/TopErrors'
@@ -14,9 +15,9 @@ const TOP_INCIDENTS = 3
 
 function Panel({ title, action, className = '', delay = 0, children }) {
   return (
-    <section className={`card rise flex flex-col p-5 ${className}`} style={{ animationDelay: `${delay}ms` }}>
-      <div className="mb-4 flex items-center justify-between gap-2">
-        <h2 className="text-lg font-semibold">{title}</h2>
+    <section className={`rise rounded-lg border border-zinc-800 bg-zinc-900/60 flex flex-col p-4 ${className}`} style={{ animationDelay: `${delay}ms` }}>
+      <div className="mb-3 flex items-center justify-between gap-2 border-b border-zinc-800 pb-3">
+        <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">{title}</h2>
         {action}
       </div>
       <div className="flex-1">{children}</div>
@@ -106,6 +107,13 @@ export default function DashboardPage() {
           </Panel>
         </div>
       </div>
+
+      <Panel title="Service dependency graph" delay={460}>
+        <p className="mb-4 text-sm text-zinc-400">
+          Which services cascaded failures to others, based on the order they broke within each incident.
+        </p>
+        <ServiceDependencyGraph incidents={incidents} allServices={summary.services} />
+      </Panel>
     </div>
   )
 }

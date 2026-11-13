@@ -181,47 +181,79 @@ export default function UploadPage() {
           )}
         </section>
 
-        <aside className="card p-5">
-          <h2 className="text-lg font-semibold">No log at hand?</h2>
-          <p className="mt-1 text-sm text-zinc-400">Try one of the sample logs with a known failure.</p>
-          <div className="mt-4">
-            {samples.loading && <Loading text="Loading samples..." />}
-            {samples.error && <ErrorState message={samples.error} onRetry={samples.reload} />}
-            {samples.data && samples.data.length === 0 && <EmptyState title="No sample logs on the server" />}
+        <aside className="overflow-hidden rounded-xl bg-panel/80 ring-1 ring-white/10">
+          {/* Header */}
+          <div className="px-5 pt-5 pb-4">
+            <h2 className="text-lg font-semibold">No log at hand?</h2>
+            <p className="mt-1 text-sm text-zinc-400">Try one of the sample logs with a known failure.</p>
+          </div>
+
+          {/* Sample list */}
+          <div className="px-3 pb-3">
+            {samples.loading && (
+              <div className="px-2 pb-2"><Loading text="Loading samples..." /></div>
+            )}
+            {samples.error && (
+              <div className="px-2 pb-2"><ErrorState message={samples.error} onRetry={samples.reload} /></div>
+            )}
+            {samples.data && samples.data.length === 0 && (
+              <div className="px-2 pb-2"><EmptyState title="No sample logs on the server" /></div>
+            )}
             {samples.data && samples.data.length > 0 && (
-              <>
-                {/* Each sample is a button; the selected one is highlighted (works like radio buttons) */}
-                <div role="radiogroup" aria-label="Sample log" className="max-h-80 space-y-1.5 overflow-y-auto pr-1">
-                  {samples.data.map((s) => {
-                    const selected = s.name === selectedSample
-                    return (
-                      <button
-                        key={s.name}
-                        role="radio"
-                        aria-checked={selected}
-                        onClick={() => setSampleName(s.name)}
-                        className={`flex w-full items-center justify-between gap-2 rounded-lg px-3 py-2 text-left text-sm transition ${
-                          selected
-                            ? 'bg-accent-1/15 text-white ring-1 ring-accent-1/60'
-                            : 'text-zinc-300 ring-1 ring-white/5 hover:bg-white/5 hover:ring-white/15'
-                        }`}
-                      >
-                        <span className="min-w-0 truncate">{prettyName(s.name)}</span>
-                        <span className="shrink-0 text-xs text-zinc-500">{formatBytes(s.size_bytes)}</span>
-                      </button>
-                    )
-                  })}
-                </div>
-                <button
-                  onClick={() => run('sample', () => loadSample(selectedSample))}
-                  disabled={busy !== null}
-                  className="btn-primary mt-4 w-full"
-                >
-                  {busy === 'sample' ? 'Analyzing sample...' : 'Load sample log'}
-                </button>
-              </>
+              <div
+                role="radiogroup"
+                aria-label="Sample log"
+                className="max-h-72 overflow-y-auto space-y-0.5 rounded-lg bg-zinc-900/60 p-1.5 ring-1 ring-white/5"
+                style={{ scrollbarWidth: 'thin', scrollbarColor: 'rgb(63 63 70) transparent' }}
+              >
+                {samples.data.map((s) => {
+                  const selected = s.name === selectedSample
+                  return (
+                    <button
+                      key={s.name}
+                      role="radio"
+                      aria-checked={selected}
+                      onClick={() => setSampleName(s.name)}
+                      className={`group flex w-full items-center justify-between gap-3 rounded-md px-3 py-2.5 text-left text-sm transition-all duration-150 ${
+                        selected
+                          ? 'bg-accent-1/20 text-white shadow-sm ring-1 ring-accent-1/50'
+                          : 'text-zinc-300 hover:bg-white/5 hover:text-white'
+                      }`}
+                    >
+                      {/* colour dot that shows selection state */}
+                      <span className={`h-1.5 w-1.5 shrink-0 rounded-full transition-all duration-150 ${
+                        selected ? 'bg-accent-1 shadow-[0_0_6px_1px_var(--accent-1)]' : 'bg-zinc-600 group-hover:bg-zinc-400'
+                      }`} />
+                      <span className="min-w-0 flex-1 truncate font-medium">{prettyName(s.name)}</span>
+                      <span className={`shrink-0 font-mono text-xs tabular-nums transition-colors ${selected ? 'text-accent-soft' : 'text-zinc-500'}`}>
+                        {formatBytes(s.size_bytes)}
+                      </span>
+                    </button>
+                  )
+                })}
+              </div>
             )}
           </div>
+
+          {/* Divider + Load button — flush to the card bottom */}
+          {samples.data && samples.data.length > 0 && (
+            <div className="border-t border-white/8 p-3">
+              <button
+                onClick={() => run('sample', () => loadSample(selectedSample))}
+                disabled={busy !== null}
+                className="btn-primary w-full py-2.5 text-sm"
+              >
+                {busy === 'sample' ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+                    Analyzing sample…
+                  </span>
+                ) : (
+                  'Load sample log'
+                )}
+              </button>
+            </div>
+          )}
         </aside>
       </div>
     </div>
